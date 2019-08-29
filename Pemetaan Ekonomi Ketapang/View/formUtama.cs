@@ -3,6 +3,8 @@
     using MetroFramework.Forms;
     using System;
     using System.Windows.Forms;
+    using System.Diagnostics;
+    using Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan;
 
     /// <summary>
     /// Defines the <see cref="formUtama" />
@@ -26,7 +28,8 @@
         private void formUtama_Load(object sender, EventArgs e)
         {
             IsMdiContainer = true;
-            
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
         }
 
         /// <summary>
@@ -53,6 +56,61 @@
             {
                 Application.Exit();
             }
+        }
+
+        private void settingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pendataanUmatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void cariKepalaKeluargaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formKepalaKeluarga formKK = new formKepalaKeluarga();
+            formKK.MdiParent = this;
+            formKK.Show();
+        }
+
+        private void laporanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputFormSamplingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kepalaKeluargaBaruTidakTerdataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formIdentitas formInputKKBaru = new formIdentitas();
+            formInputKKBaru.MdiParent = this;
+            formInputKKBaru.Show();
+        }
+
+        private void aplikasiPendataanUmatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(@"C:\Program Files\Keuskupan Ketapang\PendataanUmat\SIUMAT_APP.exe");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan, silahkan hubungi yang bersangkutan dengan menampilkan code error berikut : " + ex.Message, "Kesalahan!");
+                return;
+            }
+        }
+
+        private void kepalaKeluargaTerdataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formKkDatabase fr = new formKkDatabase();
+            fr.MdiParent = this;
+            fr.Show();
         }
     }
 }

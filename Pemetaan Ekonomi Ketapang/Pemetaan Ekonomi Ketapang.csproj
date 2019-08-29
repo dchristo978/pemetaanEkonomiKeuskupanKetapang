@@ -74,7 +74,103 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\CoreCode.cs" />
+    <Compile Include="Controller\Ekonomi\Ref_JawabanControl.cs" />
+    <Compile Include="Controller\Ekonomi\Tbl_BobotControl.cs" />
+    <Compile Include="Controller\Ekonomi\Tbl_JawabanControl.cs" />
+    <Compile Include="Controller\Ekonomi\Tbl_PertanyaanControl.cs" />
+    <Compile Include="Controller\Global.cs" />
+    <Compile Include="Controller\Global\CoreCode.cs" />
+    <Compile Include="Controller\Umat\KepalaKeluargaControl.cs" />
+    <Compile Include="Controller\Global\mstuserControl.cs" />
+    <Compile Include="Controller\Umat\ParokiControl.cs" />
+    <Compile Include="Controller\Umat\PekerjaanControl.cs" />
+    <Compile Include="Controller\Umat\StasiControl.cs" />
+    <Compile Include="Controller\Umat\UmatControl.cs" />
+    <Compile Include="db_ekonomi_ketapang.cs">
+      <DependentUpon>db_ekonomi_ketapang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_ekonomi_ketapang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_ekonomi_ketapang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_umat_ketapang.cs">
+      <DependentUpon>db_umat_ketapang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_umat_ketapang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_umat_ketapang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model\jenis_kelamin.cs" />
+    <Compile Include="Model\mst_user.cs" />
+    <Compile Include="Model\ref_jawaban.cs" />
+    <Compile Include="Model\ref_pekerjaan.cs" />
+    <Compile Include="Model\tbl_bobot.cs" />
+    <Compile Include="Model\tbl_jawaban.cs" />
+    <Compile Include="Model\tbl_pertanyaan.cs" />
+    <Compile Include="Model\tbl_stasi.cs" />
+    <Compile Include="Model\tbl_umat.cs" />
+    <Compile Include="View\Form Pertanyaan\formFasilitasTempatTinggal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formFasilitasTempatTinggal.Designer.cs">
+      <DependentUpon>formFasilitasTempatTinggal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formIdentitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formIdentitas.Designer.cs">
+      <DependentUpon>formIdentitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formJawabanLainnya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formJawabanLainnya.Designer.cs">
+      <DependentUpon>formJawabanLainnya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formKebutuhanHidupSehariHari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formKebutuhanHidupSehariHari.Designer.cs">
+      <DependentUpon>formKebutuhanHidupSehariHari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formKkDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formKkDatabase.Designer.cs">
+      <DependentUpon>formKkDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formKondisiTempatTinggal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formKondisiTempatTinggal.Designer.cs">
+      <DependentUpon>formKondisiTempatTinggal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formLainLain1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formLainLain1.Designer.cs">
+      <DependentUpon>formLainLain1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formTambahJawabanLainnya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formTambahJawabanLainnya.Designer.cs">
+      <DependentUpon>formTambahJawabanLainnya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formTanamanPangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formTanamanPangan.Designer.cs">
+      <DependentUpon>formTanamanPangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\formKepalaKeluarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\formKepalaKeluarga.Designer.cs">
+      <DependentUpon>formKepalaKeluarga.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +185,36 @@
     <Compile Include="View\formUtama.Designer.cs">
       <DependentUpon>formUtama.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Form Pertanyaan\formFasilitasTempatTinggal.resx">
+      <DependentUpon>formFasilitasTempatTinggal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formIdentitas.resx">
+      <DependentUpon>formIdentitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formJawabanLainnya.resx">
+      <DependentUpon>formJawabanLainnya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formKebutuhanHidupSehariHari.resx">
+      <DependentUpon>formKebutuhanHidupSehariHari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formKkDatabase.resx">
+      <DependentUpon>formKkDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formKondisiTempatTinggal.resx">
+      <DependentUpon>formKondisiTempatTinggal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formLainLain1.resx">
+      <DependentUpon>formLainLain1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formTambahJawabanLainnya.resx">
+      <DependentUpon>formTambahJawabanLainnya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formTanamanPangan.resx">
+      <DependentUpon>formTanamanPangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\formKepalaKeluarga.resx">
+      <DependentUpon>formKepalaKeluarga.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +231,28 @@
     <EmbeddedResource Include="View\formUtama.resx">
       <DependentUpon>formUtama.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="db_ekonomi_ketapang.xsc">
+      <DependentUpon>db_ekonomi_ketapang.xsd</DependentUpon>
+    </None>
+    <None Include="db_ekonomi_ketapang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_ekonomi_ketapang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="db_ekonomi_ketapang.xss">
+      <DependentUpon>db_ekonomi_ketapang.xsd</DependentUpon>
+    </None>
+    <None Include="db_umat_ketapang.xsc">
+      <DependentUpon>db_umat_ketapang.xsd</DependentUpon>
+    </None>
+    <None Include="db_umat_ketapang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_umat_ketapang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="db_umat_ketapang.xss">
+      <DependentUpon>db_umat_ketapang.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,9 +267,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="bin\Debug\KKKetapang.jpg" />
     <Content Include="MetroFramework.txt" />

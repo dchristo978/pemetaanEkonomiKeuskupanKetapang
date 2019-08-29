@@ -1,0 +1,1050 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="db_umat_ketapang" targetNamespace="http://tempuri.org/db_umat_ketapang.xsd" xmlns:mstns="http://tempuri.org/db_umat_ketapang.xsd" xmlns="http://tempuri.org/db_umat_ketapang.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_umat_ketapangConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_umat_ketapangConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Pemetaan_Ekonomi_Ketapang.Properties.Settings.GlobalReference.Default.db_umat_ketapangConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mst_umatTableAdapter" GeneratorDataComponentClassName="mst_umatTableAdapter" Name="mst_umat" UserDataComponentName="mst_umatTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_umat_ketapangConnectionString (Settings)" DbObjectName="db_umat_ketapang.mst_umat" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `mst_umat` WHERE ((`id_umat` = @p1) AND ((@p2 = 1 AND `id_mst_umat` IS NULL) OR (`id_mst_umat` = @p3)) AND ((@p4 = 1 AND `no_ktp` IS NULL) OR (`no_ktp` = @p5)) AND ((@p6 = 1 AND `no_kk` IS NULL) OR (`no_kk` = @p7)) AND ((@p8 = 1 AND `nama` IS NULL) OR (`nama` = @p9)) AND ((@p10 = 1 AND `nama_baptis` IS NULL) OR (`nama_baptis` = @p11)) AND ((@p12 = 1 AND `alamat` IS NULL) OR (`alamat` = @p13)) AND ((@p14 = 1 AND `jenis_kelamin` IS NULL) OR (`jenis_kelamin` = @p15)) AND ((@p16 = 1 AND `id_hubungan` IS NULL) OR (`id_hubungan` = @p17)) AND ((@p18 = 1 AND `id_agama` IS NULL) OR (`id_agama` = @p19)) AND ((@p20 = 1 AND `id_paroki_lahir` IS NULL) OR (`id_paroki_lahir` = @p21)) AND ((@p22 = 1 AND `id_stasi_lahir` IS NULL) OR (`id_stasi_lahir` = @p23)) AND ((@p24 = 1 AND `tanggal_lahir` IS NULL) OR (`tanggal_lahir` = @p25)) AND ((@p26 = 1 AND `no_telp` IS NULL) OR (`no_telp` = @p27)) AND ((@p28 = 1 AND `tempat_lahir` IS NULL) OR (`tempat_lahir` = @p29)) AND ((@p30 = 1 AND `nomor_baptis` IS NULL) OR (`nomor_baptis` = @p31)) AND ((@p32 = 1 AND `nama_ayah` IS NULL) OR (`nama_ayah` = @p33)) AND ((@p34 = 1 AND `nama_ibu` IS NULL) OR (`nama_ibu` = @p35)) AND ((@p36 = 1 AND `tanggal_baptis` IS NULL) OR (`tanggal_baptis` = @p37)) AND ((@p38 = 1 AND `id_paroki_baptis` IS NULL) OR (`id_paroki_baptis` = @p39)) AND ((@p40 = 1 AND `id_pastor_baptis` IS NULL) OR (`id_pastor_baptis` = @p41)) AND ((@p42 = 1 AND `id_stasi_baptis` IS NULL) OR (`id_stasi_baptis` = @p43)) AND ((@p44 = 1 AND `nama_stasi_baptis` IS NULL) OR (`nama_stasi_baptis` = @p45)) AND ((@p46 = 1 AND `nama_pastor_baptis` IS NULL) OR (`nama_pastor_baptis` = @p47)) AND ((@p48 = 1 AND `wali_baptis_1` IS NULL) OR (`wali_baptis_1` = @p49)) AND ((@p50 = 1 AND `wali_baptis_2` IS NULL) OR (`wali_baptis_2` = @p51)) AND ((@p52 = 1 AND `nomor_komuni` IS NULL) OR (`nomor_komuni` = @p53)) AND ((@p54 = 1 AND `tanggal_komuni_pertama` IS NULL) OR (`tanggal_komuni_pertama` = @p55)) AND ((@p56 = 1 AND `id_paroki_komuni` IS NULL) OR (`id_paroki_komuni` = @p57)) AND ((@p58 = 1 AND `id_pastor_komuni` IS NULL) OR (`id_pastor_komuni` = @p59)) AND ((@p60 = 1 AND `id_stasi_komuni` IS NULL) OR (`id_stasi_komuni` = @p61)) AND ((@p62 = 1 AND `pastor_komuni` IS NULL) OR (`pastor_komuni` = @p63)) AND ((@p64 = 1 AND `wali_komuni` IS NULL) OR (`wali_komuni` = @p65)) AND ((@p66 = 1 AND `nomor_krisma` IS NULL) OR (`nomor_krisma` = @p67)) AND ((@p68 = 1 AND `nama_baptis_krisma` IS NULL) OR (`nama_baptis_krisma` = @p69)) AND ((@p70 = 1 AND `tanggal_krisma` IS NULL) OR (`tanggal_krisma` = @p71)) AND ((@p72 = 1 AND `id_paroki_krisma` IS NULL) OR (`id_paroki_krisma` = @p73)) AND ((@p74 = 1 AND `tempat_krisma` IS NULL) OR (`tempat_krisma` = @p75)) AND ((@p76 = 1 AND `id_pastor_krisma` IS NULL) OR (`id_pastor_krisma` = @p77)) AND ((@p78 = 1 AND `id_stasi_krisma` IS NULL) OR (`id_stasi_krisma` = @p79)) AND ((@p80 = 1 AND `pastor_krisma` IS NULL) OR (`pastor_krisma` = @p81)) AND ((@p82 = 1 AND `wali_krisma_1` IS NULL) OR (`wali_krisma_1` = @p83)) AND ((@p84 = 1 AND `wali_krisma_2` IS NULL) OR (`wali_krisma_2` = @p85)) AND ((@p86 = 1 AND `pendidikan_terakhir` IS NULL) OR (`pendidikan_terakhir` = @p87)) AND ((@p88 = 1 AND `id_ref_pekerjaan` IS NULL) OR (`id_ref_pekerjaan` = @p89)) AND ((@p90 = 1 AND `peran_digereja` IS NULL) OR (`peran_digereja` = @p91)) AND ((@p92 = 1 AND `peran_dilingkungan` IS NULL) OR (`peran_dilingkungan` = @p93)) AND ((@p94 = 1 AND `peran_dimasyarakat` IS NULL) OR (`peran_dimasyarakat` = @p95)) AND ((@p96 = 1 AND `golongan_darah` IS NULL) OR (`golongan_darah` = @p97)) AND ((@p98 = 1 AND `status_perkawinan` IS NULL) OR (`status_perkawinan` = @p99)) AND ((@p100 = 1 AND `id_status_umat` IS NULL) OR (`id_status_umat` = @p101)) AND ((@p102 = 1 AND `id_paroki` IS NULL) OR (`id_paroki` = @p103)) AND ((@p104 = 1 AND `id_lingkungan` IS NULL) OR (`id_lingkungan` = @p105)) AND ((@p106 = 1 AND `id_stasi` IS NULL) OR (`id_stasi` = @p107)) AND ((@p108 = 1 AND `id_propinsi` IS NULL) OR (`id_propinsi` = @p109)) AND ((@p110 = 1 AND `id_kota` IS NULL) OR (`id_kota` = @p111)) AND ((@p112 = 1 AND `id_kecamatan` IS NULL) OR (`id_kecamatan` = @p113)) AND ((@p114 = 1 AND `id_desa` IS NULL) OR (`id_desa` = @p115)) AND ((@p116 = 1 AND `kepala_keluarga` IS NULL) OR (`kepala_keluarga` = @p117)) AND ((@p118 = 1 AND `status_domisili` IS NULL) OR (`status_domisili` = @p119)) AND ((@p120 = 1 AND `id_kondisi_ekonomi` IS NULL) OR (`id_kondisi_ekonomi` = @p121)) AND ((@p122 = 1 AND `id_suku` IS NULL) OR (`id_suku` = @p123)) AND ((@p124 = 1 AND `tanggal_input` IS NULL) OR (`tanggal_input` = @p125)) AND ((@p126 = 1 AND `is_deleted` IS NULL) OR (`is_deleted` = @p127)) AND ((@p128 = 1 AND `tanggal_verifikasi` IS NULL) OR (`tanggal_verifikasi` = @p129)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_umat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_mst_umat" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_mst_umat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="no_ktp" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_ktp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="no_kk" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_kk" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="jenis_kelamin" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="jenis_kelamin" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_hubungan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_hubungan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p18" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_agama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p19" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_agama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p20" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_lahir" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p21" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_lahir" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p22" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_lahir" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p23" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_lahir" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p24" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_lahir" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p25" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_lahir" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p26" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="no_telp" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p27" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_telp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p28" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tempat_lahir" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p29" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tempat_lahir" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p30" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nomor_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p31" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p32" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_ayah" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p33" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_ayah" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p34" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_ibu" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p35" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_ibu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p36" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p37" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p38" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p39" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p40" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p41" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p42" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p43" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p44" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_stasi_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p45" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_stasi_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p46" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_pastor_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p47" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_pastor_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p48" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="wali_baptis_1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p49" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_baptis_1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p50" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="wali_baptis_2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p51" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_baptis_2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p52" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nomor_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p53" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p54" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_komuni_pertama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p55" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_komuni_pertama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p56" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p57" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p58" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p59" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p60" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p61" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p62" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="pastor_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p63" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pastor_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p64" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="wali_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p65" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p66" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nomor_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p67" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p68" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_baptis_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p69" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_baptis_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p70" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p71" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p72" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p73" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p74" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tempat_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p75" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tempat_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p76" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p77" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p78" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p79" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p80" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="pastor_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p81" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pastor_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p82" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="wali_krisma_1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p83" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_krisma_1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p84" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="wali_krisma_2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p85" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_krisma_2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p86" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="pendidikan_terakhir" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p87" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="pendidikan_terakhir" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p88" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_ref_pekerjaan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p89" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_ref_pekerjaan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p90" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="peran_digereja" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p91" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_digereja" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p92" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="peran_dilingkungan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p93" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_dilingkungan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p94" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="peran_dimasyarakat" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p95" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_dimasyarakat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p96" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="golongan_darah" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p97" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="golongan_darah" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p98" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="status_perkawinan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p99" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="status_perkawinan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p100" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_status_umat" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p101" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_status_umat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p102" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p103" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p104" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_lingkungan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p105" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_lingkungan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p106" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p107" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p108" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_propinsi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p109" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_propinsi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p110" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kota" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p111" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kota" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p112" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kecamatan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p113" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kecamatan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p114" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_desa" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p115" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_desa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p116" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="kepala_keluarga" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p117" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="kepala_keluarga" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p118" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="status_domisili" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p119" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="status_domisili" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p120" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kondisi_ekonomi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p121" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kondisi_ekonomi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p122" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_suku" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p123" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_suku" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p124" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_input" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p125" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="tanggal_input" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p126" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="is_deleted" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p127" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="is_deleted" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p128" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_verifikasi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p129" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="tanggal_verifikasi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `mst_umat` (`id_mst_umat`, `no_ktp`, `no_kk`, `nama`, `nama_baptis`, `alamat`, `jenis_kelamin`, `id_hubungan`, `id_agama`, `id_paroki_lahir`, `id_stasi_lahir`, `tanggal_lahir`, `no_telp`, `tempat_lahir`, `nomor_baptis`, `nama_ayah`, `nama_ibu`, `tanggal_baptis`, `id_paroki_baptis`, `id_pastor_baptis`, `id_stasi_baptis`, `nama_stasi_baptis`, `nama_pastor_baptis`, `wali_baptis_1`, `wali_baptis_2`, `nomor_komuni`, `tanggal_komuni_pertama`, `id_paroki_komuni`, `id_pastor_komuni`, `id_stasi_komuni`, `pastor_komuni`, `wali_komuni`, `nomor_krisma`, `nama_baptis_krisma`, `tanggal_krisma`, `id_paroki_krisma`, `tempat_krisma`, `id_pastor_krisma`, `id_stasi_krisma`, `pastor_krisma`, `wali_krisma_1`, `wali_krisma_2`, `pendidikan_terakhir`, `id_ref_pekerjaan`, `peran_digereja`, `peran_dilingkungan`, `peran_dimasyarakat`, `golongan_darah`, `status_perkawinan`, `id_status_umat`, `id_paroki`, `id_lingkungan`, `id_stasi`, `id_propinsi`, `id_kota`, `id_kecamatan`, `id_desa`, `kepala_keluarga`, `status_domisili`, `id_kondisi_ekonomi`, `id_suku`, `tanggal_input`, `is_deleted`, `tanggal_verifikasi`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55, @p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63, @p64)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_mst_umat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_ktp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_kk" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="jenis_kelamin" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_hubungan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_agama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_lahir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_lahir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_lahir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_telp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tempat_lahir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_ayah" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_ibu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p18" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p19" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p20" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p21" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p22" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_stasi_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p23" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_pastor_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p24" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_baptis_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p25" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_baptis_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p26" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p27" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_komuni_pertama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p28" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p29" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p30" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p31" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pastor_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p32" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p33" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p34" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_baptis_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p35" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p36" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p37" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tempat_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p38" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p39" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p40" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pastor_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p41" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_krisma_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p42" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_krisma_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p43" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="pendidikan_terakhir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p44" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_ref_pekerjaan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p45" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_digereja" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p46" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_dilingkungan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p47" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_dimasyarakat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p48" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="golongan_darah" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p49" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="status_perkawinan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p50" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_status_umat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p51" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p52" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_lingkungan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p53" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p54" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_propinsi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p55" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kota" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p56" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kecamatan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p57" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_desa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p58" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="kepala_keluarga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p59" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="status_domisili" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p60" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kondisi_ekonomi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p61" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_suku" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p62" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="tanggal_input" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p63" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="is_deleted" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p64" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="tanggal_verifikasi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_umat`, `id_mst_umat`, `no_ktp`, `no_kk`, `nama`, `nama_baptis`, `alamat`, `jenis_kelamin`, `id_hubungan`, `id_agama`, `id_paroki_lahir`, `id_stasi_lahir`, `tanggal_lahir`, `no_telp`, `tempat_lahir`, `nomor_baptis`, `nama_ayah`, `nama_ibu`, `tanggal_baptis`, `id_paroki_baptis`, `id_pastor_baptis`, `id_stasi_baptis`, `nama_stasi_baptis`, `nama_pastor_baptis`, `wali_baptis_1`, `wali_baptis_2`, `nomor_komuni`, `tanggal_komuni_pertama`, `id_paroki_komuni`, `id_pastor_komuni`, `id_stasi_komuni`, `pastor_komuni`, `wali_komuni`, `nomor_krisma`, `nama_baptis_krisma`, `tanggal_krisma`, `id_paroki_krisma`, `tempat_krisma`, `id_pastor_krisma`, `id_stasi_krisma`, `pastor_krisma`, `wali_krisma_1`, `wali_krisma_2`, `pendidikan_terakhir`, `id_ref_pekerjaan`, `peran_digereja`, `peran_dilingkungan`, `peran_dimasyarakat`, `golongan_darah`, `status_perkawinan`, `id_status_umat`, `id_paroki`, `id_lingkungan`, `id_stasi`, `id_propinsi`, `id_kota`, `id_kecamatan`, `id_desa`, `kepala_keluarga`, `status_domisili`, `id_kondisi_ekonomi`, `id_suku`, `tanggal_input`, `is_deleted`, `tanggal_verifikasi` FROM `mst_umat`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `mst_umat` SET `id_mst_umat` = @p1, `no_ktp` = @p2, `no_kk` = @p3, `nama` = @p4, `nama_baptis` = @p5, `alamat` = @p6, `jenis_kelamin` = @p7, `id_hubungan` = @p8, `id_agama` = @p9, `id_paroki_lahir` = @p10, `id_stasi_lahir` = @p11, `tanggal_lahir` = @p12, `no_telp` = @p13, `tempat_lahir` = @p14, `nomor_baptis` = @p15, `nama_ayah` = @p16, `nama_ibu` = @p17, `tanggal_baptis` = @p18, `id_paroki_baptis` = @p19, `id_pastor_baptis` = @p20, `id_stasi_baptis` = @p21, `nama_stasi_baptis` = @p22, `nama_pastor_baptis` = @p23, `wali_baptis_1` = @p24, `wali_baptis_2` = @p25, `nomor_komuni` = @p26, `tanggal_komuni_pertama` = @p27, `id_paroki_komuni` = @p28, `id_pastor_komuni` = @p29, `id_stasi_komuni` = @p30, `pastor_komuni` = @p31, `wali_komuni` = @p32, `nomor_krisma` = @p33, `nama_baptis_krisma` = @p34, `tanggal_krisma` = @p35, `id_paroki_krisma` = @p36, `tempat_krisma` = @p37, `id_pastor_krisma` = @p38, `id_stasi_krisma` = @p39, `pastor_krisma` = @p40, `wali_krisma_1` = @p41, `wali_krisma_2` = @p42, `pendidikan_terakhir` = @p43, `id_ref_pekerjaan` = @p44, `peran_digereja` = @p45, `peran_dilingkungan` = @p46, `peran_dimasyarakat` = @p47, `golongan_darah` = @p48, `status_perkawinan` = @p49, `id_status_umat` = @p50, `id_paroki` = @p51, `id_lingkungan` = @p52, `id_stasi` = @p53, `id_propinsi` = @p54, `id_kota` = @p55, `id_kecamatan` = @p56, `id_desa` = @p57, `kepala_keluarga` = @p58, `status_domisili` = @p59, `id_kondisi_ekonomi` = @p60, `id_suku` = @p61, `tanggal_input` = @p62, `is_deleted` = @p63, `tanggal_verifikasi` = @p64 WHERE ((`id_umat` = @p65) AND ((@p66 = 1 AND `id_mst_umat` IS NULL) OR (`id_mst_umat` = @p67)) AND ((@p68 = 1 AND `no_ktp` IS NULL) OR (`no_ktp` = @p69)) AND ((@p70 = 1 AND `no_kk` IS NULL) OR (`no_kk` = @p71)) AND ((@p72 = 1 AND `nama` IS NULL) OR (`nama` = @p73)) AND ((@p74 = 1 AND `nama_baptis` IS NULL) OR (`nama_baptis` = @p75)) AND ((@p76 = 1 AND `alamat` IS NULL) OR (`alamat` = @p77)) AND ((@p78 = 1 AND `jenis_kelamin` IS NULL) OR (`jenis_kelamin` = @p79)) AND ((@p80 = 1 AND `id_hubungan` IS NULL) OR (`id_hubungan` = @p81)) AND ((@p82 = 1 AND `id_agama` IS NULL) OR (`id_agama` = @p83)) AND ((@p84 = 1 AND `id_paroki_lahir` IS NULL) OR (`id_paroki_lahir` = @p85)) AND ((@p86 = 1 AND `id_stasi_lahir` IS NULL) OR (`id_stasi_lahir` = @p87)) AND ((@p88 = 1 AND `tanggal_lahir` IS NULL) OR (`tanggal_lahir` = @p89)) AND ((@p90 = 1 AND `no_telp` IS NULL) OR (`no_telp` = @p91)) AND ((@p92 = 1 AND `tempat_lahir` IS NULL) OR (`tempat_lahir` = @p93)) AND ((@p94 = 1 AND `nomor_baptis` IS NULL) OR (`nomor_baptis` = @p95)) AND ((@p96 = 1 AND `nama_ayah` IS NULL) OR (`nama_ayah` = @p97)) AND ((@p98 = 1 AND `nama_ibu` IS NULL) OR (`nama_ibu` = @p99)) AND ((@p100 = 1 AND `tanggal_baptis` IS NULL) OR (`tanggal_baptis` = @p101)) AND ((@p102 = 1 AND `id_paroki_baptis` IS NULL) OR (`id_paroki_baptis` = @p103)) AND ((@p104 = 1 AND `id_pastor_baptis` IS NULL) OR (`id_pastor_baptis` = @p105)) AND ((@p106 = 1 AND `id_stasi_baptis` IS NULL) OR (`id_stasi_baptis` = @p107)) AND ((@p108 = 1 AND `nama_stasi_baptis` IS NULL) OR (`nama_stasi_baptis` = @p109)) AND ((@p110 = 1 AND `nama_pastor_baptis` IS NULL) OR (`nama_pastor_baptis` = @p111)) AND ((@p112 = 1 AND `wali_baptis_1` IS NULL) OR (`wali_baptis_1` = @p113)) AND ((@p114 = 1 AND `wali_baptis_2` IS NULL) OR (`wali_baptis_2` = @p115)) AND ((@p116 = 1 AND `nomor_komuni` IS NULL) OR (`nomor_komuni` = @p117)) AND ((@p118 = 1 AND `tanggal_komuni_pertama` IS NULL) OR (`tanggal_komuni_pertama` = @p119)) AND ((@p120 = 1 AND `id_paroki_komuni` IS NULL) OR (`id_paroki_komuni` = @p121)) AND ((@p122 = 1 AND `id_pastor_komuni` IS NULL) OR (`id_pastor_komuni` = @p123)) AND ((@p124 = 1 AND `id_stasi_komuni` IS NULL) OR (`id_stasi_komuni` = @p125)) AND ((@p126 = 1 AND `pastor_komuni` IS NULL) OR (`pastor_komuni` = @p127)) AND ((@p128 = 1 AND `wali_komuni` IS NULL) OR (`wali_komuni` = @p129)) AND ((@p130 = 1 AND `nomor_krisma` IS NULL) OR (`nomor_krisma` = @p131)) AND ((@p132 = 1 AND `nama_baptis_krisma` IS NULL) OR (`nama_baptis_krisma` = @p133)) AND ((@p134 = 1 AND `tanggal_krisma` IS NULL) OR (`tanggal_krisma` = @p135)) AND ((@p136 = 1 AND `id_paroki_krisma` IS NULL) OR (`id_paroki_krisma` = @p137)) AND ((@p138 = 1 AND `tempat_krisma` IS NULL) OR (`tempat_krisma` = @p139)) AND ((@p140 = 1 AND `id_pastor_krisma` IS NULL) OR (`id_pastor_krisma` = @p141)) AND ((@p142 = 1 AND `id_stasi_krisma` IS NULL) OR (`id_stasi_krisma` = @p143)) AND ((@p144 = 1 AND `pastor_krisma` IS NULL) OR (`pastor_krisma` = @p145)) AND ((@p146 = 1 AND `wali_krisma_1` IS NULL) OR (`wali_krisma_1` = @p147)) AND ((@p148 = 1 AND `wali_krisma_2` IS NULL) OR (`wali_krisma_2` = @p149)) AND ((@p150 = 1 AND `pendidikan_terakhir` IS NULL) OR (`pendidikan_terakhir` = @p151)) AND ((@p152 = 1 AND `id_ref_pekerjaan` IS NULL) OR (`id_ref_pekerjaan` = @p153)) AND ((@p154 = 1 AND `peran_digereja` IS NULL) OR (`peran_digereja` = @p155)) AND ((@p156 = 1 AND `peran_dilingkungan` IS NULL) OR (`peran_dilingkungan` = @p157)) AND ((@p158 = 1 AND `peran_dimasyarakat` IS NULL) OR (`peran_dimasyarakat` = @p159)) AND ((@p160 = 1 AND `golongan_darah` IS NULL) OR (`golongan_darah` = @p161)) AND ((@p162 = 1 AND `status_perkawinan` IS NULL) OR (`status_perkawinan` = @p163)) AND ((@p164 = 1 AND `id_status_umat` IS NULL) OR (`id_status_umat` = @p165)) AND ((@p166 = 1 AND `id_paroki` IS NULL) OR (`id_paroki` = @p167)) AND ((@p168 = 1 AND `id_lingkungan` IS NULL) OR (`id_lingkungan` = @p169)) AND ((@p170 = 1 AND `id_stasi` IS NULL) OR (`id_stasi` = @p171)) AND ((@p172 = 1 AND `id_propinsi` IS NULL) OR (`id_propinsi` = @p173)) AND ((@p174 = 1 AND `id_kota` IS NULL) OR (`id_kota` = @p175)) AND ((@p176 = 1 AND `id_kecamatan` IS NULL) OR (`id_kecamatan` = @p177)) AND ((@p178 = 1 AND `id_desa` IS NULL) OR (`id_desa` = @p179)) AND ((@p180 = 1 AND `kepala_keluarga` IS NULL) OR (`kepala_keluarga` = @p181)) AND ((@p182 = 1 AND `status_domisili` IS NULL) OR (`status_domisili` = @p183)) AND ((@p184 = 1 AND `id_kondisi_ekonomi` IS NULL) OR (`id_kondisi_ekonomi` = @p185)) AND ((@p186 = 1 AND `id_suku` IS NULL) OR (`id_suku` = @p187)) AND ((@p188 = 1 AND `tanggal_input` IS NULL) OR (`tanggal_input` = @p189)) AND ((@p190 = 1 AND `is_deleted` IS NULL) OR (`is_deleted` = @p191)) AND ((@p192 = 1 AND `tanggal_verifikasi` IS NULL) OR (`tanggal_verifikasi` = @p193)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_mst_umat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_ktp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_kk" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="jenis_kelamin" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_hubungan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_agama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_lahir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_lahir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_lahir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_telp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tempat_lahir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_ayah" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_ibu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p18" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p19" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p20" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p21" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p22" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_stasi_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p23" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_pastor_baptis" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p24" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_baptis_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p25" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_baptis_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p26" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p27" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_komuni_pertama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p28" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p29" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p30" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p31" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pastor_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p32" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_komuni" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p33" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p34" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_baptis_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p35" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p36" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p37" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tempat_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p38" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p39" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p40" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pastor_krisma" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p41" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_krisma_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p42" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_krisma_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p43" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="pendidikan_terakhir" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p44" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_ref_pekerjaan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p45" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_digereja" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p46" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_dilingkungan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p47" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_dimasyarakat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p48" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="golongan_darah" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p49" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="status_perkawinan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p50" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_status_umat" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p51" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p52" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_lingkungan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p53" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p54" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_propinsi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p55" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kota" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p56" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kecamatan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p57" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_desa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p58" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="kepala_keluarga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p59" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="status_domisili" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p60" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kondisi_ekonomi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p61" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_suku" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p62" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="tanggal_input" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p63" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="is_deleted" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p64" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="tanggal_verifikasi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p65" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_umat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p66" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_mst_umat" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p67" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_mst_umat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p68" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="no_ktp" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p69" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_ktp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p70" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="no_kk" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p71" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_kk" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p72" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p73" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p74" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p75" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p76" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p77" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alamat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p78" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="jenis_kelamin" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p79" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="jenis_kelamin" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p80" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_hubungan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p81" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_hubungan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p82" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_agama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p83" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_agama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p84" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_lahir" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p85" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_lahir" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p86" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_lahir" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p87" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_lahir" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p88" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_lahir" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p89" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_lahir" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p90" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="no_telp" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p91" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="no_telp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p92" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tempat_lahir" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p93" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tempat_lahir" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p94" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nomor_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p95" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p96" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_ayah" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p97" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_ayah" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p98" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_ibu" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p99" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_ibu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p100" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p101" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p102" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p103" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p104" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p105" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p106" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p107" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p108" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_stasi_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p109" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_stasi_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p110" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_pastor_baptis" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p111" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_pastor_baptis" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p112" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="wali_baptis_1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p113" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_baptis_1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p114" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="wali_baptis_2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p115" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_baptis_2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p116" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nomor_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p117" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p118" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_komuni_pertama" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p119" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_komuni_pertama" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p120" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p121" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p122" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p123" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p124" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p125" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p126" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="pastor_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p127" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pastor_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p128" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="wali_komuni" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p129" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_komuni" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p130" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nomor_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p131" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nomor_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p132" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="nama_baptis_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p133" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nama_baptis_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p134" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p135" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p136" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p137" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p138" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tempat_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p139" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="tempat_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p140" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p141" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_pastor_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p142" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p143" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p144" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="pastor_krisma" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p145" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="pastor_krisma" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p146" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="wali_krisma_1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p147" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_krisma_1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p148" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="wali_krisma_2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p149" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="wali_krisma_2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p150" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="pendidikan_terakhir" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p151" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="pendidikan_terakhir" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p152" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_ref_pekerjaan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p153" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_ref_pekerjaan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p154" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="peran_digereja" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p155" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_digereja" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p156" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="peran_dilingkungan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p157" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_dilingkungan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p158" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="peran_dimasyarakat" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p159" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="peran_dimasyarakat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p160" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="golongan_darah" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p161" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="golongan_darah" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p162" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="status_perkawinan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p163" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="status_perkawinan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p164" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_status_umat" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p165" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_status_umat" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p166" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p167" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_paroki" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p168" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_lingkungan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p169" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_lingkungan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p170" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p171" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_stasi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p172" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_propinsi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p173" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_propinsi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p174" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kota" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p175" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kota" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p176" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kecamatan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p177" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kecamatan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p178" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_desa" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p179" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_desa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p180" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="kepala_keluarga" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p181" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="kepala_keluarga" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p182" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="status_domisili" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p183" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="status_domisili" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p184" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kondisi_ekonomi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p185" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_kondisi_ekonomi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p186" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_suku" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p187" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_suku" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p188" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_input" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p189" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="tanggal_input" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p190" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="is_deleted" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p191" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="is_deleted" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p192" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tanggal_verifikasi" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p193" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="tanggal_verifikasi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_umat" DataSetColumn="id_umat" />
+              <Mapping SourceColumn="id_mst_umat" DataSetColumn="id_mst_umat" />
+              <Mapping SourceColumn="no_ktp" DataSetColumn="no_ktp" />
+              <Mapping SourceColumn="no_kk" DataSetColumn="no_kk" />
+              <Mapping SourceColumn="nama" DataSetColumn="nama" />
+              <Mapping SourceColumn="nama_baptis" DataSetColumn="nama_baptis" />
+              <Mapping SourceColumn="alamat" DataSetColumn="alamat" />
+              <Mapping SourceColumn="jenis_kelamin" DataSetColumn="jenis_kelamin" />
+              <Mapping SourceColumn="id_hubungan" DataSetColumn="id_hubungan" />
+              <Mapping SourceColumn="id_agama" DataSetColumn="id_agama" />
+              <Mapping SourceColumn="id_paroki_lahir" DataSetColumn="id_paroki_lahir" />
+              <Mapping SourceColumn="id_stasi_lahir" DataSetColumn="id_stasi_lahir" />
+              <Mapping SourceColumn="tanggal_lahir" DataSetColumn="tanggal_lahir" />
+              <Mapping SourceColumn="no_telp" DataSetColumn="no_telp" />
+              <Mapping SourceColumn="tempat_lahir" DataSetColumn="tempat_lahir" />
+              <Mapping SourceColumn="nomor_baptis" DataSetColumn="nomor_baptis" />
+              <Mapping SourceColumn="nama_ayah" DataSetColumn="nama_ayah" />
+              <Mapping SourceColumn="nama_ibu" DataSetColumn="nama_ibu" />
+              <Mapping SourceColumn="tanggal_baptis" DataSetColumn="tanggal_baptis" />
+              <Mapping SourceColumn="id_paroki_baptis" DataSetColumn="id_paroki_baptis" />
+              <Mapping SourceColumn="id_pastor_baptis" DataSetColumn="id_pastor_baptis" />
+              <Mapping SourceColumn="id_stasi_baptis" DataSetColumn="id_stasi_baptis" />
+              <Mapping SourceColumn="nama_stasi_baptis" DataSetColumn="nama_stasi_baptis" />
+              <Mapping SourceColumn="nama_pastor_baptis" DataSetColumn="nama_pastor_baptis" />
+              <Mapping SourceColumn="wali_baptis_1" DataSetColumn="wali_baptis_1" />
+              <Mapping SourceColumn="wali_baptis_2" DataSetColumn="wali_baptis_2" />
+              <Mapping SourceColumn="nomor_komuni" DataSetColumn="nomor_komuni" />
+              <Mapping SourceColumn="tanggal_komuni_pertama" DataSetColumn="tanggal_komuni_pertama" />
+              <Mapping SourceColumn="id_paroki_komuni" DataSetColumn="id_paroki_komuni" />
+              <Mapping SourceColumn="id_pastor_komuni" DataSetColumn="id_pastor_komuni" />
+              <Mapping SourceColumn="id_stasi_komuni" DataSetColumn="id_stasi_komuni" />
+              <Mapping SourceColumn="pastor_komuni" DataSetColumn="pastor_komuni" />
+              <Mapping SourceColumn="wali_komuni" DataSetColumn="wali_komuni" />
+              <Mapping SourceColumn="nomor_krisma" DataSetColumn="nomor_krisma" />
+              <Mapping SourceColumn="nama_baptis_krisma" DataSetColumn="nama_baptis_krisma" />
+              <Mapping SourceColumn="tanggal_krisma" DataSetColumn="tanggal_krisma" />
+              <Mapping SourceColumn="id_paroki_krisma" DataSetColumn="id_paroki_krisma" />
+              <Mapping SourceColumn="tempat_krisma" DataSetColumn="tempat_krisma" />
+              <Mapping SourceColumn="id_pastor_krisma" DataSetColumn="id_pastor_krisma" />
+              <Mapping SourceColumn="id_stasi_krisma" DataSetColumn="id_stasi_krisma" />
+              <Mapping SourceColumn="pastor_krisma" DataSetColumn="pastor_krisma" />
+              <Mapping SourceColumn="wali_krisma_1" DataSetColumn="wali_krisma_1" />
+              <Mapping SourceColumn="wali_krisma_2" DataSetColumn="wali_krisma_2" />
+              <Mapping SourceColumn="pendidikan_terakhir" DataSetColumn="pendidikan_terakhir" />
+              <Mapping SourceColumn="id_ref_pekerjaan" DataSetColumn="id_ref_pekerjaan" />
+              <Mapping SourceColumn="peran_digereja" DataSetColumn="peran_digereja" />
+              <Mapping SourceColumn="peran_dilingkungan" DataSetColumn="peran_dilingkungan" />
+              <Mapping SourceColumn="peran_dimasyarakat" DataSetColumn="peran_dimasyarakat" />
+              <Mapping SourceColumn="golongan_darah" DataSetColumn="golongan_darah" />
+              <Mapping SourceColumn="status_perkawinan" DataSetColumn="status_perkawinan" />
+              <Mapping SourceColumn="id_status_umat" DataSetColumn="id_status_umat" />
+              <Mapping SourceColumn="id_paroki" DataSetColumn="id_paroki" />
+              <Mapping SourceColumn="id_lingkungan" DataSetColumn="id_lingkungan" />
+              <Mapping SourceColumn="id_stasi" DataSetColumn="id_stasi" />
+              <Mapping SourceColumn="id_propinsi" DataSetColumn="id_propinsi" />
+              <Mapping SourceColumn="id_kota" DataSetColumn="id_kota" />
+              <Mapping SourceColumn="id_kecamatan" DataSetColumn="id_kecamatan" />
+              <Mapping SourceColumn="id_desa" DataSetColumn="id_desa" />
+              <Mapping SourceColumn="kepala_keluarga" DataSetColumn="kepala_keluarga" />
+              <Mapping SourceColumn="status_domisili" DataSetColumn="status_domisili" />
+              <Mapping SourceColumn="id_kondisi_ekonomi" DataSetColumn="id_kondisi_ekonomi" />
+              <Mapping SourceColumn="id_suku" DataSetColumn="id_suku" />
+              <Mapping SourceColumn="tanggal_input" DataSetColumn="tanggal_input" />
+              <Mapping SourceColumn="is_deleted" DataSetColumn="is_deleted" />
+              <Mapping SourceColumn="tanggal_verifikasi" DataSetColumn="tanggal_verifikasi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kkTableAdapter" GeneratorDataComponentClassName="kkTableAdapter" Name="kk" UserDataComponentName="kkTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_umat_ketapangConnectionString (Settings)" DbObjectName="db_umat_ketapang.kk" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_mst_umat`, `no_kk`, `nama_kepala`, `stasi`, `lingkungan`, `Alamat`, `desa`, `kecamatan`, `kabupaten`, `paroki`, `id_lingkungan`, `id_stasi`, `id_paroki`, `id_status_umat` FROM `db_umat_ketapang`.`kk`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_mst_umat" DataSetColumn="id_mst_umat" />
+              <Mapping SourceColumn="no_kk" DataSetColumn="no_kk" />
+              <Mapping SourceColumn="nama_kepala" DataSetColumn="nama_kepala" />
+              <Mapping SourceColumn="stasi" DataSetColumn="stasi" />
+              <Mapping SourceColumn="lingkungan" DataSetColumn="lingkungan" />
+              <Mapping SourceColumn="Alamat" DataSetColumn="Alamat" />
+              <Mapping SourceColumn="desa" DataSetColumn="desa" />
+              <Mapping SourceColumn="kecamatan" DataSetColumn="kecamatan" />
+              <Mapping SourceColumn="kabupaten" DataSetColumn="kabupaten" />
+              <Mapping SourceColumn="paroki" DataSetColumn="paroki" />
+              <Mapping SourceColumn="id_lingkungan" DataSetColumn="id_lingkungan" />
+              <Mapping SourceColumn="id_stasi" DataSetColumn="id_stasi" />
+              <Mapping SourceColumn="id_paroki" DataSetColumn="id_paroki" />
+              <Mapping SourceColumn="id_status_umat" DataSetColumn="id_status_umat" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="db_umat_ketapangConnectionString (Settings)" DbObjectName="db_umat_ketapang.kk" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="cariNama_Kepala" GetMethodModifier="Public" GetMethodName="cariNama_Kepala" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="cariNama_Kepala" UserSourceName="cariNama_Kepala">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT no_kk, nama_kepala, stasi, lingkungan, Alamat, desa, kecamatan, kabupaten, paroki
+FROM     kk
+WHERE  nama_kepala LIKE @keyword </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="keyword" ColumnName="nama_kepala" DataSourceName="db_umat_ketapang.kk" DataTypeServer="varchar(150)(150)" DbType="String" Direction="Input" ParameterName="@keyword" Precision="0" ProviderType="VarChar" Scale="0" Size="150" SourceColumn="nama_kepala" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db_umat_ketapangConnectionString (Settings)" DbObjectName="db_umat_ketapang.kk" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="cariNoKK" GetMethodModifier="Public" GetMethodName="cariNoKK" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="cariNoKK" UserSourceName="cariNoKK">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        no_kk, nama_kepala, stasi, lingkungan, Alamat, desa, kecamatan, kabupaten, paroki
+FROM            kk
+WHERE        no_kk LIKE  @keyword </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="keyword" ColumnName="no_kk" DataSourceName="db_umat_ketapang.kk" DataTypeServer="varchar(20)(20)" DbType="String" Direction="Input" ParameterName="@keyword" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="no_kk" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db_umat_ketapangConnectionString (Settings)" DbObjectName="db_umat_ketapang.kk" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="cariNoKK_Nama_Kepala" GetMethodModifier="Public" GetMethodName="cariNoKK_Nama_Kepala" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="cariNoKK_Nama_Kepala" UserSourceName="cariNoKK_Nama_Kepala">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT no_kk, nama_kepala, stasi, lingkungan, Alamat, desa, kecamatan, kabupaten, paroki
+FROM     kk
+WHERE  (no_kk LIKE @keyword1) AND (nama_kepala LIKE @keyword2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="keyword1" ColumnName="no_kk" DataSourceName="db_umat_ketapang.kk" DataTypeServer="varchar(20)(20)" DbType="String" Direction="Input" ParameterName="@keyword1" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="no_kk" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="keyword2" ColumnName="nama_kepala" DataSourceName="db_umat_ketapang.kk" DataTypeServer="varchar(150)(150)" DbType="String" Direction="Input" ParameterName="@keyword2" Precision="0" ProviderType="VarChar" Scale="0" Size="150" SourceColumn="nama_kepala" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db_umat_ketapangConnectionString (Settings)" DbObjectName="db_umat_ketapang.kk" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="getAll" GetMethodModifier="Public" GetMethodName="getAll" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="getAll" UserSourceName="getAll">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        no_kk, nama_kepala, stasi, lingkungan, Alamat, desa, kecamatan, kabupaten, paroki, id_stasi, id_paroki
+FROM            kk</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mstuserTableAdapter" GeneratorDataComponentClassName="mstuserTableAdapter" Name="mstuser" UserDataComponentName="mstuserTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_umat_ketapangConnectionString (Settings)" DbObjectName="db_umat_ketapang.mstuser" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `mstuser` WHERE ((`username` = @p1) AND (`fullname` = @p2) AND (`password` = @p3) AND (`role` = @p4))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="username" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fullname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="role" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `mstuser` (`username`, `fullname`, `password`, `role`) VALUES (@p1, @p2, @p3, @p4)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fullname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="role" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `username`, `fullname`, `password`, `role` FROM `mstuser`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `mstuser` SET `username` = @p1, `fullname` = @p2, `password` = @p3, `role` = @p4 WHERE ((`username` = @p5) AND (`fullname` = @p6) AND (`password` = @p7) AND (`role` = @p8))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fullname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="role" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="username" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fullname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="role" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="username" DataSetColumn="username" />
+              <Mapping SourceColumn="fullname" DataSetColumn="fullname" />
+              <Mapping SourceColumn="password" DataSetColumn="password" />
+              <Mapping SourceColumn="role" DataSetColumn="role" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="db_umat_ketapangConnectionString (Settings)" DbObjectName="db_umat_ketapang.mstuser" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="login" GetMethodModifier="Public" GetMethodName="login" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="login" UserSourceName="login">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        username
+FROM            mstuser
+WHERE        (username LIKE @keyword1) AND (password LIKE @keyword2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="keyword1" ColumnName="username" DataSourceName="db_umat_ketapang.mstuser" DataTypeServer="varchar(20)(20)" DbType="String" Direction="Input" ParameterName="@keyword1" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="keyword2" ColumnName="password" DataSourceName="db_umat_ketapang.mstuser" DataTypeServer="varchar(100)(100)" DbType="String" Direction="Input" ParameterName="@keyword2" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db_umat_ketapangConnectionString (Settings)" DbObjectName="db_umat_ketapang.mstuser" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="loginV2" Modifier="Public" Name="loginV2" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="loginV2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        username
+FROM            mstuser
+WHERE        (username LIKE @keyword1) AND (password LIKE @keyword2)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="keyword1" ColumnName="username" DataSourceName="db_umat_ketapang.mstuser" DataTypeServer="varchar(20)(20)" DbType="String" Direction="Input" ParameterName="@keyword1" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="keyword2" ColumnName="password" DataSourceName="db_umat_ketapang.mstuser" DataTypeServer="varchar(100)(100)" DbType="String" Direction="Input" ParameterName="@keyword2" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="db_umat_ketapang" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="db_umat_ketapang" msprop:Generator_UserDSName="db_umat_ketapang">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="mst_umat" msprop:Generator_TableClassName="mst_umatDataTable" msprop:Generator_TableVarName="tablemst_umat" msprop:Generator_TablePropName="mst_umat" msprop:Generator_RowDeletingName="mst_umatRowDeleting" msprop:Generator_RowChangingName="mst_umatRowChanging" msprop:Generator_RowEvHandlerName="mst_umatRowChangeEventHandler" msprop:Generator_RowDeletedName="mst_umatRowDeleted" msprop:Generator_UserTableName="mst_umat" msprop:Generator_RowChangedName="mst_umatRowChanged" msprop:Generator_RowEvArgName="mst_umatRowChangeEvent" msprop:Generator_RowClassName="mst_umatRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_umat" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_umat" msprop:Generator_ColumnPropNameInRow="id_umat" msprop:Generator_ColumnPropNameInTable="id_umatColumn" msprop:Generator_UserColumnName="id_umat" type="xs:int" />
+              <xs:element name="id_mst_umat" msprop:Generator_ColumnVarNameInTable="columnid_mst_umat" msprop:Generator_ColumnPropNameInRow="id_mst_umat" msprop:Generator_ColumnPropNameInTable="id_mst_umatColumn" msprop:Generator_UserColumnName="id_mst_umat" type="xs:int" minOccurs="0" />
+              <xs:element name="no_ktp" msprop:Generator_ColumnVarNameInTable="columnno_ktp" msprop:Generator_ColumnPropNameInRow="no_ktp" msprop:Generator_ColumnPropNameInTable="no_ktpColumn" msprop:Generator_UserColumnName="no_ktp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_kk" msprop:Generator_ColumnVarNameInTable="columnno_kk" msprop:Generator_ColumnPropNameInRow="no_kk" msprop:Generator_ColumnPropNameInTable="no_kkColumn" msprop:Generator_UserColumnName="no_kk" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_UserColumnName="nama" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_baptis" msprop:Generator_ColumnVarNameInTable="columnnama_baptis" msprop:Generator_ColumnPropNameInRow="nama_baptis" msprop:Generator_ColumnPropNameInTable="nama_baptisColumn" msprop:Generator_UserColumnName="nama_baptis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat" msprop:Generator_ColumnPropNameInRow="alamat" msprop:Generator_ColumnPropNameInTable="alamatColumn" msprop:Generator_UserColumnName="alamat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jenis_kelamin" msprop:Generator_ColumnVarNameInTable="columnjenis_kelamin" msprop:Generator_ColumnPropNameInRow="jenis_kelamin" msprop:Generator_ColumnPropNameInTable="jenis_kelaminColumn" msprop:Generator_UserColumnName="jenis_kelamin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_hubungan" msprop:Generator_ColumnVarNameInTable="columnid_hubungan" msprop:Generator_ColumnPropNameInRow="id_hubungan" msprop:Generator_ColumnPropNameInTable="id_hubunganColumn" msprop:Generator_UserColumnName="id_hubungan" type="xs:int" minOccurs="0" />
+              <xs:element name="id_agama" msprop:Generator_ColumnVarNameInTable="columnid_agama" msprop:Generator_ColumnPropNameInRow="id_agama" msprop:Generator_ColumnPropNameInTable="id_agamaColumn" msprop:Generator_UserColumnName="id_agama" type="xs:int" minOccurs="0" />
+              <xs:element name="id_paroki_lahir" msprop:Generator_ColumnVarNameInTable="columnid_paroki_lahir" msprop:Generator_ColumnPropNameInRow="id_paroki_lahir" msprop:Generator_ColumnPropNameInTable="id_paroki_lahirColumn" msprop:Generator_UserColumnName="id_paroki_lahir" type="xs:int" minOccurs="0" />
+              <xs:element name="id_stasi_lahir" msprop:Generator_ColumnVarNameInTable="columnid_stasi_lahir" msprop:Generator_ColumnPropNameInRow="id_stasi_lahir" msprop:Generator_ColumnPropNameInTable="id_stasi_lahirColumn" msprop:Generator_UserColumnName="id_stasi_lahir" type="xs:int" minOccurs="0" />
+              <xs:element name="tanggal_lahir" msprop:Generator_ColumnVarNameInTable="columntanggal_lahir" msprop:Generator_ColumnPropNameInRow="tanggal_lahir" msprop:Generator_ColumnPropNameInTable="tanggal_lahirColumn" msprop:Generator_UserColumnName="tanggal_lahir" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="no_telp" msprop:Generator_ColumnVarNameInTable="columnno_telp" msprop:Generator_ColumnPropNameInRow="no_telp" msprop:Generator_ColumnPropNameInTable="no_telpColumn" msprop:Generator_UserColumnName="no_telp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tempat_lahir" msprop:Generator_ColumnVarNameInTable="columntempat_lahir" msprop:Generator_ColumnPropNameInRow="tempat_lahir" msprop:Generator_ColumnPropNameInTable="tempat_lahirColumn" msprop:Generator_UserColumnName="tempat_lahir" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomor_baptis" msprop:Generator_ColumnVarNameInTable="columnnomor_baptis" msprop:Generator_ColumnPropNameInRow="nomor_baptis" msprop:Generator_ColumnPropNameInTable="nomor_baptisColumn" msprop:Generator_UserColumnName="nomor_baptis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_ayah" msprop:Generator_ColumnVarNameInTable="columnnama_ayah" msprop:Generator_ColumnPropNameInRow="nama_ayah" msprop:Generator_ColumnPropNameInTable="nama_ayahColumn" msprop:Generator_UserColumnName="nama_ayah" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_ibu" msprop:Generator_ColumnVarNameInTable="columnnama_ibu" msprop:Generator_ColumnPropNameInRow="nama_ibu" msprop:Generator_ColumnPropNameInTable="nama_ibuColumn" msprop:Generator_UserColumnName="nama_ibu" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_baptis" msprop:Generator_ColumnVarNameInTable="columntanggal_baptis" msprop:Generator_ColumnPropNameInRow="tanggal_baptis" msprop:Generator_ColumnPropNameInTable="tanggal_baptisColumn" msprop:Generator_UserColumnName="tanggal_baptis" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="id_paroki_baptis" msprop:Generator_ColumnVarNameInTable="columnid_paroki_baptis" msprop:Generator_ColumnPropNameInRow="id_paroki_baptis" msprop:Generator_ColumnPropNameInTable="id_paroki_baptisColumn" msprop:Generator_UserColumnName="id_paroki_baptis" type="xs:int" minOccurs="0" />
+              <xs:element name="id_pastor_baptis" msprop:Generator_ColumnVarNameInTable="columnid_pastor_baptis" msprop:Generator_ColumnPropNameInRow="id_pastor_baptis" msprop:Generator_ColumnPropNameInTable="id_pastor_baptisColumn" msprop:Generator_UserColumnName="id_pastor_baptis" type="xs:int" minOccurs="0" />
+              <xs:element name="id_stasi_baptis" msprop:Generator_ColumnVarNameInTable="columnid_stasi_baptis" msprop:Generator_ColumnPropNameInRow="id_stasi_baptis" msprop:Generator_ColumnPropNameInTable="id_stasi_baptisColumn" msprop:Generator_UserColumnName="id_stasi_baptis" type="xs:int" minOccurs="0" />
+              <xs:element name="nama_stasi_baptis" msprop:Generator_ColumnVarNameInTable="columnnama_stasi_baptis" msprop:Generator_ColumnPropNameInRow="nama_stasi_baptis" msprop:Generator_ColumnPropNameInTable="nama_stasi_baptisColumn" msprop:Generator_UserColumnName="nama_stasi_baptis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_pastor_baptis" msprop:Generator_ColumnVarNameInTable="columnnama_pastor_baptis" msprop:Generator_ColumnPropNameInRow="nama_pastor_baptis" msprop:Generator_ColumnPropNameInTable="nama_pastor_baptisColumn" msprop:Generator_UserColumnName="nama_pastor_baptis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wali_baptis_1" msprop:Generator_ColumnVarNameInTable="columnwali_baptis_1" msprop:Generator_ColumnPropNameInRow="wali_baptis_1" msprop:Generator_ColumnPropNameInTable="wali_baptis_1Column" msprop:Generator_UserColumnName="wali_baptis_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wali_baptis_2" msprop:Generator_ColumnVarNameInTable="columnwali_baptis_2" msprop:Generator_ColumnPropNameInRow="wali_baptis_2" msprop:Generator_ColumnPropNameInTable="wali_baptis_2Column" msprop:Generator_UserColumnName="wali_baptis_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomor_komuni" msprop:Generator_ColumnVarNameInTable="columnnomor_komuni" msprop:Generator_ColumnPropNameInRow="nomor_komuni" msprop:Generator_ColumnPropNameInTable="nomor_komuniColumn" msprop:Generator_UserColumnName="nomor_komuni" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_komuni_pertama" msprop:Generator_ColumnVarNameInTable="columntanggal_komuni_pertama" msprop:Generator_ColumnPropNameInRow="tanggal_komuni_pertama" msprop:Generator_ColumnPropNameInTable="tanggal_komuni_pertamaColumn" msprop:Generator_UserColumnName="tanggal_komuni_pertama" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="id_paroki_komuni" msprop:Generator_ColumnVarNameInTable="columnid_paroki_komuni" msprop:Generator_ColumnPropNameInRow="id_paroki_komuni" msprop:Generator_ColumnPropNameInTable="id_paroki_komuniColumn" msprop:Generator_UserColumnName="id_paroki_komuni" type="xs:int" minOccurs="0" />
+              <xs:element name="id_pastor_komuni" msprop:Generator_ColumnVarNameInTable="columnid_pastor_komuni" msprop:Generator_ColumnPropNameInRow="id_pastor_komuni" msprop:Generator_ColumnPropNameInTable="id_pastor_komuniColumn" msprop:Generator_UserColumnName="id_pastor_komuni" type="xs:int" minOccurs="0" />
+              <xs:element name="id_stasi_komuni" msprop:Generator_ColumnVarNameInTable="columnid_stasi_komuni" msprop:Generator_ColumnPropNameInRow="id_stasi_komuni" msprop:Generator_ColumnPropNameInTable="id_stasi_komuniColumn" msprop:Generator_UserColumnName="id_stasi_komuni" type="xs:int" minOccurs="0" />
+              <xs:element name="pastor_komuni" msprop:Generator_ColumnVarNameInTable="columnpastor_komuni" msprop:Generator_ColumnPropNameInRow="pastor_komuni" msprop:Generator_ColumnPropNameInTable="pastor_komuniColumn" msprop:Generator_UserColumnName="pastor_komuni" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wali_komuni" msprop:Generator_ColumnVarNameInTable="columnwali_komuni" msprop:Generator_ColumnPropNameInRow="wali_komuni" msprop:Generator_ColumnPropNameInTable="wali_komuniColumn" msprop:Generator_UserColumnName="wali_komuni" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomor_krisma" msprop:Generator_ColumnVarNameInTable="columnnomor_krisma" msprop:Generator_ColumnPropNameInRow="nomor_krisma" msprop:Generator_ColumnPropNameInTable="nomor_krismaColumn" msprop:Generator_UserColumnName="nomor_krisma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_baptis_krisma" msprop:Generator_ColumnVarNameInTable="columnnama_baptis_krisma" msprop:Generator_ColumnPropNameInRow="nama_baptis_krisma" msprop:Generator_ColumnPropNameInTable="nama_baptis_krismaColumn" msprop:Generator_UserColumnName="nama_baptis_krisma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_krisma" msprop:Generator_ColumnVarNameInTable="columntanggal_krisma" msprop:Generator_ColumnPropNameInRow="tanggal_krisma" msprop:Generator_ColumnPropNameInTable="tanggal_krismaColumn" msprop:Generator_UserColumnName="tanggal_krisma" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="id_paroki_krisma" msprop:Generator_ColumnVarNameInTable="columnid_paroki_krisma" msprop:Generator_ColumnPropNameInRow="id_paroki_krisma" msprop:Generator_ColumnPropNameInTable="id_paroki_krismaColumn" msprop:Generator_UserColumnName="id_paroki_krisma" type="xs:int" minOccurs="0" />
+              <xs:element name="tempat_krisma" msprop:Generator_ColumnVarNameInTable="columntempat_krisma" msprop:Generator_ColumnPropNameInRow="tempat_krisma" msprop:Generator_ColumnPropNameInTable="tempat_krismaColumn" msprop:Generator_UserColumnName="tempat_krisma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_pastor_krisma" msprop:Generator_ColumnVarNameInTable="columnid_pastor_krisma" msprop:Generator_ColumnPropNameInRow="id_pastor_krisma" msprop:Generator_ColumnPropNameInTable="id_pastor_krismaColumn" msprop:Generator_UserColumnName="id_pastor_krisma" type="xs:int" minOccurs="0" />
+              <xs:element name="id_stasi_krisma" msprop:Generator_ColumnVarNameInTable="columnid_stasi_krisma" msprop:Generator_ColumnPropNameInRow="id_stasi_krisma" msprop:Generator_ColumnPropNameInTable="id_stasi_krismaColumn" msprop:Generator_UserColumnName="id_stasi_krisma" type="xs:int" minOccurs="0" />
+              <xs:element name="pastor_krisma" msprop:Generator_ColumnVarNameInTable="columnpastor_krisma" msprop:Generator_ColumnPropNameInRow="pastor_krisma" msprop:Generator_ColumnPropNameInTable="pastor_krismaColumn" msprop:Generator_UserColumnName="pastor_krisma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wali_krisma_1" msprop:Generator_ColumnVarNameInTable="columnwali_krisma_1" msprop:Generator_ColumnPropNameInRow="wali_krisma_1" msprop:Generator_ColumnPropNameInTable="wali_krisma_1Column" msprop:Generator_UserColumnName="wali_krisma_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wali_krisma_2" msprop:Generator_ColumnVarNameInTable="columnwali_krisma_2" msprop:Generator_ColumnPropNameInRow="wali_krisma_2" msprop:Generator_ColumnPropNameInTable="wali_krisma_2Column" msprop:Generator_UserColumnName="wali_krisma_2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pendidikan_terakhir" msprop:Generator_ColumnVarNameInTable="columnpendidikan_terakhir" msprop:Generator_ColumnPropNameInRow="pendidikan_terakhir" msprop:Generator_ColumnPropNameInTable="pendidikan_terakhirColumn" msprop:Generator_UserColumnName="pendidikan_terakhir" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_ref_pekerjaan" msprop:Generator_ColumnVarNameInTable="columnid_ref_pekerjaan" msprop:Generator_ColumnPropNameInRow="id_ref_pekerjaan" msprop:Generator_ColumnPropNameInTable="id_ref_pekerjaanColumn" msprop:Generator_UserColumnName="id_ref_pekerjaan" type="xs:int" minOccurs="0" />
+              <xs:element name="peran_digereja" msprop:Generator_ColumnVarNameInTable="columnperan_digereja" msprop:Generator_ColumnPropNameInRow="peran_digereja" msprop:Generator_ColumnPropNameInTable="peran_digerejaColumn" msprop:Generator_UserColumnName="peran_digereja" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="peran_dilingkungan" msprop:Generator_ColumnVarNameInTable="columnperan_dilingkungan" msprop:Generator_ColumnPropNameInRow="peran_dilingkungan" msprop:Generator_ColumnPropNameInTable="peran_dilingkunganColumn" msprop:Generator_UserColumnName="peran_dilingkungan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="peran_dimasyarakat" msprop:Generator_ColumnVarNameInTable="columnperan_dimasyarakat" msprop:Generator_ColumnPropNameInRow="peran_dimasyarakat" msprop:Generator_ColumnPropNameInTable="peran_dimasyarakatColumn" msprop:Generator_UserColumnName="peran_dimasyarakat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="golongan_darah" msprop:Generator_ColumnVarNameInTable="columngolongan_darah" msprop:Generator_ColumnPropNameInRow="golongan_darah" msprop:Generator_ColumnPropNameInTable="golongan_darahColumn" msprop:Generator_UserColumnName="golongan_darah" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status_perkawinan" msprop:Generator_ColumnVarNameInTable="columnstatus_perkawinan" msprop:Generator_ColumnPropNameInRow="status_perkawinan" msprop:Generator_ColumnPropNameInTable="status_perkawinanColumn" msprop:Generator_UserColumnName="status_perkawinan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_status_umat" msprop:Generator_ColumnVarNameInTable="columnid_status_umat" msprop:Generator_ColumnPropNameInRow="id_status_umat" msprop:Generator_ColumnPropNameInTable="id_status_umatColumn" msprop:Generator_UserColumnName="id_status_umat" type="xs:int" minOccurs="0" />
+              <xs:element name="id_paroki" msprop:Generator_ColumnVarNameInTable="columnid_paroki" msprop:Generator_ColumnPropNameInRow="id_paroki" msprop:Generator_ColumnPropNameInTable="id_parokiColumn" msprop:Generator_UserColumnName="id_paroki" type="xs:int" minOccurs="0" />
+              <xs:element name="id_lingkungan" msprop:Generator_ColumnVarNameInTable="columnid_lingkungan" msprop:Generator_ColumnPropNameInRow="id_lingkungan" msprop:Generator_ColumnPropNameInTable="id_lingkunganColumn" msprop:Generator_UserColumnName="id_lingkungan" type="xs:int" minOccurs="0" />
+              <xs:element name="id_stasi" msprop:Generator_ColumnVarNameInTable="columnid_stasi" msprop:Generator_ColumnPropNameInRow="id_stasi" msprop:Generator_ColumnPropNameInTable="id_stasiColumn" msprop:Generator_UserColumnName="id_stasi" type="xs:int" minOccurs="0" />
+              <xs:element name="id_propinsi" msprop:Generator_ColumnVarNameInTable="columnid_propinsi" msprop:Generator_ColumnPropNameInRow="id_propinsi" msprop:Generator_ColumnPropNameInTable="id_propinsiColumn" msprop:Generator_UserColumnName="id_propinsi" type="xs:int" minOccurs="0" />
+              <xs:element name="id_kota" msprop:Generator_ColumnVarNameInTable="columnid_kota" msprop:Generator_ColumnPropNameInRow="id_kota" msprop:Generator_ColumnPropNameInTable="id_kotaColumn" msprop:Generator_UserColumnName="id_kota" type="xs:int" minOccurs="0" />
+              <xs:element name="id_kecamatan" msprop:Generator_ColumnVarNameInTable="columnid_kecamatan" msprop:Generator_ColumnPropNameInRow="id_kecamatan" msprop:Generator_ColumnPropNameInTable="id_kecamatanColumn" msprop:Generator_UserColumnName="id_kecamatan" type="xs:int" minOccurs="0" />
+              <xs:element name="id_desa" msprop:Generator_ColumnVarNameInTable="columnid_desa" msprop:Generator_ColumnPropNameInRow="id_desa" msprop:Generator_ColumnPropNameInTable="id_desaColumn" msprop:Generator_UserColumnName="id_desa" type="xs:int" minOccurs="0" />
+              <xs:element name="kepala_keluarga" msprop:Generator_ColumnVarNameInTable="columnkepala_keluarga" msprop:Generator_ColumnPropNameInRow="kepala_keluarga" msprop:Generator_ColumnPropNameInTable="kepala_keluargaColumn" msprop:Generator_UserColumnName="kepala_keluarga" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status_domisili" msprop:Generator_ColumnVarNameInTable="columnstatus_domisili" msprop:Generator_ColumnPropNameInRow="status_domisili" msprop:Generator_ColumnPropNameInTable="status_domisiliColumn" msprop:Generator_UserColumnName="status_domisili" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_kondisi_ekonomi" msprop:Generator_ColumnVarNameInTable="columnid_kondisi_ekonomi" msprop:Generator_ColumnPropNameInRow="id_kondisi_ekonomi" msprop:Generator_ColumnPropNameInTable="id_kondisi_ekonomiColumn" msprop:Generator_UserColumnName="id_kondisi_ekonomi" type="xs:int" minOccurs="0" />
+              <xs:element name="id_suku" msprop:Generator_ColumnVarNameInTable="columnid_suku" msprop:Generator_ColumnPropNameInRow="id_suku" msprop:Generator_ColumnPropNameInTable="id_sukuColumn" msprop:Generator_UserColumnName="id_suku" type="xs:int" minOccurs="0" />
+              <xs:element name="tanggal_input" msprop:Generator_ColumnVarNameInTable="columntanggal_input" msprop:Generator_ColumnPropNameInRow="tanggal_input" msprop:Generator_ColumnPropNameInTable="tanggal_inputColumn" msprop:Generator_UserColumnName="tanggal_input" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="is_deleted" msprop:Generator_ColumnVarNameInTable="columnis_deleted" msprop:Generator_ColumnPropNameInRow="is_deleted" msprop:Generator_ColumnPropNameInTable="is_deletedColumn" msprop:Generator_UserColumnName="is_deleted" type="xs:int" minOccurs="0" />
+              <xs:element name="tanggal_verifikasi" msprop:Generator_ColumnVarNameInTable="columntanggal_verifikasi" msprop:Generator_ColumnPropNameInRow="tanggal_verifikasi" msprop:Generator_ColumnPropNameInTable="tanggal_verifikasiColumn" msprop:Generator_UserColumnName="tanggal_verifikasi" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="kk" msprop:Generator_TableClassName="kkDataTable" msprop:Generator_TableVarName="tablekk" msprop:Generator_TablePropName="kk" msprop:Generator_RowDeletingName="kkRowDeleting" msprop:Generator_RowChangingName="kkRowChanging" msprop:Generator_RowEvHandlerName="kkRowChangeEventHandler" msprop:Generator_RowDeletedName="kkRowDeleted" msprop:Generator_UserTableName="kk" msprop:Generator_RowChangedName="kkRowChanged" msprop:Generator_RowEvArgName="kkRowChangeEvent" msprop:Generator_RowClassName="kkRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_mst_umat" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_mst_umat" msprop:Generator_ColumnPropNameInRow="id_mst_umat" msprop:Generator_ColumnPropNameInTable="id_mst_umatColumn" msprop:Generator_UserColumnName="id_mst_umat" type="xs:int" />
+              <xs:element name="no_kk" msprop:Generator_ColumnVarNameInTable="columnno_kk" msprop:Generator_ColumnPropNameInRow="no_kk" msprop:Generator_ColumnPropNameInTable="no_kkColumn" msprop:Generator_UserColumnName="no_kk" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_kepala" msprop:Generator_ColumnVarNameInTable="columnnama_kepala" msprop:Generator_ColumnPropNameInRow="nama_kepala" msprop:Generator_ColumnPropNameInTable="nama_kepalaColumn" msprop:Generator_UserColumnName="nama_kepala" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stasi" msprop:Generator_ColumnVarNameInTable="columnstasi" msprop:Generator_ColumnPropNameInRow="stasi" msprop:Generator_ColumnPropNameInTable="stasiColumn" msprop:Generator_UserColumnName="stasi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lingkungan" msprop:Generator_ColumnVarNameInTable="columnlingkungan" msprop:Generator_ColumnPropNameInRow="lingkungan" msprop:Generator_ColumnPropNameInTable="lingkunganColumn" msprop:Generator_UserColumnName="lingkungan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Alamat" msprop:Generator_ColumnVarNameInTable="columnAlamat" msprop:Generator_ColumnPropNameInRow="Alamat" msprop:Generator_ColumnPropNameInTable="AlamatColumn" msprop:Generator_UserColumnName="Alamat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="desa" msprop:Generator_ColumnVarNameInTable="columndesa" msprop:Generator_ColumnPropNameInRow="desa" msprop:Generator_ColumnPropNameInTable="desaColumn" msprop:Generator_UserColumnName="desa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="kecamatan" msprop:Generator_ColumnVarNameInTable="columnkecamatan" msprop:Generator_ColumnPropNameInRow="kecamatan" msprop:Generator_ColumnPropNameInTable="kecamatanColumn" msprop:Generator_UserColumnName="kecamatan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="kabupaten" msprop:Generator_ColumnVarNameInTable="columnkabupaten" msprop:Generator_ColumnPropNameInRow="kabupaten" msprop:Generator_ColumnPropNameInTable="kabupatenColumn" msprop:Generator_UserColumnName="kabupaten" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="paroki" msprop:Generator_ColumnVarNameInTable="columnparoki" msprop:Generator_ColumnPropNameInRow="paroki" msprop:Generator_ColumnPropNameInTable="parokiColumn" msprop:Generator_UserColumnName="paroki" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_lingkungan" msprop:Generator_ColumnVarNameInTable="columnid_lingkungan" msprop:Generator_ColumnPropNameInRow="id_lingkungan" msprop:Generator_ColumnPropNameInTable="id_lingkunganColumn" msprop:Generator_UserColumnName="id_lingkungan" type="xs:int" minOccurs="0" />
+              <xs:element name="id_stasi" msprop:Generator_ColumnVarNameInTable="columnid_stasi" msprop:Generator_ColumnPropNameInRow="id_stasi" msprop:Generator_ColumnPropNameInTable="id_stasiColumn" msprop:Generator_UserColumnName="id_stasi" type="xs:int" minOccurs="0" />
+              <xs:element name="id_paroki" msprop:Generator_ColumnVarNameInTable="columnid_paroki" msprop:Generator_ColumnPropNameInRow="id_paroki" msprop:Generator_ColumnPropNameInTable="id_parokiColumn" msprop:Generator_UserColumnName="id_paroki" type="xs:int" minOccurs="0" />
+              <xs:element name="id_status_umat" msprop:Generator_ColumnVarNameInTable="columnid_status_umat" msprop:Generator_ColumnPropNameInRow="id_status_umat" msprop:Generator_ColumnPropNameInTable="id_status_umatColumn" msprop:Generator_UserColumnName="id_status_umat" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mstuser" msprop:Generator_TableClassName="mstuserDataTable" msprop:Generator_TableVarName="tablemstuser" msprop:Generator_RowChangedName="mstuserRowChanged" msprop:Generator_TablePropName="mstuser" msprop:Generator_RowDeletingName="mstuserRowDeleting" msprop:Generator_RowChangingName="mstuserRowChanging" msprop:Generator_RowEvHandlerName="mstuserRowChangeEventHandler" msprop:Generator_RowDeletedName="mstuserRowDeleted" msprop:Generator_RowClassName="mstuserRow" msprop:Generator_UserTableName="mstuser" msprop:Generator_RowEvArgName="mstuserRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="username" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_UserColumnName="username">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fullname" msprop:Generator_ColumnVarNameInTable="columnfullname" msprop:Generator_ColumnPropNameInRow="fullname" msprop:Generator_ColumnPropNameInTable="fullnameColumn" msprop:Generator_UserColumnName="fullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="password" msprop:Generator_ColumnVarNameInTable="columnpassword" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_UserColumnName="password">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="role" msprop:Generator_ColumnVarNameInTable="columnrole" msprop:Generator_ColumnPropNameInRow="role" msprop:Generator_ColumnPropNameInTable="roleColumn" msprop:Generator_UserColumnName="role">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:mst_umat" />
+      <xs:field xpath="mstns:id_umat" />
+    </xs:unique>
+    <xs:unique name="kk_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:kk" />
+      <xs:field xpath="mstns:id_mst_umat" />
+    </xs:unique>
+    <xs:unique name="mstuser_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:mstuser" />
+      <xs:field xpath="mstns:username" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

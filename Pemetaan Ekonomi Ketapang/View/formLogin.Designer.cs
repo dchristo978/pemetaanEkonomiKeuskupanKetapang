@@ -72,8 +72,9 @@
             // 
             this.button_login.AutoSize = true;
             this.button_login.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_login.BackColor = System.Drawing.Color.DarkBlue;
+            this.button_login.BackColor = System.Drawing.Color.Lavender;
             this.button_login.Depth = 0;
+            this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_login.ForeColor = System.Drawing.SystemColors.Menu;
             this.button_login.Location = new System.Drawing.Point(436, 233);
             this.button_login.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -108,12 +109,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 356);
+            this.ControlBox = false;
             this.Controls.Add(this.tb_versiAplikasi);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_login);
             this.Controls.Add(this.edt_password);
             this.Controls.Add(this.edt_username);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(676, 356);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(676, 356);
             this.Name = "form_login";
             this.Text = "Pemetaan Ekonomi Keuskupan Ketapang";
             this.Load += new System.EventHandler(this.form_login_Load);
