@@ -5,6 +5,9 @@
     using System.Windows.Forms;
     using System.Diagnostics;
     using Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan;
+    using Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan;
+    using Pemetaan_Ekonomi_Ketapang.Controller;
+
 
     /// <summary>
     /// Defines the <see cref="formUtama" />
@@ -88,9 +91,13 @@
 
         private void kepalaKeluargaBaruTidakTerdataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formIdentitas formInputKKBaru = new formIdentitas();
-            formInputKKBaru.MdiParent = this;
-            formInputKKBaru.Show();
+            GlobalParam.formParent = "formUtama";
+            formPilihParoki formPilihParoki = new formPilihParoki();
+            formPilihParoki.MdiParent = this;
+            formPilihParoki.Show();
+            //formIdentitas formInputKKBaru = new formIdentitas();
+            //formInputKKBaru.MdiParent = this;
+            //formInputKKBaru.Show();
         }
 
         private void aplikasiPendataanUmatToolStripMenuItem_Click(object sender, EventArgs e)

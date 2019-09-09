@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pemetaan_Ekonomi_Ketapang.Controller
 {
-    class Global
+    class GlobalParam
     {
         public static int idPertanyaan = 0;
 
@@ -22,6 +22,10 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller
         public static int id_ref_pekerjaan = 0;
         public static int id_paroki = 0;
         public static int id_stasi = 0;
+
+        public static String nama_database = "";
+
+        public static String formParent = "";
 
 
     }

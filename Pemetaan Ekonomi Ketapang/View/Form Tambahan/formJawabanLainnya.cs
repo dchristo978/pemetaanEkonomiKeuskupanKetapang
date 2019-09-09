@@ -66,10 +66,10 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void formJawabanLainnya_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = refJawabanControl.populateDataGridBasedOnIDPertanyaan(Global.idPertanyaan);
+            dataGridView1.DataSource = refJawabanControl.populateDataGridBasedOnIDPertanyaan(GlobalParam.idPertanyaan);
             dataGridView1.Columns["id_ref_jawaban"].Visible = false;
-            lbBab.Text = pertanyaanControl.getBabPertanyaanBasedOnIDpertanyaan(Global.idPertanyaan);
-            lbPertanyaan.Text = pertanyaanControl.getPertanyaanBasedOnIdPertanyaan(Global.idPertanyaan);
+            lbBab.Text = pertanyaanControl.getBabPertanyaanBasedOnIDpertanyaan(GlobalParam.idPertanyaan);
+            lbPertanyaan.Text = pertanyaanControl.getPertanyaanBasedOnIdPertanyaan(GlobalParam.idPertanyaan);
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)

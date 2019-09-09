@@ -12,10 +12,13 @@ using Pemetaan_Ekonomi_Ketapang.Controller.Umat;
 using Pemetaan_Ekonomi_Ketapang.Model;
 using Pemetaan_Ekonomi_Ketapang.Controller;
 using Pemetaan_Ekonomi_Ketapang.db_ekonomi_ketapangTableAdapters;
+using Pemetaan_Ekonomi_Ketapang.Controller.Global;
+
 namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 {
     public partial class formIdentitas : MetroForm
     {
+        DatabasesConnector dbConnector = new DatabasesConnector();
         DataSet dataNamaParoki= new DataSet();
         db_ekonomi_ketapang ds = new db_ekonomi_ketapang();
         private tbl_parokiTableAdapter parokiAdapter = new tbl_parokiTableAdapter();
@@ -59,7 +62,9 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         private void populateComboBoxStasi()
         {
             List<tbl_stasi> temp = new List<tbl_stasi>();
-            temp = stasiControl.getAllStasiList();
+            //temp = stasiControl.getAllStasiList();
+            temp = stasiControl.getAllStasiListNew(dbConnector.getIDParoki(Convert.ToInt32(GlobalParam.nama_database)),GlobalParam.nama_database);
+            MessageBox.Show("VALUE CMB PAROKI : " + this.cmbParoki.SelectedValue);
             this.cmbStasi.DataSource = temp.Where(tbl_stasi => tbl_stasi.id_paroki == this.cmbParoki.SelectedValue.ToString()).ToList();
             this.cmbStasi.DisplayMember = "nama_stasi";
             this.cmbStasi.ValueMember = "id_stasi";
@@ -81,14 +86,13 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
             populateComboBoxStasi();
             populateComboBoxKelamin();
 
-            if(String.IsNullOrEmpty(Global.nama))
+            if(String.IsNullOrEmpty(GlobalParam.nama))
             {
-                this.edtNamaKepalaKeluarga.Text = Global.nama;
-                this.edtNoK5.Text = Global.no_k5;
-                this.cmbKelamin.SelectedIndex = this.cmbKelamin.FindStringExact(Global.jenis_kelamin);
-                this.cmbParoki.SelectedValue = Global.id_paroki;
-                this.cmbStasi.SelectedValue = Global.id_stasi;
-                this.cmbPekerjaan.SelectedValue = Global.id_ref_pekerjaan;
+                this.edtNamaKepalaKeluarga.Text = GlobalParam.nama;
+                this.edtNoK5.Text = GlobalParam.no_k5;
+                this.cmbKelamin.SelectedIndex = this.cmbKelamin.FindStringExact(GlobalParam.jenis_kelamin);
+                this.cmbParoki.SelectedValue = GlobalParam.id_paroki;
+                this.cmbStasi.SelectedValue = GlobalParam.id_stasi;
             }
         }
 

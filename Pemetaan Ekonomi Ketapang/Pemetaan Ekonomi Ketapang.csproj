@@ -78,8 +78,9 @@
     <Compile Include="Controller\Ekonomi\Tbl_BobotControl.cs" />
     <Compile Include="Controller\Ekonomi\Tbl_JawabanControl.cs" />
     <Compile Include="Controller\Ekonomi\Tbl_PertanyaanControl.cs" />
-    <Compile Include="Controller\Global.cs" />
+    <Compile Include="Controller\Global\GlobalParam.cs" />
     <Compile Include="Controller\Global\CoreCode.cs" />
+    <Compile Include="Controller\Global\DatabasesConnector.cs" />
     <Compile Include="Controller\Umat\KepalaKeluargaControl.cs" />
     <Compile Include="Controller\Global\mstuserControl.cs" />
     <Compile Include="Controller\Umat\ParokiControl.cs" />
@@ -123,10 +124,10 @@
     <Compile Include="View\Form Pertanyaan\formIdentitas.Designer.cs">
       <DependentUpon>formIdentitas.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form Pertanyaan\formJawabanLainnya.cs">
+    <Compile Include="View\Form Tambahan\formJawabanLainnya.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form Pertanyaan\formJawabanLainnya.Designer.cs">
+    <Compile Include="View\Form Tambahan\formJawabanLainnya.Designer.cs">
       <DependentUpon>formJawabanLainnya.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Form Pertanyaan\formKebutuhanHidupSehariHari.cs">
@@ -153,11 +154,17 @@
     <Compile Include="View\Form Pertanyaan\formLainLain1.Designer.cs">
       <DependentUpon>formLainLain1.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form Pertanyaan\formTambahJawabanLainnya.cs">
+    <Compile Include="View\Form Tambahan\formPilihParoki.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form Pertanyaan\formTambahJawabanLainnya.Designer.cs">
-      <DependentUpon>formTambahJawabanLainnya.cs</DependentUpon>
+    <Compile Include="View\Form Tambahan\formPilihParoki.Designer.cs">
+      <DependentUpon>formPilihParoki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Tambahan\formTambahJawabanBaru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Tambahan\formTambahJawabanBaru.Designer.cs">
+      <DependentUpon>formTambahJawabanBaru.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Form Pertanyaan\formTanamanPangan.cs">
       <SubType>Form</SubType>
@@ -191,7 +198,7 @@
     <EmbeddedResource Include="View\Form Pertanyaan\formIdentitas.resx">
       <DependentUpon>formIdentitas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form Pertanyaan\formJawabanLainnya.resx">
+    <EmbeddedResource Include="View\Form Tambahan\formJawabanLainnya.resx">
       <DependentUpon>formJawabanLainnya.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formKebutuhanHidupSehariHari.resx">
@@ -206,8 +213,11 @@
     <EmbeddedResource Include="View\Form Pertanyaan\formLainLain1.resx">
       <DependentUpon>formLainLain1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form Pertanyaan\formTambahJawabanLainnya.resx">
-      <DependentUpon>formTambahJawabanLainnya.cs</DependentUpon>
+    <EmbeddedResource Include="View\Form Tambahan\formPilihParoki.resx">
+      <DependentUpon>formPilihParoki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Tambahan\formTambahJawabanBaru.resx">
+      <DependentUpon>formTambahJawabanBaru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formTanamanPangan.resx">
       <DependentUpon>formTanamanPangan.cs</DependentUpon>
@@ -231,6 +241,7 @@
     <EmbeddedResource Include="View\formUtama.resx">
       <DependentUpon>formUtama.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Controller\Umat\mst_umatControl.cs" />
     <None Include="db_ekonomi_ketapang.xsc">
       <DependentUpon>db_ekonomi_ketapang.xsd</DependentUpon>
     </None>

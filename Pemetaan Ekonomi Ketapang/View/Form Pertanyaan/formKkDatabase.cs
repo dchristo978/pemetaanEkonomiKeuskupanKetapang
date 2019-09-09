@@ -81,13 +81,15 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void dataGridKepalaKeluarga_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Global.no_k5 = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["no_kk"].ToString();
-            Global.nama = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama"].ToString();
-            Global.jenis_kelamin = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["jenis_kelamin"].ToString();
+            GlobalParam.no_k5 = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["no_kk"].ToString();
+            GlobalParam.nama = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama"].ToString();
+            GlobalParam.jenis_kelamin = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["jenis_kelamin"].ToString();
 
-            Global.id_ref_pekerjaan = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_ref_pekerjaan"]);
-            Global.id_paroki = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_paroki"]);
-            Global.id_stasi = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_stasi"]);
+            GlobalParam.id_ref_pekerjaan = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_ref_pekerjaan"]);
+            GlobalParam.id_paroki = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_paroki"]);
+            GlobalParam.id_stasi = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_stasi"]);
+
+            GlobalParam.formParent = "formKkDatabase";
 
             formIdentitas fr = new formIdentitas();
             fr.ShowDialog();
@@ -101,13 +103,11 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void dataGridKepalaKeluarga_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            Global.no_k5 = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["no_kk"].ToString();
-            Global.nama = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama_kepala"].ToString();
-            Global.jenis_kelamin = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["jenis_kelamin"].ToString();
-
-            Global.id_ref_pekerjaan = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_ref_pekerjaan"]);
-            Global.id_paroki = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_paroki"]);
-            Global.id_stasi = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_stasi"]);
+            GlobalParam.no_k5 = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["no_kk"].Value.ToString();
+            GlobalParam.nama = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama_kepala"].Value.ToString();
+            //Global.id_ref_pekerjaan = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_ref_pekerjaan"].Value.ToString());
+            GlobalParam.id_paroki = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_paroki"].Value.ToString());
+            GlobalParam.id_stasi = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_stasi"].Value.ToString());
 
             formIdentitas fr = new formIdentitas();
             fr.ShowDialog();
