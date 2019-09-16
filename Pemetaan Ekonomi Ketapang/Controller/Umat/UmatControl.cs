@@ -7,6 +7,8 @@ using Pemetaan_Ekonomi_Ketapang.db_ekonomi_ketapangTableAdapters;
 using Pemetaan_Ekonomi_Ketapang.Model;
 using System.Data;
 using System.Diagnostics;
+using MySql.Data.MySqlClient;
+using Pemetaan_Ekonomi_Ketapang.Controller.Global;
 
 namespace Pemetaan_Ekonomi_Ketapang.Controller.Umat
 {
@@ -14,17 +16,18 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Umat
     {
         private tbl_umatTableAdapter umatAdapter = new tbl_umatTableAdapter();
         private db_ekonomi_ketapang ds = new db_ekonomi_ketapang();
+        private DatabasesConnector dbConnector = new DatabasesConnector();
 
         public String insertSamplingUmatBaru(tbl_umat temp)
         {
             String balikan;
             try
             {
-                balikan = umatAdapter.insertUmat(getLastIndexIDUmatPlusOne(),temp.no_kk, temp.no_k5, temp.no_ktp, temp.nama, temp.umur, temp.jenis_kelamin, temp.no_telp, temp.id_ref_pekerjaan, temp.id_paroki, temp.id_stasi).ToString();
+                balikan = umatAdapter.insertUmat(getLastIndexIDUmatPlusOne(), temp.no_kk, temp.no_k5, temp.no_ktp, temp.nama, temp.umur, temp.jenis_kelamin, temp.no_telp, temp.id_ref_pekerjaan, temp.id_paroki, temp.id_stasi).ToString();
             }
             catch (Exception E)
             {
-                balikan = E.Message.ToString() + "    " +temp.tostr();
+                balikan = E.Message.ToString() + "    " + temp.tostr();
             }
 
             return balikan;
@@ -36,7 +39,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Umat
             ds.Clear();
             ds.EnforceConstraints = false;
             umatAdapter.Fill(ds.tbl_umat);
-            Debug.Write("JUMLAH ISINYA : " + ds.tbl_umat.Rows[ds.tbl_umat.Rows.Count-1][0].ToString() );
+            Debug.Write("JUMLAH ISINYA : " + ds.tbl_umat.Rows[ds.tbl_umat.Rows.Count - 1][0].ToString());
             if (ds.tbl_umat.Rows.Count == 0)
             {
                 return balikan;
@@ -53,7 +56,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Umat
             ds.Clear();
             ds.EnforceConstraints = false;
             umatAdapter.Fill(ds.tbl_umat);
-            return  ds.tbl_umat.Rows[ds.tbl_umat.Rows.Count - 1][0].ToString();
+            return ds.tbl_umat.Rows[ds.tbl_umat.Rows.Count - 1][0].ToString();
         }
 
         public tbl_umat getDataUmatSatuan(int idUmat)
@@ -73,7 +76,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Umat
             balikan.id_paroki = Convert.ToInt32(row["id_paroki"].ToString());
             balikan.id_stasi = Convert.ToInt32(row["id_stasi"].ToString());
             balikan.umur = Convert.ToInt32(row["umur"].ToString());
-            
+
             return balikan;
         }
 
@@ -90,7 +93,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Umat
 
             Debug.Write("ISI NOMOR IDENTIAS : " + " KTP " + temp.no_ktp + " KK " + temp.no_kk + "K5 " + temp.no_k5);
 
-            if (string.Equals(temp.no_k5,"Null") && string.Equals(temp.no_ktp, "Null"))
+            if (string.Equals(temp.no_k5, "Null") && string.Equals(temp.no_ktp, "Null"))
                 return temp.no_kk + " / KK";
             else if (string.Equals(temp.no_ktp, "Null") && string.Equals(temp.no_kk, "Null"))
                 return temp.no_k5 + " / K5";
@@ -98,7 +101,134 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Umat
                 return temp.no_ktp + " / KTP";
             else
                 return "Kosong";
-                
+
+        }
+        public DataTable getMstUmatBasedOnParoki()
+        {
+            String namaDatabase = GlobalParam.nama_database;
+
+            MySqlConnection connection = dbConnector.openConnection("", "", namaDatabase);
+            String query = "Select " +
+                "mu.no_kk, " +
+                "mu.nama, " +
+                "mu.jenis_kelamin, " +
+                "rp.pekerjaan, " +
+                "tp.nama_paroki, " +
+                "ts.nama_stasi, " +
+                "mu.tanggal_lahir " +
+                "from mst_umat as mu " +
+                "join ref_pekerjaan as rp " +
+                "on mu.id_ref_pekerjaan = rp.id_ref_pekerjaan " +
+                "join tbl_paroki as tp " +
+                "on mu.id_paroki = tp.id_paroki " +
+                "join tbl_stasi as ts " +
+                "on mu.id_stasi = ts.id_stasi " +
+                "where mu.no_kk is not null";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            DataSet ds = new DataSet();
+            DataTable balikan = new DataTable();
+            ds.Tables.Add(balikan);
+            ds.EnforceConstraints = false;
+            balikan.Load(reader);
+            reader.Close();
+            return balikan;
+        }
+
+        public int getIdRefPekerjaanBasedOnPekerjaan(String pekerjaan)
+        {
+            int balikan = 0;
+            MySqlConnection connection = dbConnector.openConnection("", "", GlobalParam.nama_database);
+            connection.Open();
+            String query = "Select id_ref_pekerjaan from ref_pekerjaan where pekerjaan = @pekerjaan";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@pekerjaan", pekerjaan);
+            MySqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+                balikan = reader.GetInt32(0);
+            reader.Close();
+            connection.Close();
+            return balikan;
+        }
+
+        public int getKodeStasiBasedOnNamaStasi(String namaStasi)
+        {
+            int balikan = 0;
+            MySqlConnection connection = dbConnector.openConnection("", "", GlobalParam.nama_database);
+            connection.Open();
+            String query = "Select kode_stasi from tbl_stasi where nama_stasi = @stasi";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@stasi", namaStasi);
+            MySqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+                balikan = reader.GetInt32(0);
+            reader.Close();
+            connection.Close();
+            
+            return balikan;
+        }
+
+        public DataTable searchUmatBasedOnNamaK5Stasi(String pNama, String pK5, String pStasi)
+        {
+            String namaDatabase = GlobalParam.nama_database;
+
+            MySqlConnection connection = dbConnector.openConnection("", "", namaDatabase);
+            String query = "Select " +
+                "mu.no_kk, " +
+                "mu.nama, " +
+                "mu.jenis_kelamin, " +
+                "rp.pekerjaan, " +
+                "tp.nama_paroki, " +
+                "ts.nama_stasi, " +
+                "mu.tanggal_lahir " +
+                "from mst_umat as mu " +
+                "join ref_pekerjaan as rp " +
+                "on mu.id_ref_pekerjaan = rp.id_ref_pekerjaan " +
+                "join tbl_paroki as tp " +
+                "on mu.id_paroki = tp.id_paroki " +
+                "join tbl_stasi as ts " +
+                "on mu.id_stasi = ts.id_stasi " +
+                "where mu.no_kk is not null";
+            
+
+            if(!String.Equals(pStasi,"-1"))
+            {
+                query += " AND ts.id_stasi = @paramStasi";
+            }
+            if(!String.IsNullOrWhiteSpace(pNama))
+            {
+                query += " AND mu.nama LIKE @paramNama";
+            }
+            if(!String.IsNullOrWhiteSpace(pK5))
+            {
+                query += " AND mu.no_kk LIKE @paramK5";
+            }
+
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
+            if (!String.Equals(pStasi, "-1"))
+            {
+                command.Parameters.AddWithValue("@paramStasi", pStasi);
+            }
+            if (!String.IsNullOrWhiteSpace(pNama))
+            {
+                command.Parameters.AddWithValue("@paramNama", "%" + pNama + "%");
+            }
+            if (!String.IsNullOrWhiteSpace(pK5))
+            {
+                command.Parameters.AddWithValue("@paramK5","%" + pK5 + "%");
+            }
+            MySqlDataReader reader = command.ExecuteReader();
+
+            DataSet ds = new DataSet();
+            DataTable balikan = new DataTable();
+            ds.Tables.Add(balikan);
+            ds.EnforceConstraints = false;
+            balikan.Load(reader);
+            reader.Close();
+            return balikan;
         }
     }
 }

@@ -9,11 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using Pemetaan_Ekonomi_Ketapang.Controller;
+using Pemetaan_Ekonomi_Ketapang.Controller.Umat;
+using Pemetaan_Ekonomi_Ketapang.Controller.Global;
+using Pemetaan_Ekonomi_Ketapang.Model;
 
 namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 {
+    
     public partial class formKkDatabase : MetroForm
     {
+        DatabasesConnector dbConnector = new DatabasesConnector();
+        UmatControl umatControl = new UmatControl();
+        StasiControl stasiControl = new StasiControl();
+
         public formKkDatabase()
         {
             InitializeComponent();
@@ -23,13 +31,18 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         public void setDataGridView(DataGridView DG)
         {
-            DG.DataSource = KKC.getAll();
-            DG.Columns.Remove("id_mst_umat");
+            DG.DataSource = umatControl.getMstUmatBasedOnParoki();
+            DG.Columns[0].HeaderText = "No K5";
+            for(int i = 0; i<DG.Columns.Count; i ++)
+                DG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         public void cariNoKK_KepalaKeluarga(DataGridView DG)
         {
-            DG.DataSource = KKC.cariNoKK_KepalaKeluarga(edt_cari_noKK.Text, edt_cari_kepalaKeluarga.Text);
+            DG.DataSource = umatControl.searchUmatBasedOnNamaK5Stasi(this.edt_cari_kepalaKeluarga.Text, this.edt_cari_noKK.Text, this.cmbStasi.SelectedValue.ToString());
+            DG.Columns[0].HeaderText = "No K5";
+            for (int i = 0; i < DG.Columns.Count; i++)
+                DG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void dataGridKepalaKeluarga_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -81,37 +94,51 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void dataGridKepalaKeluarga_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            GlobalParam.no_k5 = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["no_kk"].ToString();
-            GlobalParam.nama = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama"].ToString();
-            GlobalParam.jenis_kelamin = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["jenis_kelamin"].ToString();
-
-            GlobalParam.id_ref_pekerjaan = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_ref_pekerjaan"]);
-            GlobalParam.id_paroki = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_paroki"]);
-            GlobalParam.id_stasi = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_stasi"]);
-
-            GlobalParam.formParent = "formKkDatabase";
-
-            formIdentitas fr = new formIdentitas();
-            fr.ShowDialog();
-            this.Hide();
+            goToFormIdentitas(e);
         }
 
         private void formKkDatabase_Load(object sender, EventArgs e)
         {
             setDataGridView(this.dataGridKepalaKeluarga);
+            List<tbl_stasi> temp = new List<tbl_stasi>();
+            temp = stasiControl.getStasiBasedOnIdParokiNew(Convert.ToInt32(dbConnector.getIDParoki(GlobalParam.nama_database)), GlobalParam.nama_database);
+
+            temp.Add(new tbl_stasi("-1","","","TIDAK MEMILIH STASI",0,"1"));
+            this.cmbStasi.DataSource = temp;
+            this.cmbStasi.DisplayMember = "nama_stasi";
+            this.cmbStasi.ValueMember = "id_stasi";
+            this.cmbStasi.SelectedValue = "-1";
+
         }
 
         private void dataGridKepalaKeluarga_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            GlobalParam.no_k5 = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["no_kk"].Value.ToString();
-            GlobalParam.nama = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama_kepala"].Value.ToString();
-            //Global.id_ref_pekerjaan = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_ref_pekerjaan"].Value.ToString());
-            GlobalParam.id_paroki = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_paroki"].Value.ToString());
-            GlobalParam.id_stasi = Convert.ToInt32(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["id_stasi"].Value.ToString());
+            goToFormIdentitas(e);
+        }
 
-            formIdentitas fr = new formIdentitas();
-            fr.ShowDialog();
-            this.Hide();
+        public void goToFormIdentitas(DataGridViewCellEventArgs e)
+        {
+            if (!String.Equals(GlobalParam.formParent, "formKepalaKeluarga"))
+            {
+
+
+                GlobalParam.no_k5 = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["no_kk"].Value.ToString();
+                GlobalParam.nama = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama"].Value.ToString();
+
+                GlobalParam.jenis_kelamin = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["jenis_kelamin"].Value.ToString();
+                GlobalParam.id_ref_pekerjaan = umatControl.getIdRefPekerjaanBasedOnPekerjaan(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["pekerjaan"].Value.ToString());
+                GlobalParam.id_paroki = Convert.ToInt32(dbConnector.getIDParoki(GlobalParam.nama_database));
+                GlobalParam.kode_stasi = umatControl.getKodeStasiBasedOnNamaStasi(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama_stasi"].Value.ToString());
+
+                formIdentitas fr = new formIdentitas();
+                fr.ShowDialog();
+                this.Hide();
+            }
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            this.cariNoKK_KepalaKeluarga(this.dataGridKepalaKeluarga);
         }
     }
 }

@@ -36,19 +36,25 @@
             this.dataGridKepalaKeluarga = new System.Windows.Forms.DataGridView();
             this.edt_col = new System.Windows.Forms.TextBox();
             this.edt_row = new System.Windows.Forms.TextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.cmbStasi = new System.Windows.Forms.ComboBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridKepalaKeluarga)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.metroButton1);
+            this.groupBox1.Controls.Add(this.cmbStasi);
+            this.groupBox1.Controls.Add(this.metroLabel3);
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.edt_cari_kepalaKeluarga);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.edt_cari_noKK);
-            this.groupBox1.Location = new System.Drawing.Point(49, 83);
+            this.groupBox1.Location = new System.Drawing.Point(23, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(404, 125);
+            this.groupBox1.Size = new System.Drawing.Size(543, 143);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pencarian Kepala Keluarga";
@@ -110,6 +116,33 @@
             this.edt_row.TabIndex = 8;
             this.edt_row.Visible = false;
             // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(6, 104);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel3.TabIndex = 5;
+            this.metroLabel3.Text = "Stasi ";
+            // 
+            // cmbStasi
+            // 
+            this.cmbStasi.FormattingEnabled = true;
+            this.cmbStasi.Location = new System.Drawing.Point(71, 104);
+            this.cmbStasi.Name = "cmbStasi";
+            this.cmbStasi.Size = new System.Drawing.Size(301, 21);
+            this.cmbStasi.TabIndex = 6;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(409, 60);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(109, 43);
+            this.metroButton1.TabIndex = 7;
+            this.metroButton1.Text = "CARI";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // formKkDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,5 +173,8 @@
         private System.Windows.Forms.DataGridView dataGridKepalaKeluarga;
         private System.Windows.Forms.TextBox edt_col;
         private System.Windows.Forms.TextBox edt_row;
+        private System.Windows.Forms.ComboBox cmbStasi;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

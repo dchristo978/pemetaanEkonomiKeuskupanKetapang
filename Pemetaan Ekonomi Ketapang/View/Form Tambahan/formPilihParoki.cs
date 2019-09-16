@@ -38,10 +38,16 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
         {
             GlobalParam.nama_database = this.comboBox1.SelectedValue.ToString();
 
-            if(String.Equals(GlobalParam.formParent,"formUtama"))
+            if(String.Equals(GlobalParam.formParent,"formIdentitas"))
             {
-                formIdentitas formIdentitas = new formIdentitas();
-                formIdentitas.Show();
+                formIdentitas form = new formIdentitas();
+                form.Show();
+                this.Close();
+            }
+            else if (String.Equals(GlobalParam.formParent,"formKkDatabase"))
+            {
+                formKkDatabase form = new formKkDatabase();
+                form.Show();
                 this.Close();
             }
         }

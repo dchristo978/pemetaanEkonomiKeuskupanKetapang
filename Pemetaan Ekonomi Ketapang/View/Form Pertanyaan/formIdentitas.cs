@@ -37,17 +37,24 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void formIdentitas_Load(object sender, EventArgs e)
         {
-            initializeForm();
-
+            this.edtNamaKepalaKeluarga.Clear();
+            this.edtNoK5.Clear();
+            this.edtUmur.Clear();
+            this.radioK5.Select();
+            
+            populateComboBoxPekerjaan(); 
+            populateComboBoxKelamin();
+            populateComboBoxParokiAlternate();
+            populateComboBoxStasi();
+            checkIfFromformKkDatabase();
         }
-
-        private void populateComboBoxParoki()
+        
+        private void populateComboBoxParokiAlternate()
         {
-            ds.EnforceConstraints = false;
-            parokiAdapter.Fill(ds.tbl_paroki);
-            this.cmbParoki.DataSource = ds.tbl_paroki;
-            this.cmbParoki.DisplayMember = "nama_paroki";
+            this.cmbParoki.DataSource = dbConnector.getListDatabases();
+            this.cmbParoki.DisplayMember = "lokasi_paroki";
             this.cmbParoki.ValueMember = "id_paroki";
+            this.cmbParoki.SelectedValue = dbConnector.getIDParoki(GlobalParam.nama_database);
         }
 
         private void populateComboBoxPekerjaan()
@@ -62,37 +69,36 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         private void populateComboBoxStasi()
         {
             List<tbl_stasi> temp = new List<tbl_stasi>();
-            //temp = stasiControl.getAllStasiList();
-            temp = stasiControl.getAllStasiListNew(dbConnector.getIDParoki(Convert.ToInt32(GlobalParam.nama_database)),GlobalParam.nama_database);
-            MessageBox.Show("VALUE CMB PAROKI : " + this.cmbParoki.SelectedValue);
-            this.cmbStasi.DataSource = temp.Where(tbl_stasi => tbl_stasi.id_paroki == this.cmbParoki.SelectedValue.ToString()).ToList();
+            temp = stasiControl.getStasiBasedOnIdParokiNew(Convert.ToInt32(dbConnector.getIDParoki(GlobalParam.nama_database)),GlobalParam.nama_database);
+            this.cmbStasi.DataSource = temp;
             this.cmbStasi.DisplayMember = "nama_stasi";
-            this.cmbStasi.ValueMember = "id_stasi";
+            this.cmbStasi.ValueMember = "kode_stasi";
         }
 
         private void cmbParoki_SelectedIndexChanged(object sender, EventArgs e)
         {
-            populateComboBoxStasi();
         }
-        private void initializeForm()
-        {
-            this.edtNamaKepalaKeluarga.Clear();
-            this.edtNoK5.Clear();
-            this.edtUmur.Clear();
-            this.radioK5.Select();
-            
-            populateComboBoxParoki();
-            populateComboBoxPekerjaan();
-            populateComboBoxStasi();
-            populateComboBoxKelamin();
 
-            if(String.IsNullOrEmpty(GlobalParam.nama))
+        private void checkIfFromformKkDatabase()
+        {
+            if (String.Equals(GlobalParam.formParent, "formKkDatabase"))
             {
+                
+                List<tbl_stasi> temp = new List<tbl_stasi>();
+                temp = stasiControl.getStasiBasedOnIdParokiNew(Convert.ToInt32(dbConnector.getIDParoki(GlobalParam.nama_database)), GlobalParam.nama_database);
+                int indexItemNamaStasi = temp.FindIndex(a => a.nama_stasi == stasiControl.getStasiNameFromGlobalKodeStasiAndGlobalIdParoki());
+                MessageBox.Show("INDEX DARI NAMA STASINYA ADALAH : " + indexItemNamaStasi + " Dan kode stasi nya adalah :  " + GlobalParam.kode_stasi);
+                this.cmbParoki.Enabled = false;
+                this.cmbStasi.Enabled = false;
                 this.edtNamaKepalaKeluarga.Text = GlobalParam.nama;
                 this.edtNoK5.Text = GlobalParam.no_k5;
-                this.cmbKelamin.SelectedIndex = this.cmbKelamin.FindStringExact(GlobalParam.jenis_kelamin);
-                this.cmbParoki.SelectedValue = GlobalParam.id_paroki;
-                this.cmbStasi.SelectedValue = GlobalParam.id_stasi;
+                
+
+                this.cmbStasi.SelectedIndex = indexItemNamaStasi;
+
+                //Selected Value
+                this.cmbKelamin.SelectedValue = (GlobalParam.jenis_kelamin);
+                this.cmbPekerjaan.SelectedValue = (GlobalParam.id_ref_pekerjaan);
             }
         }
 

@@ -74,9 +74,11 @@
 
         private void cariKepalaKeluargaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formKepalaKeluarga formKK = new formKepalaKeluarga();
-            formKK.MdiParent = this;
-            formKK.Show();
+            GlobalParam.formParent = "formKepalaKeluarga";
+            formPilihParoki formPilihParoki = new formPilihParoki();
+            formPilihParoki.Text = "Form Kepala Keluarga";
+            formPilihParoki.MdiParent = this;
+            formPilihParoki.Show();
         }
 
         private void laporanToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,7 +93,7 @@
 
         private void kepalaKeluargaBaruTidakTerdataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GlobalParam.formParent = "formUtama";
+            GlobalParam.formParent = "formIdentitas";
             formPilihParoki formPilihParoki = new formPilihParoki();
             formPilihParoki.MdiParent = this;
             formPilihParoki.Show();
@@ -115,9 +117,13 @@
 
         private void kepalaKeluargaTerdataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formKkDatabase fr = new formKkDatabase();
-            fr.MdiParent = this;
-            fr.Show();
+            GlobalParam.formParent = "formKkDatabase";
+            formPilihParoki formPilihParoki = new formPilihParoki();
+            formPilihParoki.MdiParent = this;
+            formPilihParoki.Show();
+            //formKkDatabase fr = new formKkDatabase();
+            //fr.MdiParent = this;
+            //fr.Show();
         }
     }
 }
