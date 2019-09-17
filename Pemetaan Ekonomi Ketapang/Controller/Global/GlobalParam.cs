@@ -26,7 +26,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller
         public static String nama_database = "";
 
         public static String formParent = "";
-
-
+        
+        
     }
 }

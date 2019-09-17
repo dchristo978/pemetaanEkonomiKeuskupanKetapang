@@ -87,7 +87,6 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                 List<tbl_stasi> temp = new List<tbl_stasi>();
                 temp = stasiControl.getStasiBasedOnIdParokiNew(Convert.ToInt32(dbConnector.getIDParoki(GlobalParam.nama_database)), GlobalParam.nama_database);
                 int indexItemNamaStasi = temp.FindIndex(a => a.nama_stasi == stasiControl.getStasiNameFromGlobalKodeStasiAndGlobalIdParoki());
-                MessageBox.Show("INDEX DARI NAMA STASINYA ADALAH : " + indexItemNamaStasi + " Dan kode stasi nya adalah :  " + GlobalParam.kode_stasi);
                 this.cmbParoki.Enabled = false;
                 this.cmbStasi.Enabled = false;
                 this.edtNamaKepalaKeluarga.Text = GlobalParam.nama;

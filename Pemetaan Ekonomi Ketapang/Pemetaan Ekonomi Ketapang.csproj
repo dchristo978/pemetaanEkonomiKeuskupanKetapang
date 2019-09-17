@@ -136,10 +136,10 @@
     <Compile Include="View\Form Pertanyaan\formKebutuhanHidupSehariHari.Designer.cs">
       <DependentUpon>formKebutuhanHidupSehariHari.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form Pertanyaan\formKkDatabase.cs">
+    <Compile Include="View\Form Tambahan\formKkDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form Pertanyaan\formKkDatabase.Designer.cs">
+    <Compile Include="View\Form Tambahan\formKkDatabase.Designer.cs">
       <DependentUpon>formKkDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Form Pertanyaan\formKondisiTempatTinggal.cs">
@@ -204,7 +204,7 @@
     <EmbeddedResource Include="View\Form Pertanyaan\formKebutuhanHidupSehariHari.resx">
       <DependentUpon>formKebutuhanHidupSehariHari.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form Pertanyaan\formKkDatabase.resx">
+    <EmbeddedResource Include="View\Form Tambahan\formKkDatabase.resx">
       <DependentUpon>formKkDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formKondisiTempatTinggal.resx">

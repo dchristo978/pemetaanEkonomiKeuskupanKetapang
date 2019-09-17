@@ -11,14 +11,14 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
 {
     class Ref_JawabanControl
     {
-        private ref_jawabanTableAdapter refjawabanControl = new ref_jawabanTableAdapter();
+        private ref_jawabanTableAdapter refJawabanAdapter = new ref_jawabanTableAdapter();
         private db_ekonomi_ketapang ds = new db_ekonomi_ketapang();
 
         public List<ref_jawaban> populateComboBox()
         {
             DataTable dt = new DataTable();
             dt.Clear();
-            dt = refjawabanControl.GetData();
+            dt = refJawabanAdapter.GetData();
 
             List<ref_jawaban> balikan = new List<ref_jawaban>();
             for(int i = 0; i < dt.Rows.Count; i ++)
@@ -37,7 +37,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
 
         public int insertNewRefJawaban(ref_jawaban temp)
         {
-            return refjawabanControl.insertNewRefJawaban(this.getLastIndexRefJawaban(), "z", temp.jawaban, temp.id_pertanyaan);
+            return refJawabanAdapter.insertNewRefJawaban(this.getLastIndexRefJawaban(), "z", temp.jawaban, temp.id_pertanyaan);
         }
 
         public int getLastIndexRefJawaban()
@@ -45,7 +45,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
             int balikan = 0;
             ds.Clear();
             ds.EnforceConstraints = false;
-            refjawabanControl.Fill(ds.ref_jawaban);
+            refJawabanAdapter.Fill(ds.ref_jawaban);
             if (ds.ref_jawaban.Rows.Count == 0)
             {
                 return balikan;
@@ -60,7 +60,9 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
         public DataTable populateDataGridBasedOnIDPertanyaan(int idPertanyaan)
         {
             DataTable temp = new DataTable();
-            temp = refjawabanControl.getCustomJawabanBasedOnIDPertanyaan(idPertanyaan);
+            temp = refJawabanAdapter.GetData();
+            temp = temp.Select("id_pertanyaan = " + idPertanyaan, "id_ref_jawaban DESC").CopyToDataTable();
+
             return temp;
         }
     }

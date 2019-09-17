@@ -79,7 +79,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            lbJawaban.Text = dataGridView1.SelectedCells[1].Value.ToString();
+            lbJawaban.Text = dataGridView1.Rows[e.ColumnIndex].Cells["jawaban"].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -121,7 +121,6 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
             if (!String.Equals(GlobalParam.formParent, "formKepalaKeluarga"))
             {
 
-
                 GlobalParam.no_k5 = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["no_kk"].Value.ToString();
                 GlobalParam.nama = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama"].Value.ToString();
 

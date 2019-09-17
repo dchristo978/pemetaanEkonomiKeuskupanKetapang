@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Data;
 using System.Diagnostics;
+using Pemetaan_Ekonomi_Ketapang.Controller;
 namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 {
     public partial class formTambahJawabanLainnya : MetroForm
@@ -28,6 +29,10 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
             this.cmbPertanyaan.DisplayMember = "pertanyaan";
             this.cmbPertanyaan.ValueMember = "id_pertanyaan";
             this.cmbPertanyaan.DataSource = temp;
+            this.cmbPertanyaan.SelectedValue = GlobalParam.idPertanyaan;
+
+            if (String.Equals(GlobalParam.formParent, "formUtama"))
+                this.cmbPertanyaan.Enabled = false;
 
             disableBobot(false);
         }
@@ -112,17 +117,13 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
             {
                 edtBatasAtasBobot.Enabled = false;
                 edtBatasBawahBobot.Enabled = false;
-                DataTable temp = bobotControl.getBobotDataTable(Convert.ToInt32(this.cmbPertanyaan.SelectedValue));
-                temp.Columns.Remove("batas_bawah_bobot");
-                temp.Columns.Remove("batas_atas_bobot");
-                this.dataGridView1.DataSource = temp;
             }
             else
             {
-                DataTable temp = bobotControl.getBobotDataTable(Convert.ToInt32(this.cmbPertanyaan.SelectedValue));
-                this.dataGridView1.DataSource = temp;
                 isBatasAtasBawah = true;
             }
+
+            loadDatagridview(tempFlag);
         }
 
         private void btnSimpanBobot_Click(object sender, EventArgs e)
@@ -137,6 +138,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                 {
                     tbl_bobot temp = new tbl_bobot(0, Convert.ToDouble(this.edtBobot.Text), this.edtHeaderBobot.Text, this.edtDesBobot.Text, Convert.ToDouble(this.edtBatasBawahBobot.Text), Convert.ToDouble(this.edtBatasAtasBobot.Text), "Y", Convert.ToInt32(this.cmbPertanyaan.SelectedValue));
                     simpanBobotBaru(temp);
+                    this.dataGridView1.Refresh();
                 }
             }
             else
@@ -149,6 +151,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                 {
                     tbl_bobot temp = new tbl_bobot(0, Convert.ToDouble(this.edtBobot.Text), this.edtHeaderBobot.Text, this.edtDesBobot.Text, 0, 0, "Y", Convert.ToInt32(this.cmbPertanyaan.SelectedValue));
                     simpanBobotBaru(temp);
+                    this.dataGridView1.Refresh();
                 }
             }
         }
@@ -167,6 +170,24 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                 MessageBox.Show("Terjadi kesalahan pada saat memasukan bobot baru, silahkan hubungi admin dengan error code : " + E.Message);
             }
             dataGridView1.Refresh();
+        }
+
+        private void loadDatagridview(bool tempFlag)
+        {
+            if(!tempFlag)
+            {
+                DataTable temp = bobotControl.getBobotDataTable(Convert.ToInt32(this.cmbPertanyaan.SelectedValue));
+                temp.Columns.Remove("batas_bawah_bobot");
+                temp.Columns.Remove("batas_atas_bobot");
+                this.dataGridView1.DataSource = temp;
+                this.dataGridView1.Columns[0].Visible = false;
+            }
+            else
+            {
+                DataTable temp = bobotControl.getBobotDataTable(Convert.ToInt32(this.cmbPertanyaan.SelectedValue));
+                this.dataGridView1.DataSource = temp;
+                this.dataGridView1.Columns[0].Visible = false;
+            }
         }
     }
 }

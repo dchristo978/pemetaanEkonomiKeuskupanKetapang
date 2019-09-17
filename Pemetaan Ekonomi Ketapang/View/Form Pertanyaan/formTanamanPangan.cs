@@ -68,6 +68,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void btnTambahLain_Click(object sender, EventArgs e)
         {
+            GlobalParam.formParent = "formTanamanPangan";
             GlobalParam.idPertanyaan = 19;
             formJawabanLainnya fr = new formJawabanLainnya();
             fr.ShowDialog();
