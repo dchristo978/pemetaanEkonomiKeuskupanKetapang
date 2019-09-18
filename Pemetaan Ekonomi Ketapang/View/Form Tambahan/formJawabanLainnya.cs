@@ -68,8 +68,13 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         {
             dataGridView1.DataSource = refJawabanControl.populateDataGridBasedOnIDPertanyaan(GlobalParam.idPertanyaan);
             dataGridView1.Columns["id_ref_jawaban"].Visible = false;
+            dataGridView1.Columns["no_jawaban"].Visible = false;
+            dataGridView1.Columns["id_pertanyaan"].Visible = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             lbBab.Text = pertanyaanControl.getBabPertanyaanBasedOnIDpertanyaan(GlobalParam.idPertanyaan);
             lbPertanyaan.Text = pertanyaanControl.getPertanyaanBasedOnIdPertanyaan(GlobalParam.idPertanyaan);
+
+            lbJawaban.Text = "Belum ada jawaban yang dipilh";
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -79,7 +84,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            lbJawaban.Text = dataGridView1.Rows[e.ColumnIndex].Cells["jawaban"].Value.ToString();
+            lbJawaban.Text = dataGridView1.Rows[e.RowIndex].Cells["jawaban"].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -89,6 +94,11 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         }
 
         private void formJawabanLainnya_Activated(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
+        }
+
+        private void formJawabanLainnya_Enter(object sender, EventArgs e)
         {
             dataGridView1.Refresh();
         }

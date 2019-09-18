@@ -125,5 +125,13 @@
             //fr.MdiParent = this;
             //fr.Show();
         }
+
+        private void tambahJawabanBaruToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Pertanyaan.formTambahJawabanLainnya form = new formTambahJawabanLainnya();
+            GlobalParam.formParent = "formUtama";
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

@@ -110,16 +110,17 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                     if (this.cbTidakAda.Checked)
                         tblJawaanControl.insertJawaban(new tbl_jawaban(0,76, Convert.ToInt32(formIdentitas.idUmat), "Null", "Null"));
 
-                    MessageBox.Show("Data Lain Lain berhasil di masukan, silahkan lanjutkan ke form berikut!");
-                    formTanamanPangan fr = new formTanamanPangan();
-                    this.Hide();
-                    fr.ShowDialog();
-                    this.Close();
                 }
                 catch(Exception E)
                 {
                     MessageBox.Show("Terjadi kesalahan, silahkan hubungi admin dengan error code : " + tempFlag + "  Tempflagnya  " + E.Message);
                 }
+
+                MessageBox.Show("Data Lain Lain berhasil di masukan, silahkan lanjutkan ke form berikut!");
+                formTanamanPangan fr = new formTanamanPangan();
+                this.Hide();
+                fr.Show();
+                this.Close();
             }
         }
 

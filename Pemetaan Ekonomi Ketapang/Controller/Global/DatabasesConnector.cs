@@ -10,6 +10,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Global
 {
     class DatabasesConnector
     {
+        public static String dbEkonomi = "db_ekonomi_ketapang";
         public string lokasi_paroki { get; set; }
         public string nama_database { get; set; }
         public string id_paroki { get; set; }

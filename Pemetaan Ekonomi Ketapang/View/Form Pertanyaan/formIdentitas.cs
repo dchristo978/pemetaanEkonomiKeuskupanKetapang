@@ -168,6 +168,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                     {
                         MessageBox.Show("Data umat baru berhasil dimasukan, silahkan isi data hasil sampling pada form berikutnya!");
                         idUmat = umatControl.getLastID();
+                        GlobalParam.id_umat = Convert.ToInt32(idUmat);
                         this.Hide();
                         formKondisiTempatTinggal formKondisiTempatTinggal = new formKondisiTempatTinggal();
                         formKondisiTempatTinggal.ShowDialog();

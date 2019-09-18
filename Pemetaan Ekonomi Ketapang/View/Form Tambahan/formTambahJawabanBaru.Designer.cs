@@ -88,7 +88,7 @@
             // 
             // btnSimpanJawaban
             // 
-            this.btnSimpanJawaban.Location = new System.Drawing.Point(541, 82);
+            this.btnSimpanJawaban.Location = new System.Drawing.Point(181, 136);
             this.btnSimpanJawaban.Name = "btnSimpanJawaban";
             this.btnSimpanJawaban.Size = new System.Drawing.Size(110, 41);
             this.btnSimpanJawaban.TabIndex = 4;
@@ -99,15 +99,15 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(412, 203);
+            this.dataGridView1.Location = new System.Drawing.Point(468, 82);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(365, 182);
+            this.dataGridView1.Size = new System.Drawing.Size(597, 303);
             this.dataGridView1.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(538, 178);
+            this.label3.Location = new System.Drawing.Point(465, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 13);
             this.label3.TabIndex = 6;
@@ -205,18 +205,19 @@
             // 
             // btnSelesai
             // 
-            this.btnSelesai.Location = new System.Drawing.Point(310, 423);
+            this.btnSelesai.Location = new System.Drawing.Point(456, 423);
             this.btnSelesai.Name = "btnSelesai";
             this.btnSelesai.Size = new System.Drawing.Size(180, 51);
             this.btnSelesai.TabIndex = 18;
             this.btnSelesai.Text = "Selesai";
             this.btnSelesai.UseVisualStyleBackColor = true;
+            this.btnSelesai.Click += new System.EventHandler(this.btnSelesai_Click);
             // 
             // formTambahJawabanLainnya
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 497);
+            this.ClientSize = new System.Drawing.Size(1088, 497);
             this.Controls.Add(this.btnSelesai);
             this.Controls.Add(this.edtBobot);
             this.Controls.Add(this.edtBatasBawahBobot);

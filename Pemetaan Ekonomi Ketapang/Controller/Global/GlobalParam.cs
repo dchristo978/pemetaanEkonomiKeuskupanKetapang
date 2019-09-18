@@ -22,6 +22,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller
         public static int id_ref_pekerjaan = 0;
         public static int id_paroki = 0;
         public static int kode_stasi = 0;
+        public static int id_umat = 0;
 
         public static String nama_database = "";
 

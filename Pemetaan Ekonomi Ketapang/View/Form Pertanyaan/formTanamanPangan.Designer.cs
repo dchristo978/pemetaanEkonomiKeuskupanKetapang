@@ -380,7 +380,7 @@
             this.Controls.Add(this.cmbSimpan);
             this.Controls.Add(this.groupBox1);
             this.Name = "formTanamanPangan";
-            this.Text = "Form Tanaman Pangan";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.formTanamanPangan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

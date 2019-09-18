@@ -42,6 +42,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutAkunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keluarAplikasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tambahJawabanBaruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,6 +133,8 @@
             // 
             // settingToolStripMenuItem
             // 
+            this.settingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tambahJawabanBaruToolStripMenuItem});
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             this.settingToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.settingToolStripMenuItem.Text = "Setting";
@@ -159,6 +162,13 @@
             this.keluarAplikasiToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.keluarAplikasiToolStripMenuItem.Text = "Keluar Aplikasi";
             this.keluarAplikasiToolStripMenuItem.Click += new System.EventHandler(this.keluarAplikasiToolStripMenuItem_Click);
+            // 
+            // tambahJawabanBaruToolStripMenuItem
+            // 
+            this.tambahJawabanBaruToolStripMenuItem.Name = "tambahJawabanBaruToolStripMenuItem";
+            this.tambahJawabanBaruToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.tambahJawabanBaruToolStripMenuItem.Text = "Tambah Jawaban Baru";
+            this.tambahJawabanBaruToolStripMenuItem.Click += new System.EventHandler(this.tambahJawabanBaruToolStripMenuItem_Click);
             // 
             // formUtama
             // 
@@ -193,5 +203,6 @@
         private System.Windows.Forms.ToolStripMenuItem lihatRekomendasiSamplingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kepalaKeluargaTerdataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kepalaKeluargaBaruTidakTerdataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tambahJawabanBaruToolStripMenuItem;
     }
 }

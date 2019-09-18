@@ -65,6 +65,13 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
 
             return temp;
         }
+
+        public int getIdRefJawabanBasedOnJawaban(String jawaban)
+        {
+            return Convert.ToInt32(refJawabanAdapter.getIdRefJawabanBasedOnJawaban(jawaban));
+        }
+
+
     }
 }
 
