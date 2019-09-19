@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using Pemetaan_Ekonomi_Ketapang.Controller;
 using Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi;
+using Pemetaan_Ekonomi_Ketapang.Model;
 
 namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 {
     public partial class formJawabanLainnya : MetroForm
     {
+        Tbl_JawabanControl tblJawabanControl = new Tbl_JawabanControl();
         Ref_JawabanControl refJawabanControl = new Ref_JawabanControl();
         Tbl_PertanyaanControl pertanyaanControl = new Tbl_PertanyaanControl();
 
@@ -79,12 +81,55 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
+            if (!String.IsNullOrWhiteSpace(this.edtDescJawaban1.Text))
+            {
 
+                if (this.edtDescJawaban2.Enabled == false)
+                {
+                    tblJawabanControl.insertJawaban(new tbl_jawaban(0, Convert.ToInt32(this.edtIdRefJawaban.Text), GlobalParam.id_umat, this.edtDescJawaban1.Text, ""));
+
+                    this.edtDescJawaban2.Enabled = true;
+                    lbJawaban.Text = "Belum ada jawaban yang dipilh";
+
+                    MessageBox.Show("Jawaban berhasil dimasukan, silahkan lanjutkan pilih jawaban lainnya atau keluar dari form ini untuk melanjutkan pengisian data!");
+                }
+                else
+                {
+                    if (!String.IsNullOrWhiteSpace(this.edtDescJawaban2.Text))
+                    {
+                        tblJawabanControl.insertJawaban(new tbl_jawaban(0, Convert.ToInt32(this.edtIdRefJawaban.Text), GlobalParam.id_umat, this.edtDescJawaban1.Text, this.edtDescJawaban2.Text));
+
+                        lbJawaban.Text = "Belum ada jawaban yang dipilh";
+                        MessageBox.Show("Jawaban berhasil dimasukan, silahkan lanjutkan pilih jawaban lainnya atau keluar dari form ini untuk melanjutkan pengisian data!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Silahkan isi deksripsi jawaban dua terlebih dahulu!");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Silahkan isi deskripsi jawaban satu terlebih dahulu!");
+            }
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            lbJawaban.Text = dataGridView1.Rows[e.RowIndex].Cells["jawaban"].Value.ToString();
+            if (!tblJawabanControl.checkCustomJawabanAlreadyPickedBasedOnIdUmatAndIdRefJawaban(GlobalParam.id_umat.ToString(), dataGridView1.Rows[e.RowIndex].Cells["id_ref_jawaban"].Value.ToString()))
+            {
+                lbJawaban.Text = dataGridView1.Rows[e.RowIndex].Cells["jawaban"].Value.ToString();
+                edtIdRefJawaban.Text = dataGridView1.Rows[e.RowIndex].Cells["id_ref_jawaban"].Value.ToString();
+
+                if (pertanyaanControl.getIdJenispertanyaanBasedOnIdPertanyaan(Convert.ToInt32(GlobalParam.idPertanyaan)) == 3)
+                {
+                    this.edtDescJawaban2.Enabled = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Jawaban " + dataGridView1.Rows[e.RowIndex].Cells["jawaban"].Value.ToString() + " sudah terinput, silahkan pilih jawaban lainnya !");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,6 +146,11 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         private void formJawabanLainnya_Enter(object sender, EventArgs e)
         {
             dataGridView1.Refresh();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

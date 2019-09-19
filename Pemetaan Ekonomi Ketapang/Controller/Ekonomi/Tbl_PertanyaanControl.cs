@@ -48,5 +48,10 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
         {
             return pertanyaanAdapter.getPertanyaanBasedOnIdPertanyaan(idPertanyaan);
         }
+
+        public int getIdJenispertanyaanBasedOnIdPertanyaan(int idPertanyaan)
+        {
+            return Convert.ToInt32(pertanyaanAdapter.getIdJenisPertanyaanBasedOnIdPertanyaan(idPertanyaan));
+        }
     }
 }

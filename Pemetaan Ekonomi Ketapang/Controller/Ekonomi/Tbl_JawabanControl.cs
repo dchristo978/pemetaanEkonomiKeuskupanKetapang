@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Pemetaan_Ekonomi_Ketapang.Model;
 using Pemetaan_Ekonomi_Ketapang.db_ekonomi_ketapangTableAdapters;
 using System.Data;
+using System.Diagnostics;
 
 namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
 {
@@ -44,6 +45,20 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
             temp = tblJawabanAdapter.getCustomJawabanPickedBasedOnIdUmat(GlobalParam.id_umat);
 
             return temp;
+        }
+
+        public bool checkCustomJawabanAlreadyPickedBasedOnIdUmatAndIdRefJawaban(String idUmat, String idRefJawaban)
+        {
+            DataTable temp = tblJawabanAdapter.getCustomJawabanPickedBasedOnIdUmat(Convert.ToInt32(idUmat));
+
+            DataRow[] result = temp.Select("id_ref_jawaban = " + idRefJawaban);
+
+            foreach(DataRow row in result)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
