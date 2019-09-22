@@ -57,6 +57,11 @@
             this.lbNamaLain = new MetroFramework.Controls.MetroLabel();
             this.edtTotalLain = new System.Windows.Forms.TextBox();
             this.btnEditLain = new MetroFramework.Controls.MetroButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -328,7 +333,7 @@
             // lbNamaLain
             // 
             this.lbNamaLain.AutoSize = true;
-            this.lbNamaLain.Location = new System.Drawing.Point(254, 427);
+            this.lbNamaLain.Location = new System.Drawing.Point(269, 427);
             this.lbNamaLain.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNamaLain.Name = "lbNamaLain";
             this.lbNamaLain.Size = new System.Drawing.Size(58, 19);
@@ -344,6 +349,7 @@
             this.edtTotalLain.Size = new System.Drawing.Size(114, 20);
             this.edtTotalLain.TabIndex = 71;
             this.edtTotalLain.Visible = false;
+            this.edtTotalLain.MouseHover += new System.EventHandler(this.edtTotalLain_MouseHover);
             // 
             // btnEditLain
             // 
@@ -354,14 +360,63 @@
             this.btnEditLain.TabIndex = 72;
             this.btnEditLain.Text = "Ubah";
             this.btnEditLain.UseSelectable = true;
-            this.btnEditLain.Visible = false;
             this.btnEditLain.Click += new System.EventHandler(this.btnEditLain_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(687, 274);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 13);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "KG";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(687, 305);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 13);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "KG";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(687, 335);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 13);
+            this.label3.TabIndex = 75;
+            this.label3.Text = "KG";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(687, 368);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(22, 13);
+            this.label4.TabIndex = 76;
+            this.label4.Text = "KG";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(687, 398);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 13);
+            this.label5.TabIndex = 77;
+            this.label5.Text = "KG";
             // 
             // formTanamanPangan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 632);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEditLain);
             this.Controls.Add(this.edtTotalLain);
             this.Controls.Add(this.lbNamaLain);
@@ -381,6 +436,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "formTanamanPangan";
             this.Text = " ";
+            this.Activated += new System.EventHandler(this.formTanamanPangan_Activated);
             this.Load += new System.EventHandler(this.formTanamanPangan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -420,5 +476,10 @@
         private MetroFramework.Controls.MetroLabel lbNamaLain;
         private System.Windows.Forms.TextBox edtTotalLain;
         private MetroFramework.Controls.MetroButton btnEditLain;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

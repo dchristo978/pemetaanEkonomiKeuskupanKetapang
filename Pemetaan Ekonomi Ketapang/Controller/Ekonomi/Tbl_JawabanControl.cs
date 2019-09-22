@@ -14,10 +14,11 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
     {
         private tbl_jawabanTableAdapter tblJawabanAdapter = new tbl_jawabanTableAdapter();
         private db_ekonomi_ketapang ds = new db_ekonomi_ketapang();
+        private ref_jawabanTableAdapter refjawabanAdapter = new ref_jawabanTableAdapter();
 
         public int insertJawaban(tbl_jawaban temp)
         {
-            return tblJawabanAdapter.insertJawaban(this.getLastIndexJawaban(), temp.id_ref_jawaban,temp.id_umat,temp.deskripsi_jawaban_1, temp.deskripsi_jawaban_2);
+            return tblJawabanAdapter.insertJawaban(this.getLastIndexJawaban(), temp.id_ref_jawaban, temp.id_umat, temp.deskripsi_jawaban_1, temp.deskripsi_jawaban_2);
         }
 
 
@@ -47,18 +48,65 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
             return temp;
         }
 
+        public DataTable getCustomJawabanPickedBasedOnIdUmatAndIdPertanyaan()
+        {
+            DataTable temp = new DataTable();
+
+            temp = tblJawabanAdapter.getPickedCustomJawabanBasedOnIdPertanyaanAndIdUmat(GlobalParam.idPertanyaan,GlobalParam.id_umat);
+
+            return temp;
+        }
+
         public bool checkCustomJawabanAlreadyPickedBasedOnIdUmatAndIdRefJawaban(String idUmat, String idRefJawaban)
         {
             DataTable temp = tblJawabanAdapter.getCustomJawabanPickedBasedOnIdUmat(Convert.ToInt32(idUmat));
 
             DataRow[] result = temp.Select("id_ref_jawaban = " + idRefJawaban);
 
-            foreach(DataRow row in result)
+            foreach (DataRow row in result)
             {
                 return true;
             }
 
             return false;
+        }
+
+        public int updateJawabanBasedOnIdUmatIdRefJawaban(int idUmat, int idRefJawaban, String descJawaban1, String descJawaban2)
+        {
+            int balikan = 0;
+
+            if (String.IsNullOrWhiteSpace(descJawaban2))
+                descJawaban2 = "Null";
+
+            balikan = tblJawabanAdapter.updateDescJawaban12BasedOnIdUmatAndIdRefJawaban(descJawaban2, descJawaban1, idRefJawaban, idUmat);
+
+            return balikan;
+        }
+
+        public String getListStringCustomJawabanPickedBasedOnIDUmat()
+        {
+            String balikan = "";
+
+            DataTable temp = getCustomJawabanPickedBasedOnIdUmatAndIdPertanyaan();
+
+            if (temp != null)
+            {
+                for (int i = 0; i < temp.Rows.Count; i++)
+                {
+                    Debug.WriteLine("JAWABAN DI ROW : " + i + " ADALAH : " + temp.Rows[i]["jawaban"]);
+                    if (!(i < temp.Rows.Count - 1))
+                    {
+
+                        balikan += temp.Rows[i]["jawaban"] + ", ";
+                    }
+                    else
+                    {
+                        balikan += temp.Rows[i]["jawaban"];
+                    }
+                }
+            }
+
+            return balikan;
         }
     }
 }

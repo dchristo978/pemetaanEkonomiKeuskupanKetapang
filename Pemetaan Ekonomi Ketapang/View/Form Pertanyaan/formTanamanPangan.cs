@@ -25,6 +25,9 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         private Ref_JawabanControl refJawabanControl = new Ref_JawabanControl();
         private Tbl_JawabanControl tblJawaanControl = new Tbl_JawabanControl();
 
+        private ToolTip tempTooltip = new ToolTip();
+        private String tempListStringJawabanLain;
+
         public formTanamanPangan()
         {
             InitializeComponent();
@@ -33,6 +36,12 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         private void formTanamanPangan_Load(object sender, EventArgs e)
         {
             this.initializeHeader();
+            GlobalParam.idPertanyaan = 19;
+
+            this.edtTotalLain.Enabled = false;
+
+
+            CheckAlreadyPickedJawabanLain();
         }
 
         private void initializeHeader()
@@ -51,19 +60,52 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void cmbSimpan_Click(object sender, EventArgs e)
         {
-            if((string.IsNullOrEmpty(this.edtJagung.Text) || string.IsNullOrEmpty(this.edtKacang.Text) || string.IsNullOrEmpty(this.edtKedelai.Text) || string.IsNullOrEmpty(this.edtPadi.Text) || string.IsNullOrEmpty(this.edtUbi.Text)) && string.IsNullOrEmpty(this.edtTotalLain.Text))
+
+            if (String.IsNullOrWhiteSpace(this.edtPadi.Text.ToString()) && String.IsNullOrWhiteSpace(this.edtJagung.Text.ToString()) && String.IsNullOrWhiteSpace(this.edtUbi.Text.ToString()) && String.IsNullOrWhiteSpace(this.edtKedelai.Text.ToString()) && String.IsNullOrWhiteSpace(this.edtKacang.Text.ToString()) && String.IsNullOrWhiteSpace(this.edtTotalLain.Text.ToString()))
             {
-                MessageBox.Show("Pastikan data sudah terisi sesuai dengan Form");
+                MessageBox.Show("Pastikan salah satu data sudah diisi sesuai dengan form yang ada!");
             }
             else
-            {
+            { 
+                try
+                {
 
+                    if (!String.IsNullOrWhiteSpace(this.edtPadi.Text.ToString()))
+                    {
+                        tblJawaanControl.insertJawaban(new tbl_jawaban(0, 175, GlobalParam.id_umat, this.edtPadi.Text.ToString(), ""));
+                    }
+                    if (!String.IsNullOrWhiteSpace(this.edtJagung.Text.ToString()))
+                    {
+                        tblJawaanControl.insertJawaban(new tbl_jawaban(0, 176, GlobalParam.id_umat, this.edtJagung.Text.ToString(), ""));
+                    }
+                    if (!String.IsNullOrWhiteSpace(this.edtUbi.Text.ToString()))
+                    {
+                        tblJawaanControl.insertJawaban(new tbl_jawaban(0, 177, GlobalParam.id_umat, this.edtUbi.Text.ToString(), ""));
+                    }
+                    if (!String.IsNullOrWhiteSpace(this.edtKedelai.Text.ToString()))
+                    {
+                        tblJawaanControl.insertJawaban(new tbl_jawaban(0, 178, GlobalParam.id_umat, this.edtKedelai.Text.ToString(), ""));
+                    }
+                    if (!String.IsNullOrWhiteSpace(this.edtKacang.Text.ToString()))
+                    {
+                        tblJawaanControl.insertJawaban(new tbl_jawaban(0, 179, GlobalParam.id_umat, this.edtKacang.Text.ToString(), ""));
+                    }
+
+                    MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
+                    this.Close();
+                }
+                catch(Exception E)
+                {
+                    MessageBox.Show("Terjadi kesalahan pada sistem, silahkan hubungi admin dengan menyertakan kalimat berikut : " + E.Message);
+                }
             }
+
         }
 
         private void btnEditLain_Click(object sender, EventArgs e)
         {
-
+            formListJawabanLainTerpilih form = new formListJawabanLainTerpilih();
+            form.Show();
         }
 
         private void btnTambahLain_Click(object sender, EventArgs e)
@@ -72,6 +114,40 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
             GlobalParam.idPertanyaan = 19;
             formJawabanLainnya fr = new formJawabanLainnya();
             fr.ShowDialog();
+        }
+
+        private void formTanamanPangan_Activated(object sender, EventArgs e)
+        {
+            CheckAlreadyPickedJawabanLain();
+        }
+
+        private void CheckAlreadyPickedJawabanLain()
+        {
+            tempListStringJawabanLain = tblJawaanControl.getListStringCustomJawabanPickedBasedOnIDUmat();
+            if (!String.IsNullOrWhiteSpace(tempListStringJawabanLain))
+            {
+                this.edtTotalLain.Visible = Visible;
+                this.btnEditLain.Visible = Visible;
+                this.lbNamaLain.Visible = Visible;
+
+                this.edtTotalLain.Text = tempListStringJawabanLain;
+                tempTooltip.Active = true;
+                tempTooltip.SetToolTip(this.edtTotalLain, tempListStringJawabanLain);
+                tempTooltip.ShowAlways = true;
+            }
+            else
+            {
+                tempTooltip.Active = false;
+                this.edtTotalLain.Text = "";
+                this.edtTotalLain.Visible = false;
+                this.btnEditLain.Visible = false;
+                this.lbNamaLain.Visible = false;
+            }
+        }
+
+        private void edtTotalLain_MouseHover(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -124,6 +124,12 @@
     <Compile Include="View\Form Pertanyaan\formIdentitas.Designer.cs">
       <DependentUpon>formIdentitas.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Form Tambahan\formListJawabanLainTerpilih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Tambahan\formListJawabanLainTerpilih.Designer.cs">
+      <DependentUpon>formListJawabanLainTerpilih.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form Tambahan\formJawabanLainnya.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formIdentitas.resx">
       <DependentUpon>formIdentitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Tambahan\formListJawabanLainTerpilih.resx">
+      <DependentUpon>formListJawabanLainTerpilih.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Tambahan\formJawabanLainnya.resx">
       <DependentUpon>formJawabanLainnya.cs</DependentUpon>

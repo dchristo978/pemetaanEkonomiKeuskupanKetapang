@@ -33,6 +33,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
 
             return balikan;
         }
+        
 
         public bool isPertanyaanDenganBobotJawabanBatasAtasBawahBasedOnIdPertanyaan(int idPertanyaan)
         {

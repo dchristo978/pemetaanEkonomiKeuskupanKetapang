@@ -4545,9 +4545,7 @@ namespace Pemetaan_Ekonomi_Ketapang {
                 this.columnid_jawaban.Unique = true;
                 this.columnid_ref_jawaban.AllowDBNull = false;
                 this.columnid_umat.AllowDBNull = false;
-                this.columndeskripsi_jawaban_1.AllowDBNull = false;
                 this.columndeskripsi_jawaban_1.MaxLength = 255;
-                this.columndeskripsi_jawaban_2.AllowDBNull = false;
                 this.columndeskripsi_jawaban_2.MaxLength = 255;
             }
             
@@ -6441,7 +6439,12 @@ namespace Pemetaan_Ekonomi_Ketapang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string deskripsi_jawaban_1 {
                 get {
-                    return ((string)(this[this.tabletbl_jawaban.deskripsi_jawaban_1Column]));
+                    if (this.Isdeskripsi_jawaban_1Null()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tabletbl_jawaban.deskripsi_jawaban_1Column]));
+                    }
                 }
                 set {
                     this[this.tabletbl_jawaban.deskripsi_jawaban_1Column] = value;
@@ -6452,7 +6455,12 @@ namespace Pemetaan_Ekonomi_Ketapang {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string deskripsi_jawaban_2 {
                 get {
-                    return ((string)(this[this.tabletbl_jawaban.deskripsi_jawaban_2Column]));
+                    if (this.Isdeskripsi_jawaban_2Null()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tabletbl_jawaban.deskripsi_jawaban_2Column]));
+                    }
                 }
                 set {
                     this[this.tabletbl_jawaban.deskripsi_jawaban_2Column] = value;
@@ -6479,6 +6487,30 @@ namespace Pemetaan_Ekonomi_Ketapang {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["tbl_jawaban_ibfk_3"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isdeskripsi_jawaban_1Null() {
+                return this.IsNull(this.tabletbl_jawaban.deskripsi_jawaban_1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setdeskripsi_jawaban_1Null() {
+                this[this.tabletbl_jawaban.deskripsi_jawaban_1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isdeskripsi_jawaban_2Null() {
+                return this.IsNull(this.tabletbl_jawaban.deskripsi_jawaban_2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setdeskripsi_jawaban_2Null() {
+                this[this.tabletbl_jawaban.deskripsi_jawaban_2Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -13650,9 +13682,7 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `tbl_jawaban` WHERE ((`id_jawaban` = @p1) AND (`id_ref_jawaban` = @p2" +
-                ") AND (`id_umat` = @p3) AND (`deskripsi_jawaban_1` = @p4) AND (`deskripsi_jawaba" +
-                "n_2` = @p5))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tbl_jawaban` WHERE ((`id_jawaban` = @p1) AND (`id_ref_jawaban` = @p2) AND (`id_umat` = @p3) AND ((@p4 = 1 AND `deskripsi_jawaban_1` IS NULL) OR (`deskripsi_jawaban_1` = @p5)) AND ((@p6 = 1 AND `deskripsi_jawaban_2` IS NULL) OR (`deskripsi_jawaban_2` = @p7)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -13680,6 +13710,15 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p4";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "deskripsi_jawaban_1";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p5";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -13687,7 +13726,16 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p5";
+            param.ParameterName = "@p6";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "deskripsi_jawaban_2";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p7";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -13736,7 +13784,7 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `tbl_jawaban` SET `id_jawaban` = @p1, `id_ref_jawaban` = @p2, `id_umat` = @p3, `deskripsi_jawaban_1` = @p4, `deskripsi_jawaban_2` = @p5 WHERE ((`id_jawaban` = @p6) AND (`id_ref_jawaban` = @p7) AND (`id_umat` = @p8) AND (`deskripsi_jawaban_1` = @p9) AND (`deskripsi_jawaban_2` = @p10))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `tbl_jawaban` SET `id_jawaban` = @p1, `id_ref_jawaban` = @p2, `id_umat` = @p3, `deskripsi_jawaban_1` = @p4, `deskripsi_jawaban_2` = @p5 WHERE ((`id_jawaban` = @p6) AND (`id_ref_jawaban` = @p7) AND (`id_umat` = @p8) AND ((@p9 = 1 AND `deskripsi_jawaban_1` IS NULL) OR (`deskripsi_jawaban_1` = @p10)) AND ((@p11 = 1 AND `deskripsi_jawaban_2` IS NULL) OR (`deskripsi_jawaban_2` = @p12)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -13799,6 +13847,15 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p9";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "deskripsi_jawaban_1";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p10";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -13806,7 +13863,16 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p10";
+            param.ParameterName = "@p11";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "deskripsi_jawaban_2";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p12";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -13825,7 +13891,7 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[3];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[5];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `id_jawaban`, `id_ref_jawaban`, `id_umat`, `deskripsi_jawaban_1`, `deskrip" +
@@ -13833,7 +13899,7 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        tbl_jawaban.id_jawaban, tbl_jawaban.id_ref_jawaban, tbl_jawaban.id_umat, tbl_jawaban.deskripsi_jawaban_1, tbl_jawaban.deskripsi_jawaban_2
+            this._commandCollection[1].CommandText = @"SELECT        tbl_jawaban.deskripsi_jawaban_1, tbl_jawaban.deskripsi_jawaban_2, tbl_jawaban.id_jawaban, tbl_jawaban.id_ref_jawaban, tbl_jawaban.id_umat
 FROM            tbl_jawaban INNER JOIN
                          ref_jawaban ON tbl_jawaban.id_ref_jawaban = ref_jawaban.id_ref_jawaban
 WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
@@ -13847,30 +13913,52 @@ WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
             this._commandCollection[1].Parameters.Add(param);
             this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO `tbl_jawaban` (`id_jawaban`, `id_ref_jawaban`, `id_umat`, `deskripsi_" +
-                "jawaban_1`, `deskripsi_jawaban_2`) VALUES (@p1, @p2, @p3, @p4, @p5)";
+            this._commandCollection[2].CommandText = @"SELECT        ref_jawaban.id_ref_jawaban, ref_jawaban.no_jawaban, ref_jawaban.jawaban, ref_jawaban.id_pertanyaan, tbl_jawaban.id_jawaban, tbl_jawaban.id_ref_jawaban AS Expr1, tbl_jawaban.id_umat, tbl_jawaban.deskripsi_jawaban_1, 
+                         tbl_jawaban.deskripsi_jawaban_2
+FROM            ref_jawaban INNER JOIN
+                         tbl_jawaban ON ref_jawaban.id_ref_jawaban = tbl_jawaban.id_ref_jawaban
+WHERE        (ref_jawaban.id_pertanyaan = @idPertanyaan) AND (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @idUmat)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@idPertanyaan";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "id_pertanyaan";
+            this._commandCollection[2].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@idUmat";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "id_umat";
+            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "INSERT INTO `tbl_jawaban` (`id_jawaban`, `id_ref_jawaban`, `id_umat`, `deskripsi_" +
+                "jawaban_1`, `deskripsi_jawaban_2`) VALUES (@p1, @p2, @p3, @p4, @p5)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "id_jawaban";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p2";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "id_ref_jawaban";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "id_umat";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.String;
@@ -13878,7 +13966,7 @@ WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
             param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "deskripsi_jawaban_1";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p5";
             param.DbType = global::System.Data.DbType.String;
@@ -13886,7 +13974,45 @@ WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
             param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "deskripsi_jawaban_2";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
+            this._commandCollection[4] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "UPDATE       tbl_jawaban\r\nSET                deskripsi_jawaban_2 = @pDescJawaban2" +
+                ", deskripsi_jawaban_1 = @pDescJawaban1\r\nWHERE        (id_ref_jawaban = @pRefJawa" +
+                "ban) AND (id_umat = @pIdUmat)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@pDescJawaban2";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "deskripsi_jawaban_2";
+            this._commandCollection[4].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@pDescJawaban1";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "deskripsi_jawaban_1";
+            this._commandCollection[4].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@pRefJawaban";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "id_ref_jawaban";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._commandCollection[4].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@pIdUmat";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "id_umat";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._commandCollection[4].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13928,6 +14054,19 @@ WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual db_ekonomi_ketapang.tbl_jawabanDataTable getPickedCustomJawabanBasedOnIdPertanyaanAndIdUmat(int idPertanyaan, int idUmat) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idPertanyaan));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idUmat));
+            db_ekonomi_ketapang.tbl_jawabanDataTable dataTable = new db_ekonomi_ketapang.tbl_jawabanDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(db_ekonomi_ketapang.tbl_jawabanDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
@@ -13958,21 +14097,25 @@ WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int p1, int p2, int p3, string p4, string p5) {
+        public virtual int Delete(int p1, int p2, int p3, string p5, string p7) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(p1));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(p2));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(p3));
-            if ((p4 == null)) {
-                throw new global::System.ArgumentNullException("p4");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(p4));
-            }
             if ((p5 == null)) {
-                throw new global::System.ArgumentNullException("p5");
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(p5));
+            }
+            if ((p7 == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(p7));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13999,13 +14142,13 @@ WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(p2));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(p3));
             if ((p4 == null)) {
-                throw new global::System.ArgumentNullException("p4");
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(p4));
             }
             if ((p5 == null)) {
-                throw new global::System.ArgumentNullException("p5");
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(p5));
@@ -14030,18 +14173,18 @@ WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int p1, int p2, int p3, string p4, string p5, int p6, int p7, int p8, string p9, string p10) {
+        public virtual int Update(int p1, int p2, int p3, string p4, string p5, int p6, int p7, int p8, string p10, string p12) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(p1));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(p2));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(p3));
             if ((p4 == null)) {
-                throw new global::System.ArgumentNullException("p4");
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
             }
             if ((p5 == null)) {
-                throw new global::System.ArgumentNullException("p5");
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(p5));
@@ -14049,17 +14192,21 @@ WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(p6));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(p7));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(p8));
-            if ((p9 == null)) {
-                throw new global::System.ArgumentNullException("p9");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(p9));
-            }
             if ((p10 == null)) {
-                throw new global::System.ArgumentNullException("p10");
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(p10));
+            }
+            if ((p12 == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(p12));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -14081,8 +14228,8 @@ WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int p2, int p3, string p4, string p5, int p6, int p7, int p8, string p9, string p10) {
-            return this.Update(p6, p2, p3, p4, p5, p6, p7, p8, p9, p10);
+        public virtual int Update(int p2, int p3, string p4, string p5, int p6, int p7, int p8, string p10, string p12) {
+            return this.Update(p6, p2, p3, p4, p5, p6, p7, p8, p10, p12);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14090,22 +14237,59 @@ WHERE        (ref_jawaban.no_jawaban = 'z') AND (tbl_jawaban.id_umat = @p)";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int insertJawaban(int p1, int p2, int p3, string p4, string p5) {
-            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[2];
+            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[3];
             command.Parameters[0].Value = ((int)(p1));
             command.Parameters[1].Value = ((int)(p2));
             command.Parameters[2].Value = ((int)(p3));
             if ((p4 == null)) {
-                throw new global::System.ArgumentNullException("p4");
+                command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 command.Parameters[3].Value = ((string)(p4));
             }
             if ((p5 == null)) {
-                throw new global::System.ArgumentNullException("p5");
+                command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 command.Parameters[4].Value = ((string)(p5));
             }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int updateDescJawaban12BasedOnIdUmatAndIdRefJawaban(string pDescJawaban2, string pDescJawaban1, int pRefJawaban, int pIdUmat) {
+            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[4];
+            if ((pDescJawaban2 == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(pDescJawaban2));
+            }
+            if ((pDescJawaban1 == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(pDescJawaban1));
+            }
+            command.Parameters[2].Value = ((int)(pRefJawaban));
+            command.Parameters[3].Value = ((int)(pIdUmat));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
