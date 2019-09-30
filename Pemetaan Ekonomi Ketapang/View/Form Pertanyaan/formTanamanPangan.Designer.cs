@@ -68,20 +68,18 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(20, 39);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(27, 48);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(155, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(161, 20);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "1. Nama Kepala Keluarga";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(20, 73);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel2.Location = new System.Drawing.Point(27, 90);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(93, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(98, 20);
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "2. No Identitas";
             // 
@@ -99,11 +97,11 @@
             this.groupBox1.Controls.Add(this.lb_nok5);
             this.groupBox1.Controls.Add(this.metroLabel6);
             this.groupBox1.Controls.Add(this.lb_namaKK);
-            this.groupBox1.Location = new System.Drawing.Point(33, 66);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(44, 81);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(886, 155);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1181, 191);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identitas";
@@ -111,109 +109,99 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(539, 39);
-            this.metroLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel4.Location = new System.Drawing.Point(719, 48);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(59, 20);
             this.metroLabel4.TabIndex = 3;
             this.metroLabel4.Text = "4. Umur";
             // 
             // lb_stasi
             // 
             this.lb_stasi.AutoSize = true;
-            this.lb_stasi.Location = new System.Drawing.Point(625, 104);
-            this.lb_stasi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_stasi.Location = new System.Drawing.Point(833, 128);
             this.lb_stasi.Name = "lb_stasi";
-            this.lb_stasi.Size = new System.Drawing.Size(106, 19);
+            this.lb_stasi.Size = new System.Drawing.Size(111, 20);
             this.lb_stasi.TabIndex = 11;
             this.lb_stasi.Text = "Stasi taruh di sini";
             // 
             // lb_paroki
             // 
             this.lb_paroki.AutoSize = true;
-            this.lb_paroki.Location = new System.Drawing.Point(625, 73);
-            this.lb_paroki.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_paroki.Location = new System.Drawing.Point(833, 90);
             this.lb_paroki.Name = "lb_paroki";
-            this.lb_paroki.Size = new System.Drawing.Size(116, 19);
+            this.lb_paroki.Size = new System.Drawing.Size(121, 20);
             this.lb_paroki.TabIndex = 10;
             this.lb_paroki.Text = "Paroki taruh di sini";
             // 
             // lb_umur
             // 
             this.lb_umur.AutoSize = true;
-            this.lb_umur.Location = new System.Drawing.Point(625, 39);
-            this.lb_umur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_umur.Location = new System.Drawing.Point(833, 48);
             this.lb_umur.Name = "lb_umur";
-            this.lb_umur.Size = new System.Drawing.Size(154, 19);
+            this.lb_umur.Size = new System.Drawing.Size(161, 20);
             this.lb_umur.TabIndex = 9;
             this.lb_umur.Text = "Tanggal lahir taruh di sini";
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(20, 104);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel3.Location = new System.Drawing.Point(27, 128);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(100, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(107, 20);
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "3. Jenis Kelamin";
             // 
             // lb_jenisKelamin
             // 
             this.lb_jenisKelamin.AutoSize = true;
-            this.lb_jenisKelamin.Location = new System.Drawing.Point(207, 104);
-            this.lb_jenisKelamin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_jenisKelamin.Location = new System.Drawing.Point(276, 128);
             this.lb_jenisKelamin.Name = "lb_jenisKelamin";
-            this.lb_jenisKelamin.Size = new System.Drawing.Size(172, 19);
+            this.lb_jenisKelamin.Size = new System.Drawing.Size(182, 20);
             this.lb_jenisKelamin.TabIndex = 8;
             this.lb_jenisKelamin.Text = "Jenis Kelamin di taruh di sini";
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(539, 73);
-            this.metroLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel5.Location = new System.Drawing.Point(719, 90);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(61, 20);
             this.metroLabel5.TabIndex = 4;
             this.metroLabel5.Text = "5. Paroki";
             // 
             // lb_nok5
             // 
             this.lb_nok5.AutoSize = true;
-            this.lb_nok5.Location = new System.Drawing.Point(207, 73);
-            this.lb_nok5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_nok5.Location = new System.Drawing.Point(276, 90);
             this.lb_nok5.Name = "lb_nok5";
-            this.lb_nok5.Size = new System.Drawing.Size(182, 19);
+            this.lb_nok5.Size = new System.Drawing.Size(192, 20);
             this.lb_nok5.TabIndex = 7;
             this.lb_nok5.Text = "No K5 Keluarga ditaruh di sini";
             // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(539, 104);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel6.Location = new System.Drawing.Point(719, 128);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(49, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(51, 20);
             this.metroLabel6.TabIndex = 5;
             this.metroLabel6.Text = "6. Stasi";
             // 
             // lb_namaKK
             // 
             this.lb_namaKK.AutoSize = true;
-            this.lb_namaKK.Location = new System.Drawing.Point(207, 38);
-            this.lb_namaKK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_namaKK.Location = new System.Drawing.Point(276, 47);
             this.lb_namaKK.Name = "lb_namaKK";
-            this.lb_namaKK.Size = new System.Drawing.Size(226, 19);
+            this.lb_namaKK.Size = new System.Drawing.Size(237, 20);
             this.lb_namaKK.TabIndex = 6;
             this.lb_namaKK.Text = "Nama Kepala Keluarga Ditaruh di sini";
             // 
             // cmbSimpan
             // 
-            this.cmbSimpan.Location = new System.Drawing.Point(385, 531);
-            this.cmbSimpan.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbSimpan.Location = new System.Drawing.Point(513, 654);
+            this.cmbSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbSimpan.Name = "cmbSimpan";
-            this.cmbSimpan.Size = new System.Drawing.Size(162, 58);
+            this.cmbSimpan.Size = new System.Drawing.Size(216, 71);
             this.cmbSimpan.TabIndex = 51;
             this.cmbSimpan.Text = "Simpan";
             this.cmbSimpan.UseSelectable = true;
@@ -221,110 +209,104 @@
             // 
             // edtPadi
             // 
-            this.edtPadi.Location = new System.Drawing.Point(568, 271);
-            this.edtPadi.Margin = new System.Windows.Forms.Padding(2);
+            this.edtPadi.Location = new System.Drawing.Point(757, 334);
+            this.edtPadi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.edtPadi.Name = "edtPadi";
-            this.edtPadi.Size = new System.Drawing.Size(114, 20);
+            this.edtPadi.Size = new System.Drawing.Size(151, 22);
             this.edtPadi.TabIndex = 58;
             // 
             // edtJagung
             // 
-            this.edtJagung.Location = new System.Drawing.Point(568, 302);
-            this.edtJagung.Margin = new System.Windows.Forms.Padding(2);
+            this.edtJagung.Location = new System.Drawing.Point(757, 372);
+            this.edtJagung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.edtJagung.Name = "edtJagung";
-            this.edtJagung.Size = new System.Drawing.Size(114, 20);
+            this.edtJagung.Size = new System.Drawing.Size(151, 22);
             this.edtJagung.TabIndex = 59;
             // 
             // edtUbi
             // 
-            this.edtUbi.Location = new System.Drawing.Point(568, 332);
-            this.edtUbi.Margin = new System.Windows.Forms.Padding(2);
+            this.edtUbi.Location = new System.Drawing.Point(757, 409);
+            this.edtUbi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.edtUbi.Name = "edtUbi";
-            this.edtUbi.Size = new System.Drawing.Size(114, 20);
+            this.edtUbi.Size = new System.Drawing.Size(151, 22);
             this.edtUbi.TabIndex = 60;
             // 
             // edtKedelai
             // 
-            this.edtKedelai.Location = new System.Drawing.Point(568, 365);
-            this.edtKedelai.Margin = new System.Windows.Forms.Padding(2);
+            this.edtKedelai.Location = new System.Drawing.Point(757, 449);
+            this.edtKedelai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.edtKedelai.Name = "edtKedelai";
-            this.edtKedelai.Size = new System.Drawing.Size(114, 20);
+            this.edtKedelai.Size = new System.Drawing.Size(151, 22);
             this.edtKedelai.TabIndex = 61;
             // 
             // edtKacang
             // 
-            this.edtKacang.Location = new System.Drawing.Point(568, 395);
-            this.edtKacang.Margin = new System.Windows.Forms.Padding(2);
+            this.edtKacang.Location = new System.Drawing.Point(757, 486);
+            this.edtKacang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.edtKacang.Name = "edtKacang";
-            this.edtKacang.Size = new System.Drawing.Size(114, 20);
+            this.edtKacang.Size = new System.Drawing.Size(151, 22);
             this.edtKacang.TabIndex = 62;
             // 
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(254, 238);
-            this.metroLabel7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel7.Location = new System.Drawing.Point(339, 293);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(333, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(349, 20);
             this.metroLabel7.TabIndex = 63;
             this.metroLabel7.Text = "Jumlah hasil panen tanaman pangan dalam satu tahun :";
             // 
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(254, 273);
-            this.metroLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel8.Location = new System.Drawing.Point(339, 336);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(53, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(53, 20);
             this.metroLabel8.TabIndex = 64;
             this.metroLabel8.Text = "1. Padi :";
             // 
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(254, 302);
-            this.metroLabel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel9.Location = new System.Drawing.Point(339, 372);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(75, 20);
             this.metroLabel9.TabIndex = 65;
             this.metroLabel9.Text = "2. Jagung :";
             // 
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(254, 332);
-            this.metroLabel10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel10.Location = new System.Drawing.Point(339, 409);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(128, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(136, 20);
             this.metroLabel10.TabIndex = 66;
             this.metroLabel10.Text = "3. Ketela / Ubi kayu :";
             // 
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(254, 365);
-            this.metroLabel11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel11.Location = new System.Drawing.Point(339, 449);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel11.Size = new System.Drawing.Size(76, 20);
             this.metroLabel11.TabIndex = 67;
             this.metroLabel11.Text = "4. Kedelai :";
             // 
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(254, 395);
-            this.metroLabel12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel12.Location = new System.Drawing.Point(339, 486);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(108, 19);
+            this.metroLabel12.Size = new System.Drawing.Size(114, 20);
             this.metroLabel12.TabIndex = 68;
             this.metroLabel12.Text = "5. Kacang tanah :";
             // 
             // btnTambahLain
             // 
-            this.btnTambahLain.Location = new System.Drawing.Point(385, 468);
-            this.btnTambahLain.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTambahLain.Location = new System.Drawing.Point(513, 576);
+            this.btnTambahLain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTambahLain.Name = "btnTambahLain";
-            this.btnTambahLain.Size = new System.Drawing.Size(163, 33);
+            this.btnTambahLain.Size = new System.Drawing.Size(217, 41);
             this.btnTambahLain.TabIndex = 69;
             this.btnTambahLain.Text = "Tambah Jawaban Lainnya";
             this.btnTambahLain.UseSelectable = true;
@@ -333,30 +315,29 @@
             // lbNamaLain
             // 
             this.lbNamaLain.AutoSize = true;
-            this.lbNamaLain.Location = new System.Drawing.Point(269, 427);
-            this.lbNamaLain.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbNamaLain.Location = new System.Drawing.Point(359, 526);
             this.lbNamaLain.Name = "lbNamaLain";
-            this.lbNamaLain.Size = new System.Drawing.Size(58, 19);
+            this.lbNamaLain.Size = new System.Drawing.Size(61, 20);
             this.lbNamaLain.TabIndex = 70;
             this.lbNamaLain.Text = "Lain-lain";
             this.lbNamaLain.Visible = false;
             // 
             // edtTotalLain
             // 
-            this.edtTotalLain.Location = new System.Drawing.Point(568, 427);
-            this.edtTotalLain.Margin = new System.Windows.Forms.Padding(2);
+            this.edtTotalLain.Location = new System.Drawing.Point(757, 526);
+            this.edtTotalLain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.edtTotalLain.Name = "edtTotalLain";
-            this.edtTotalLain.Size = new System.Drawing.Size(114, 20);
+            this.edtTotalLain.Size = new System.Drawing.Size(151, 22);
             this.edtTotalLain.TabIndex = 71;
             this.edtTotalLain.Visible = false;
             this.edtTotalLain.MouseHover += new System.EventHandler(this.edtTotalLain_MouseHover);
             // 
             // btnEditLain
             // 
-            this.btnEditLain.Location = new System.Drawing.Point(694, 427);
-            this.btnEditLain.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditLain.Location = new System.Drawing.Point(925, 526);
+            this.btnEditLain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditLain.Name = "btnEditLain";
-            this.btnEditLain.Size = new System.Drawing.Size(65, 18);
+            this.btnEditLain.Size = new System.Drawing.Size(87, 22);
             this.btnEditLain.TabIndex = 72;
             this.btnEditLain.Text = "Ubah";
             this.btnEditLain.UseSelectable = true;
@@ -365,53 +346,58 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(687, 274);
+            this.label1.Location = new System.Drawing.Point(916, 337);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 13);
+            this.label1.Size = new System.Drawing.Size(28, 17);
             this.label1.TabIndex = 73;
             this.label1.Text = "KG";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(687, 305);
+            this.label2.Location = new System.Drawing.Point(916, 375);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 13);
+            this.label2.Size = new System.Drawing.Size(28, 17);
             this.label2.TabIndex = 74;
             this.label2.Text = "KG";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(687, 335);
+            this.label3.Location = new System.Drawing.Point(916, 412);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 13);
+            this.label3.Size = new System.Drawing.Size(28, 17);
             this.label3.TabIndex = 75;
             this.label3.Text = "KG";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(687, 368);
+            this.label4.Location = new System.Drawing.Point(916, 453);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 13);
+            this.label4.Size = new System.Drawing.Size(28, 17);
             this.label4.TabIndex = 76;
             this.label4.Text = "KG";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(687, 398);
+            this.label5.Location = new System.Drawing.Point(916, 490);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 13);
+            this.label5.Size = new System.Drawing.Size(28, 17);
             this.label5.TabIndex = 77;
             this.label5.Text = "KG";
             // 
             // formTanamanPangan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 632);
+            this.ClientSize = new System.Drawing.Size(1275, 778);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -434,8 +420,11 @@
             this.Controls.Add(this.edtPadi);
             this.Controls.Add(this.cmbSimpan);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formTanamanPangan";
-            this.Text = " ";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.Text = " Form Tanaman Pangan";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Activated += new System.EventHandler(this.formTanamanPangan_Activated);
             this.Load += new System.EventHandler(this.formTanamanPangan_Load);
             this.groupBox1.ResumeLayout(false);

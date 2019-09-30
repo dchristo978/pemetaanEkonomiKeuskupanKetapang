@@ -27,7 +27,10 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller
         public static String nama_database = "";
 
         public static String formParent = "";
-        
-        
+
+        public static bool isPanenPangan = false;
+        public static bool isPanenKeras = false;
+        public static bool isPanenTernak = false;
+
     }
 }

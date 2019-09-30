@@ -124,6 +124,12 @@
     <Compile Include="View\Form Pertanyaan\formIdentitas.Designer.cs">
       <DependentUpon>formIdentitas.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Form Pertanyaan\formTanamanKeras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formTanamanKeras.Designer.cs">
+      <DependentUpon>formTanamanKeras.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form Tambahan\formListJawabanLainTerpilih.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,12 @@
     <Compile Include="View\Form Pertanyaan\formTanamanPangan.Designer.cs">
       <DependentUpon>formTanamanPangan.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Form Tambahan\fornPilihanPanen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Tambahan\fornPilihanPanen.Designer.cs">
+      <DependentUpon>fornPilihanPanen.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\formKepalaKeluarga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formIdentitas.resx">
       <DependentUpon>formIdentitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formTanamanKeras.resx">
+      <DependentUpon>formTanamanKeras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Tambahan\formListJawabanLainTerpilih.resx">
       <DependentUpon>formListJawabanLainTerpilih.cs</DependentUpon>
@@ -230,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formTanamanPangan.resx">
       <DependentUpon>formTanamanPangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Tambahan\fornPilihanPanen.resx">
+      <DependentUpon>fornPilihanPanen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\formKepalaKeluarga.resx">
       <DependentUpon>formKepalaKeluarga.cs</DependentUpon>

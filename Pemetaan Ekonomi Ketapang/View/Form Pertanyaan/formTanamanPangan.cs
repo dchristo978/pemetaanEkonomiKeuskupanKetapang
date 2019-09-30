@@ -24,9 +24,9 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         private ParokiControl parokiControl = new ParokiControl();
         private Ref_JawabanControl refJawabanControl = new Ref_JawabanControl();
         private Tbl_JawabanControl tblJawaanControl = new Tbl_JawabanControl();
+        private String tempListStringJawabanLain = "";
 
         private ToolTip tempTooltip = new ToolTip();
-        private String tempListStringJawabanLain;
 
         public formTanamanPangan()
         {
@@ -132,11 +132,11 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
                 this.edtTotalLain.Text = tempListStringJawabanLain;
                 tempTooltip.Active = true;
-                tempTooltip.SetToolTip(this.edtTotalLain, tempListStringJawabanLain);
                 tempTooltip.ShowAlways = true;
             }
             else
             {
+                tempListStringJawabanLain = "";
                 tempTooltip.Active = false;
                 this.edtTotalLain.Text = "";
                 this.edtTotalLain.Visible = false;
@@ -147,7 +147,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private void edtTotalLain_MouseHover(object sender, EventArgs e)
         {
-
+            tempTooltip.SetToolTip(this.edtTotalLain, tempListStringJawabanLain);
         }
     }
 }
