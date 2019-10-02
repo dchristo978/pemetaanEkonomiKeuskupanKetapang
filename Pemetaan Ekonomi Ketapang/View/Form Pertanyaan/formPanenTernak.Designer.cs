@@ -53,24 +53,24 @@
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.edtSapiEkor = new System.Windows.Forms.TextBox();
+            this.edtKambingEkor = new System.Windows.Forms.TextBox();
+            this.edtAyamEkor = new System.Windows.Forms.TextBox();
+            this.edtBabiEkor = new System.Windows.Forms.TextBox();
+            this.edtIkanKg = new System.Windows.Forms.TextBox();
+            this.edtBebekKg = new System.Windows.Forms.TextBox();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.edtSapiRp = new System.Windows.Forms.TextBox();
+            this.edtKambingRp = new System.Windows.Forms.TextBox();
+            this.edtAyamRp = new System.Windows.Forms.TextBox();
+            this.edtBabiRp = new System.Windows.Forms.TextBox();
+            this.edtIkanRp = new System.Windows.Forms.TextBox();
+            this.edtBebekRp = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,6 +214,7 @@
             this.cmbSimpan.TabIndex = 112;
             this.cmbSimpan.Text = "Simpan";
             this.cmbSimpan.UseSelectable = true;
+            this.cmbSimpan.Click += new System.EventHandler(this.cmbSimpan_Click);
             // 
             // btnEditLain
             // 
@@ -317,47 +318,53 @@
             this.metroLabel13.TabIndex = 120;
             this.metroLabel13.Text = "6. Bebek/Itik :";
             // 
-            // textBox1
+            // edtSapiEkor
             // 
-            this.textBox1.Location = new System.Drawing.Point(536, 331);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 22);
-            this.textBox1.TabIndex = 121;
+            this.edtSapiEkor.Location = new System.Drawing.Point(536, 331);
+            this.edtSapiEkor.Name = "edtSapiEkor";
+            this.edtSapiEkor.Size = new System.Drawing.Size(114, 22);
+            this.edtSapiEkor.TabIndex = 121;
+            this.edtSapiEkor.TextChanged += new System.EventHandler(this.edtSapiEkor_TextChanged);
             // 
-            // textBox2
+            // edtKambingEkor
             // 
-            this.textBox2.Location = new System.Drawing.Point(536, 365);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 22);
-            this.textBox2.TabIndex = 122;
+            this.edtKambingEkor.Location = new System.Drawing.Point(536, 365);
+            this.edtKambingEkor.Name = "edtKambingEkor";
+            this.edtKambingEkor.Size = new System.Drawing.Size(114, 22);
+            this.edtKambingEkor.TabIndex = 122;
+            this.edtKambingEkor.TextChanged += new System.EventHandler(this.edtKambingEkor_TextChanged);
             // 
-            // textBox3
+            // edtAyamEkor
             // 
-            this.textBox3.Location = new System.Drawing.Point(536, 400);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 22);
-            this.textBox3.TabIndex = 123;
+            this.edtAyamEkor.Location = new System.Drawing.Point(536, 400);
+            this.edtAyamEkor.Name = "edtAyamEkor";
+            this.edtAyamEkor.Size = new System.Drawing.Size(114, 22);
+            this.edtAyamEkor.TabIndex = 123;
+            this.edtAyamEkor.TextChanged += new System.EventHandler(this.edtAyamEkor_TextChanged);
             // 
-            // textBox4
+            // edtBabiEkor
             // 
-            this.textBox4.Location = new System.Drawing.Point(536, 434);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(114, 22);
-            this.textBox4.TabIndex = 124;
+            this.edtBabiEkor.Location = new System.Drawing.Point(536, 434);
+            this.edtBabiEkor.Name = "edtBabiEkor";
+            this.edtBabiEkor.Size = new System.Drawing.Size(114, 22);
+            this.edtBabiEkor.TabIndex = 124;
+            this.edtBabiEkor.TextChanged += new System.EventHandler(this.edtBabiEkor_TextChanged);
             // 
-            // textBox5
+            // edtIkanKg
             // 
-            this.textBox5.Location = new System.Drawing.Point(536, 468);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(114, 22);
-            this.textBox5.TabIndex = 125;
+            this.edtIkanKg.Location = new System.Drawing.Point(536, 468);
+            this.edtIkanKg.Name = "edtIkanKg";
+            this.edtIkanKg.Size = new System.Drawing.Size(114, 22);
+            this.edtIkanKg.TabIndex = 125;
+            this.edtIkanKg.TextChanged += new System.EventHandler(this.edtIkanKg_TextChanged);
             // 
-            // textBox6
+            // edtBebekKg
             // 
-            this.textBox6.Location = new System.Drawing.Point(536, 500);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(114, 22);
-            this.textBox6.TabIndex = 126;
+            this.edtBebekKg.Location = new System.Drawing.Point(536, 500);
+            this.edtBebekKg.Name = "edtBebekKg";
+            this.edtBebekKg.Size = new System.Drawing.Size(114, 22);
+            this.edtBebekKg.TabIndex = 126;
+            this.edtBebekKg.TextChanged += new System.EventHandler(this.edtBebekKg_TextChanged);
             // 
             // metroLabel14
             // 
@@ -413,71 +420,77 @@
             this.metroLabel19.TabIndex = 132;
             this.metroLabel19.Text = "Ekor,   Rp";
             // 
-            // textBox7
+            // edtSapiRp
             // 
-            this.textBox7.Location = new System.Drawing.Point(728, 331);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(155, 22);
-            this.textBox7.TabIndex = 133;
+            this.edtSapiRp.Location = new System.Drawing.Point(728, 331);
+            this.edtSapiRp.Name = "edtSapiRp";
+            this.edtSapiRp.Size = new System.Drawing.Size(155, 22);
+            this.edtSapiRp.TabIndex = 133;
+            this.edtSapiRp.TextChanged += new System.EventHandler(this.edtSapiRp_TextChanged);
             // 
-            // textBox8
+            // edtKambingRp
             // 
-            this.textBox8.Location = new System.Drawing.Point(728, 365);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(155, 22);
-            this.textBox8.TabIndex = 134;
+            this.edtKambingRp.Location = new System.Drawing.Point(728, 365);
+            this.edtKambingRp.Name = "edtKambingRp";
+            this.edtKambingRp.Size = new System.Drawing.Size(155, 22);
+            this.edtKambingRp.TabIndex = 134;
+            this.edtKambingRp.TextChanged += new System.EventHandler(this.edtKambingRp_TextChanged);
             // 
-            // textBox9
+            // edtAyamRp
             // 
-            this.textBox9.Location = new System.Drawing.Point(728, 400);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(155, 22);
-            this.textBox9.TabIndex = 135;
+            this.edtAyamRp.Location = new System.Drawing.Point(728, 400);
+            this.edtAyamRp.Name = "edtAyamRp";
+            this.edtAyamRp.Size = new System.Drawing.Size(155, 22);
+            this.edtAyamRp.TabIndex = 135;
+            this.edtAyamRp.TextChanged += new System.EventHandler(this.edtAyamRp_TextChanged);
             // 
-            // textBox10
+            // edtBabiRp
             // 
-            this.textBox10.Location = new System.Drawing.Point(728, 434);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(155, 22);
-            this.textBox10.TabIndex = 136;
+            this.edtBabiRp.Location = new System.Drawing.Point(728, 434);
+            this.edtBabiRp.Name = "edtBabiRp";
+            this.edtBabiRp.Size = new System.Drawing.Size(155, 22);
+            this.edtBabiRp.TabIndex = 136;
+            this.edtBabiRp.TextChanged += new System.EventHandler(this.edtBabiRp_TextChanged);
             // 
-            // textBox11
+            // edtIkanRp
             // 
-            this.textBox11.Location = new System.Drawing.Point(728, 468);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(155, 22);
-            this.textBox11.TabIndex = 137;
+            this.edtIkanRp.Location = new System.Drawing.Point(728, 468);
+            this.edtIkanRp.Name = "edtIkanRp";
+            this.edtIkanRp.Size = new System.Drawing.Size(155, 22);
+            this.edtIkanRp.TabIndex = 137;
+            this.edtIkanRp.TextChanged += new System.EventHandler(this.edtIkanRp_TextChanged);
             // 
-            // textBox12
+            // edtBebekRp
             // 
-            this.textBox12.Location = new System.Drawing.Point(728, 500);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(155, 22);
-            this.textBox12.TabIndex = 138;
+            this.edtBebekRp.Location = new System.Drawing.Point(728, 500);
+            this.edtBebekRp.Name = "edtBebekRp";
+            this.edtBebekRp.Size = new System.Drawing.Size(155, 22);
+            this.edtBebekRp.TabIndex = 138;
+            this.edtBebekRp.TextChanged += new System.EventHandler(this.edtBebekRp_TextChanged);
             // 
             // formPanenTernak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1275, 778);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.edtBebekRp);
+            this.Controls.Add(this.edtIkanRp);
+            this.Controls.Add(this.edtBabiRp);
+            this.Controls.Add(this.edtAyamRp);
+            this.Controls.Add(this.edtKambingRp);
+            this.Controls.Add(this.edtSapiRp);
             this.Controls.Add(this.metroLabel19);
             this.Controls.Add(this.metroLabel18);
             this.Controls.Add(this.metroLabel17);
             this.Controls.Add(this.metroLabel16);
             this.Controls.Add(this.metroLabel15);
             this.Controls.Add(this.metroLabel14);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.edtBebekKg);
+            this.Controls.Add(this.edtIkanKg);
+            this.Controls.Add(this.edtBabiEkor);
+            this.Controls.Add(this.edtAyamEkor);
+            this.Controls.Add(this.edtKambingEkor);
+            this.Controls.Add(this.edtSapiEkor);
             this.Controls.Add(this.metroLabel13);
             this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.metroLabel11);
@@ -529,23 +542,23 @@
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private MetroFramework.Controls.MetroLabel metroLabel13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox edtSapiEkor;
+        private System.Windows.Forms.TextBox edtKambingEkor;
+        private System.Windows.Forms.TextBox edtAyamEkor;
+        private System.Windows.Forms.TextBox edtBabiEkor;
+        private System.Windows.Forms.TextBox edtIkanKg;
+        private System.Windows.Forms.TextBox edtBebekKg;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private MetroFramework.Controls.MetroLabel metroLabel16;
         private MetroFramework.Controls.MetroLabel metroLabel17;
         private MetroFramework.Controls.MetroLabel metroLabel18;
         private MetroFramework.Controls.MetroLabel metroLabel19;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox edtSapiRp;
+        private System.Windows.Forms.TextBox edtKambingRp;
+        private System.Windows.Forms.TextBox edtAyamRp;
+        private System.Windows.Forms.TextBox edtBabiRp;
+        private System.Windows.Forms.TextBox edtIkanRp;
+        private System.Windows.Forms.TextBox edtBebekRp;
     }
 }
