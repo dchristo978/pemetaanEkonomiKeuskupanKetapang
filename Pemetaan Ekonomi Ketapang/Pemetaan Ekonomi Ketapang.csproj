@@ -124,6 +124,12 @@
     <Compile Include="View\Form Pertanyaan\formIdentitas.Designer.cs">
       <DependentUpon>formIdentitas.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Form Pertanyaan\formPanenTernak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formPanenTernak.Designer.cs">
+      <DependentUpon>formPanenTernak.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form Pertanyaan\formPendapatanAnggotaKeluargaPerBulan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formIdentitas.resx">
       <DependentUpon>formIdentitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formPanenTernak.resx">
+      <DependentUpon>formPanenTernak.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formPendapatanAnggotaKeluargaPerBulan.resx">
       <DependentUpon>formPendapatanAnggotaKeluargaPerBulan.cs</DependentUpon>

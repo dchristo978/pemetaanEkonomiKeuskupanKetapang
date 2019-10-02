@@ -72,7 +72,6 @@
             this.edtPAM = new System.Windows.Forms.TextBox();
             this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.edtUangSekolahAnak = new System.Windows.Forms.TextBox();
-            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -483,21 +482,11 @@
             this.edtUangSekolahAnak.TabIndex = 105;
             this.edtUangSekolahAnak.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // metroLabel25
-            // 
-            this.metroLabel25.AutoSize = true;
-            this.metroLabel25.Location = new System.Drawing.Point(535, 580);
-            this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(28, 20);
-            this.metroLabel25.TabIndex = 107;
-            this.metroLabel25.Text = "Rp.";
-            // 
             // formPengeluaranKeluargaPerBulan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1275, 778);
-            this.Controls.Add(this.metroLabel25);
             this.Controls.Add(this.metroLabel24);
             this.Controls.Add(this.edtUangSekolahAnak);
             this.Controls.Add(this.metroLabel23);
@@ -587,6 +576,5 @@
         private System.Windows.Forms.TextBox edtPAM;
         private MetroFramework.Controls.MetroLabel metroLabel24;
         private System.Windows.Forms.TextBox edtUangSekolahAnak;
-        private MetroFramework.Controls.MetroLabel metroLabel25;
     }
 }
