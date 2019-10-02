@@ -136,6 +136,12 @@
     <Compile Include="View\Form Pertanyaan\formPengeluaranKeluargaPerBulan.Designer.cs">
       <DependentUpon>formPengeluaranKeluargaPerBulan.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Form Pertanyaan\formPengeluaranSandang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Pertanyaan\formPengeluaranSandang.Designer.cs">
+      <DependentUpon>formPengeluaranSandang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form Pertanyaan\formTanamanKeras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formPengeluaranKeluargaPerBulan.resx">
       <DependentUpon>formPengeluaranKeluargaPerBulan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Pertanyaan\formPengeluaranSandang.resx">
+      <DependentUpon>formPengeluaranSandang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formTanamanKeras.resx">
       <DependentUpon>formTanamanKeras.cs</DependentUpon>

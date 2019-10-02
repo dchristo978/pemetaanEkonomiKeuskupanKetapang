@@ -53,7 +53,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         {
             initializeHeader();
 
-            GlobalParam.idPertanyaan = 19;
+            GlobalParam.idPertanyaan = 22;
 
             this.edtTotalLain.Enabled = false;
 
@@ -166,6 +166,19 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                     {
 
                     }
+                }
+                else
+                {
+                    tblJawaanControl.insertJawaban(new tbl_jawaban(0, 191, GlobalParam.id_umat, this.edtBahanBakar.Text, ""));
+                    tblJawaanControl.insertJawaban(new tbl_jawaban(0, 192, GlobalParam.id_umat, this.edtSembako.Text, ""));
+                    tblJawaanControl.insertJawaban(new tbl_jawaban(0, 193, GlobalParam.id_umat, this.edtBumbuDapur.Text, ""));
+                    tblJawaanControl.insertJawaban(new tbl_jawaban(0, 194, GlobalParam.id_umat, this.edtUangJajan.Text, ""));
+                    tblJawaanControl.insertJawaban(new tbl_jawaban(0, 195, GlobalParam.id_umat, this.edtAir.Text, ""));
+                    tblJawaanControl.insertJawaban(new tbl_jawaban(0, 196, GlobalParam.id_umat, this.edtListrik.Text, ""));
+                    tblJawaanControl.insertJawaban(new tbl_jawaban(0, 197, GlobalParam.id_umat, this.edtPAM.Text, ""));
+                    tblJawaanControl.insertJawaban(new tbl_jawaban(0, 198, GlobalParam.id_umat, this.edtUangSekolahAnak.Text, ""));
+                    MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
+                    this.Close();
                 }
             }
             catch (Exception E)

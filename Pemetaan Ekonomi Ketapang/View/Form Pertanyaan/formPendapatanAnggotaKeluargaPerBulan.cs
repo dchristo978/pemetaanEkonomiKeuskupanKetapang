@@ -48,6 +48,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         private void formPendapatanAnggotaKeluargaPerBulan_Load(object sender, EventArgs e)
         {
             initializeHeader();
+            GlobalParam.idPertanyaan = 22;
         }
 
         private void cbSuami_CheckedChanged(object sender, EventArgs e)

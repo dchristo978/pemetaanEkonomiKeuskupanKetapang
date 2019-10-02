@@ -19,9 +19,8 @@ using System.Diagnostics;
 
 namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 {
-    public partial class formTanamanKeras : MetroForm
+    public partial class formPengeluaranSandang : MetroForm 
     {
-
         private UmatControl umatControl = new UmatControl();
         private StasiControl stasiControl = new StasiControl();
         private ParokiControl parokiControl = new ParokiControl();
@@ -31,9 +30,20 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 
         private ToolTip tempTooltip = new ToolTip();
 
-        public formTanamanKeras()
+        public formPengeluaranSandang()
         {
             InitializeComponent();
+        }
+
+        private void formPengeluaranSandang_Load(object sender, EventArgs e)
+        {
+            initializeHeader();
+            GlobalParam.idPertanyaan = 23;
+
+            this.edtTotalLain.Enabled = false;
+
+
+            CheckAlreadyPickedJawabanLain();
         }
 
         private void initializeHeader()
@@ -50,17 +60,6 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
             lb_jenisKelamin.Text = umat.jenis_kelamin;
         }
 
-        private void formTanamanKeras_Load(object sender, EventArgs e)
-        {
-            initializeHeader();
-
-            GlobalParam.idPertanyaan = 20;
-
-            this.edtTotalLain.Enabled = false;
-
-
-            CheckAlreadyPickedJawabanLain();
-        }
 
         private void CheckAlreadyPickedJawabanLain()
         {
@@ -86,48 +85,55 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
             }
         }
 
-        private void btnEditLain_Click(object sender, EventArgs e)
+        public void nominalChecker(TextBox param)
         {
-            formListJawabanLainTerpilih form = new formListJawabanLainTerpilih();
-            form.Show();
+            if (Convert.ToInt32(param.Text) <= 0 || String.IsNullOrWhiteSpace(param.Text))
+            {
+                param.Text = "0";
+            }
         }
 
-        private void btnTambahLain_Click(object sender, EventArgs e)
+        private void edtBeliBaju_TextChanged(object sender, EventArgs e)
         {
-            GlobalParam.formParent = "formTanamanKeras";
-            GlobalParam.idPertanyaan = 20;
-            formJawabanLainnya fr = new formJawabanLainnya();
-            fr.ShowDialog();
+            nominalChecker(this.edtBeliBaju);
         }
 
-        private void formTanamanKeras_Activated(object sender, EventArgs e)
+        private void edtBeliSepatu_TextChanged(object sender, EventArgs e)
         {
-            CheckAlreadyPickedJawabanLain();
+            nominalChecker(this.edtBeliSepatu);
         }
 
         private void cmbSimpan_Click(object sender, EventArgs e)
         {
-            if((String.IsNullOrWhiteSpace(this.edtKaretKg.Text)||String.IsNullOrWhiteSpace(this.edtKaretRp.Text)) && (String.IsNullOrWhiteSpace(this.edtSawitKg.Text)||String.IsNullOrWhiteSpace(this.edtSawitRp.Text)) && String.IsNullOrWhiteSpace(this.edtTotalLain.Text))
+            try
             {
-                MessageBox.Show("Pastikan salah satu data sudah diisi sesuai dengan form yang ada!");
-            }
-            else
-            {
-                try
+
+                if (Convert.ToInt32(this.edtBeliBaju.Text) == 0 && Convert.ToInt32(this.edtBeliSepatu.Text) == 0 && String.IsNullOrWhiteSpace(edtTotalLain.Text))
                 {
-                    if (!String.IsNullOrWhiteSpace(this.edtKaretKg.Text) && !String.IsNullOrWhiteSpace(this.edtKaretRp.Text))
-                        tblJawaanControl.insertJawaban(new tbl_jawaban(0, 180, GlobalParam.id_umat, this.edtKaretKg.Text, this.edtKaretRp.Text));
+                    DialogResult temp = MessageBox.Show("Apakah anda yakin semua jawaban adalah 0?", "Peringatan", MessageBoxButtons.YesNo);
+                    if (temp == DialogResult.Yes)
+                    {
+                        tblJawaanControl.insertJawaban(new tbl_jawaban(0, 199, GlobalParam.id_umat, this.edtBeliBaju.Text, ""));
+                        tblJawaanControl.insertJawaban(new tbl_jawaban(0, 200, GlobalParam.id_umat, this.edtBeliSepatu.Text, ""));
+                        MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
+                        this.Close();
+                    }
+                    else if (temp == DialogResult.No)
+                    {
 
-                    if (!String.IsNullOrWhiteSpace(this.edtSawitKg.Text) && !String.IsNullOrWhiteSpace(this.edtSawitRp.Text))
-                        tblJawaanControl.insertJawaban(new tbl_jawaban(0, 181, GlobalParam.id_umat, this.edtSawitKg.Text, this.edtSawitRp.Text));
-
+                    }
+                }
+                else
+                {
+                    tblJawaanControl.insertJawaban(new tbl_jawaban(0, 199, GlobalParam.id_umat, this.edtBeliBaju.Text, ""));
+                    tblJawaanControl.insertJawaban(new tbl_jawaban(0, 200, GlobalParam.id_umat, this.edtBeliSepatu.Text, ""));
                     MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
                     this.Close();
                 }
-                catch(Exception E)
-                {
-                    MessageBox.Show("Terjadi kesalahan pada sistem, silahkan hubungi admin dengan menyertakan kalimat berikut : " + E.Message);
-                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("Terjadi kesalahan pada sistem, silahkan hubungi admin dengan menyertakan kalimat berikut : " + E.Message);
             }
         }
     }
