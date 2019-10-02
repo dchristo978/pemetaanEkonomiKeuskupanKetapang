@@ -38,9 +38,10 @@
             // cbPangan
             // 
             this.cbPangan.AutoSize = true;
-            this.cbPangan.Location = new System.Drawing.Point(129, 126);
+            this.cbPangan.Location = new System.Drawing.Point(172, 155);
+            this.cbPangan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbPangan.Name = "cbPangan";
-            this.cbPangan.Size = new System.Drawing.Size(192, 17);
+            this.cbPangan.Size = new System.Drawing.Size(254, 21);
             this.cbPangan.TabIndex = 3;
             this.cbPangan.Text = "Form hasil panen tanaman pangan ";
             this.cbPangan.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // cbKeras
             // 
             this.cbKeras.AutoSize = true;
-            this.cbKeras.Location = new System.Drawing.Point(129, 168);
+            this.cbKeras.Location = new System.Drawing.Point(172, 207);
+            this.cbKeras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbKeras.Name = "cbKeras";
-            this.cbKeras.Size = new System.Drawing.Size(179, 17);
+            this.cbKeras.Size = new System.Drawing.Size(237, 21);
             this.cbKeras.TabIndex = 4;
             this.cbKeras.Text = "Form hasil panen tanaman keras";
             this.cbKeras.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // cbTernak
             // 
             this.cbTernak.AutoSize = true;
-            this.cbTernak.Location = new System.Drawing.Point(129, 206);
+            this.cbTernak.Location = new System.Drawing.Point(172, 254);
+            this.cbTernak.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbTernak.Name = "cbTernak";
-            this.cbTernak.Size = new System.Drawing.Size(139, 17);
+            this.cbTernak.Size = new System.Drawing.Size(183, 21);
             this.cbTernak.TabIndex = 5;
             this.cbTernak.Text = "Form hasil panen ternak";
             this.cbTernak.UseVisualStyleBackColor = true;
@@ -69,18 +72,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 81);
+            this.label1.Location = new System.Drawing.Point(41, 106);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(422, 13);
+            this.label1.Size = new System.Drawing.Size(572, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Centang pada pilihan form-form yang akan diisi sesuai dengan formulir yang  sudah" +
     " terisi!";
             // 
             // btnSimpan
             // 
-            this.btnSimpan.Location = new System.Drawing.Point(198, 248);
+            this.btnSimpan.Location = new System.Drawing.Point(264, 305);
+            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(110, 41);
+            this.btnSimpan.Size = new System.Drawing.Size(147, 50);
             this.btnSimpan.TabIndex = 7;
             this.btnSimpan.Text = "Pilih";
             this.btnSimpan.UseVisualStyleBackColor = true;
@@ -88,15 +93,17 @@
             // 
             // fornPilihanPanen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 340);
+            this.ClientSize = new System.Drawing.Size(653, 418);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbTernak);
             this.Controls.Add(this.cbKeras);
             this.Controls.Add(this.cbPangan);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "fornPilihanPanen";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Pilih Jenis Panen";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.ResumeLayout(false);

@@ -115,7 +115,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                     {
                         tblJawaanControl.insertJawaban(new tbl_jawaban(0, 199, GlobalParam.id_umat, this.edtBeliBaju.Text, ""));
                         tblJawaanControl.insertJawaban(new tbl_jawaban(0, 200, GlobalParam.id_umat, this.edtBeliSepatu.Text, ""));
-                        MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
+                        MessageBox.Show("Semua Data berhasil dimasukan, anda dapat mengubahnya di form edit data sampling.");
                         this.Close();
                     }
                     else if (temp == DialogResult.No)
@@ -127,7 +127,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                 {
                     tblJawaanControl.insertJawaban(new tbl_jawaban(0, 199, GlobalParam.id_umat, this.edtBeliBaju.Text, ""));
                     tblJawaanControl.insertJawaban(new tbl_jawaban(0, 200, GlobalParam.id_umat, this.edtBeliSepatu.Text, ""));
-                    MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
+                    MessageBox.Show("Semua Data berhasil dimasukan, anda dapat mengubahnya di form edit data sampling.");
                     this.Close();
                 }
             }

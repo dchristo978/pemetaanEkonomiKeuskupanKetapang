@@ -93,6 +93,8 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                     }
 
                     MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
+                    formPengeluaranKeluargaPerBulan temp = new formPengeluaranKeluargaPerBulan();
+                    temp.Show();
                     this.Close();
                 }
                 catch(Exception E)

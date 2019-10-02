@@ -92,6 +92,23 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                     }
 
                     MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
+
+                    if(GlobalParam.isPanenKeras)
+                    {
+                        formTanamanKeras temp = new formTanamanKeras();
+                        temp.Show();
+                    }
+                    else if(GlobalParam.isPanenTernak)
+                    {
+                        formPanenTernak temp = new formPanenTernak();
+                        temp.Show();
+                    }
+                    else
+                    {
+                        formPendapatanAnggotaKeluargaPerBulan temp = new formPendapatanAnggotaKeluargaPerBulan();
+                        temp.Show();
+                    }
+
                     this.Close();
                 }
                 catch(Exception E)

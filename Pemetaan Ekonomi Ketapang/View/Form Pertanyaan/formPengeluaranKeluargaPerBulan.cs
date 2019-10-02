@@ -160,6 +160,8 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                         tblJawaanControl.insertJawaban(new tbl_jawaban(0, 198, GlobalParam.id_umat, this.edtUangSekolahAnak.Text, ""));
 
                         MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
+                        formPengeluaranSandang tempForm = new formPengeluaranSandang();
+                        tempForm.Show();
                         this.Close();
                     }
                     else if (temp == DialogResult.No)
@@ -178,6 +180,8 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                     tblJawaanControl.insertJawaban(new tbl_jawaban(0, 197, GlobalParam.id_umat, this.edtPAM.Text, ""));
                     tblJawaanControl.insertJawaban(new tbl_jawaban(0, 198, GlobalParam.id_umat, this.edtUangSekolahAnak.Text, ""));
                     MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
+                    formPengeluaranSandang tempForm = new formPengeluaranSandang();
+                    tempForm.Show();
                     this.Close();
                 }
             }

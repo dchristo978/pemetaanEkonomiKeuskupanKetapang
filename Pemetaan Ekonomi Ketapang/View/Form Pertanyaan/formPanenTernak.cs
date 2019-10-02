@@ -124,6 +124,11 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                     {
                         tblJawaanControl.insertJawaban(new tbl_jawaban(0, 187, GlobalParam.id_umat, this.edtBebekKg.Text, this.edtBebekRp.Text));
                     }
+
+                    MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
+                    formPendapatanAnggotaKeluargaPerBulan temp = new formPendapatanAnggotaKeluargaPerBulan();
+                    temp.Show();
+                    this.Close();
                 }
             }
             catch (Exception E)
