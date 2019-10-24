@@ -39,10 +39,10 @@
             this.cariKepalaKeluargaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tambahJawabanBaruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutAkunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keluarAplikasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tambahJawabanBaruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +99,7 @@
             this.lihatRekomendasiSamplingToolStripMenuItem.Name = "lihatRekomendasiSamplingToolStripMenuItem";
             this.lihatRekomendasiSamplingToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.lihatRekomendasiSamplingToolStripMenuItem.Text = "Lihat Rekomendasi Sampling";
+            this.lihatRekomendasiSamplingToolStripMenuItem.Click += new System.EventHandler(this.lihatRekomendasiSamplingToolStripMenuItem_Click);
             // 
             // pendataanUmatToolStripMenuItem
             // 
@@ -140,6 +141,13 @@
             this.settingToolStripMenuItem.Text = "Setting";
             this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
             // 
+            // tambahJawabanBaruToolStripMenuItem
+            // 
+            this.tambahJawabanBaruToolStripMenuItem.Name = "tambahJawabanBaruToolStripMenuItem";
+            this.tambahJawabanBaruToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.tambahJawabanBaruToolStripMenuItem.Text = "Tambah Jawaban Baru";
+            this.tambahJawabanBaruToolStripMenuItem.Click += new System.EventHandler(this.tambahJawabanBaruToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -162,13 +170,6 @@
             this.keluarAplikasiToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.keluarAplikasiToolStripMenuItem.Text = "Keluar Aplikasi";
             this.keluarAplikasiToolStripMenuItem.Click += new System.EventHandler(this.keluarAplikasiToolStripMenuItem_Click);
-            // 
-            // tambahJawabanBaruToolStripMenuItem
-            // 
-            this.tambahJawabanBaruToolStripMenuItem.Name = "tambahJawabanBaruToolStripMenuItem";
-            this.tambahJawabanBaruToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.tambahJawabanBaruToolStripMenuItem.Text = "Tambah Jawaban Baru";
-            this.tambahJawabanBaruToolStripMenuItem.Click += new System.EventHandler(this.tambahJawabanBaruToolStripMenuItem_Click);
             // 
             // formUtama
             // 

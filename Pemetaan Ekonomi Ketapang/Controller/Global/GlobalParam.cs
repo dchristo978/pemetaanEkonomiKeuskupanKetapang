@@ -29,6 +29,8 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller
 
         public static String formParent = "";
 
+        public static double marginOfError = 0;
+
         public static bool isPanenPangan = false;
         public static bool isPanenKeras = false;
         public static bool isPanenTernak = false;

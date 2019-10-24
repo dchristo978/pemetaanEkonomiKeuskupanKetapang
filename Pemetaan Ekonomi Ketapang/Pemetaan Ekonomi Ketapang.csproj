@@ -103,6 +103,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_umat_ketapang.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Model\DGVPrinter.cs" />
     <Compile Include="Model\jenis_kelamin.cs" />
     <Compile Include="Model\mst_user.cs" />
     <Compile Include="Model\ref_jawaban.cs" />
@@ -196,6 +197,12 @@
     <Compile Include="View\Form Tambahan\formPilihParoki.Designer.cs">
       <DependentUpon>formPilihParoki.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Form Tambahan\formRekomendasiSampling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Tambahan\formRekomendasiSampling.Designer.cs">
+      <DependentUpon>formRekomendasiSampling.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form Tambahan\formTambahJawabanBaru.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,11 +215,11 @@
     <Compile Include="View\Form Pertanyaan\formTanamanPangan.Designer.cs">
       <DependentUpon>formTanamanPangan.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Form Tambahan\fornPilihanPanen.cs">
+    <Compile Include="View\Form Tambahan\formPilihanPanen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form Tambahan\fornPilihanPanen.Designer.cs">
-      <DependentUpon>fornPilihanPanen.cs</DependentUpon>
+    <Compile Include="View\Form Tambahan\formPilihanPanen.Designer.cs">
+      <DependentUpon>formPilihanPanen.cs</DependentUpon>
     </Compile>
     <Compile Include="View\formKepalaKeluarga.cs">
       <SubType>Form</SubType>
@@ -276,14 +283,17 @@
     <EmbeddedResource Include="View\Form Tambahan\formPilihParoki.resx">
       <DependentUpon>formPilihParoki.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Tambahan\formRekomendasiSampling.resx">
+      <DependentUpon>formRekomendasiSampling.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Form Tambahan\formTambahJawabanBaru.resx">
       <DependentUpon>formTambahJawabanBaru.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form Pertanyaan\formTanamanPangan.resx">
       <DependentUpon>formTanamanPangan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form Tambahan\fornPilihanPanen.resx">
-      <DependentUpon>fornPilihanPanen.cs</DependentUpon>
+    <EmbeddedResource Include="View\Form Tambahan\formPilihanPanen.resx">
+      <DependentUpon>formPilihanPanen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\formKepalaKeluarga.resx">
       <DependentUpon>formKepalaKeluarga.cs</DependentUpon>

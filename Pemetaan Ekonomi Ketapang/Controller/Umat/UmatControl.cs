@@ -230,5 +230,106 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Umat
             reader.Close();
             return balikan;
         }
+
+        public int getTotalKepalaKeluagaParoki()
+        {
+            int balikan = 0;
+            MySqlConnection connection = dbConnector.openConnection("", "", GlobalParam.nama_database);
+            Debug.WriteLine("Nama Database yang dipilih : " +GlobalParam.nama_database);
+            connection.Open();
+            String query = "Select count(nama_kepala) from kk where id_status_umat = 1";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+                balikan = reader.GetInt32(0);
+            reader.Close();
+            connection.Close();
+
+            return balikan;
+        }
+
+        public DataTable datagridRekomendasiSampling()
+        {
+            String query = "select tbl_stasi.nama_stasi, count(nama_kepala), tbl_stasi.id_stasi " +
+                "from kk join tbl_stasi on kk.id_stasi = tbl_stasi.id_stasi " +
+                "where kk.id_status_umat = 1 " +
+                "group by tbl_stasi.nama_stasi ";
+
+            String namaDatabase = GlobalParam.nama_database;
+            MySqlConnection connection = dbConnector.openConnection("", "", namaDatabase);
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            DataSet ds = new DataSet();
+            DataTable balikan = new DataTable();
+            ds.Tables.Add(balikan);
+            ds.EnforceConstraints = false;
+            balikan.Load(reader);
+            reader.Close();
+
+
+            balikan.Columns[1].ColumnName = "Total Kepala Keluarga Terdata";
+            balikan.Columns[0].ColumnName = "Nama Stasi";
+
+            balikan.Columns.Add("Rekomendasi Jumlah Sampling");
+
+            for(int i = 0; i <balikan.Rows.Count; i ++)
+            {
+                if (String.IsNullOrWhiteSpace(balikan.Rows[i][2].ToString()))
+                    break;
+                else
+                {
+                    double totalKK = Convert.ToInt32(balikan.Rows[i][1]);
+                    double marginOfError = GlobalParam.marginOfError * GlobalParam.marginOfError;
+                    double tempKKxMarginOfError = totalKK * marginOfError;
+                    double onePlusTemp = 1 + tempKKxMarginOfError;
+                    balikan.Rows[i][3] = Convert.ToInt32(totalKK / onePlusTemp);
+                }
+            }
+
+            balikan.Columns.Add("Total KK Tersampling");
+
+            for (int i = 0; i < balikan.Rows.Count; i++)
+            {
+
+                if (String.IsNullOrWhiteSpace(balikan.Rows[i][2].ToString()))
+                    break;
+                else
+                { 
+                    
+                    if (!Convert.IsDBNull(umatAdapter.getTotalKKBasedOnIdStasi(Convert.ToInt32(balikan.Rows[i][2]))))
+                    {
+                        balikan.Rows[i][4] = umatAdapter.getTotalKKBasedOnIdStasi(Convert.ToInt32(balikan.Rows[i][2]));
+                    }
+                    else
+                    {
+                        balikan.Rows[i][4] = "0";
+                    }
+                }
+            }
+
+            balikan.Columns.Add("Persentase Penyelesaian Sampling");
+            Debug.WriteLine("=======HITUNG PENYELESAIAN SAMPLING==========");
+            for (int i = 0; i < balikan.Rows.Count; i ++)
+            {
+                if (String.IsNullOrWhiteSpace(balikan.Rows[i][2].ToString()))
+                    break;
+                else
+                {
+                    Double sampled = Convert.ToInt32(balikan.Rows[i]["Total KK Tersampling"]);
+                    Double rekomendasiSample = Convert.ToInt32(balikan.Rows[i]["Rekomendasi Jumlah Sampling"]);
+                    Debug.WriteLine("Total KK Tersampling : " + sampled);
+                    Debug.WriteLine("Rekomendasi Total Sampling : " + rekomendasiSample);
+                    Debug.WriteLine("Persentasenya :  " + sampled/rekomendasiSample);
+                    balikan.Rows[i][5] = Convert.ToInt32((sampled/rekomendasiSample)*100).ToString() + "%";
+
+                }
+            }
+
+            balikan.Columns.Remove("id_stasi");
+
+            return balikan;
+        }
     }
 }

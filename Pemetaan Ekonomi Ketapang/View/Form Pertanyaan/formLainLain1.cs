@@ -11,6 +11,7 @@ using MetroFramework.Forms;
 using Pemetaan_Ekonomi_Ketapang.Model;
 using Pemetaan_Ekonomi_Ketapang.Controller.Umat;
 using Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi;
+using Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan;
 using System.Diagnostics;
 using Pemetaan_Ekonomi_Ketapang.db_ekonomi_ketapangTableAdapters;
 
@@ -117,7 +118,8 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                 }
 
                 MessageBox.Show("Data Lain Lain berhasil di masukan, silahkan lanjutkan ke form berikut!");
-                formTanamanPangan fr = new formTanamanPangan();
+
+                formPilihanPanen fr = new formPilihanPanen();
                 this.Hide();
                 fr.Show();
                 this.Close();

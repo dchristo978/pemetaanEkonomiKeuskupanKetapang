@@ -13,11 +13,11 @@ using Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan;
 
 namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
 {
-    public partial class fornPilihanPanen : MetroForm
+    public partial class formPilihanPanen : MetroForm
     {
 
 
-        public fornPilihanPanen()
+        public formPilihanPanen()
         {
             InitializeComponent();
         }

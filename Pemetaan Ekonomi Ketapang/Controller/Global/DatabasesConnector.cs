@@ -33,7 +33,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Global
             temp.Add(new DatabasesConnector("2", "Balai Berkuak", "db_umat_ketapang_balai_berkuak"));
             temp.Add(new DatabasesConnector("3", "Balai Semandang", "db_umat_ketapang_balai_semandang"));
             temp.Add(new DatabasesConnector("4", "Kendawangan", "db_umat_ketapang_kendawangan"));
-            temp.Add(new DatabasesConnector("5", "Gemma Galgani Ketapang", "db_umat_ketapang_gemma_galgani"));
+            temp.Add(new DatabasesConnector("5", "Gemma Galgani Ketapang", "db_umat_ketapang_balai_berkuak"));
             temp.Add(new DatabasesConnector("7", "Marau", "db_umat_ketapang_marau"));
             temp.Add(new DatabasesConnector("8", "Menyumbung", "db_umat_ketapang_menyumbung"));
             temp.Add(new DatabasesConnector("9", "Tayap", "db_umat_ketapang_tayap"));

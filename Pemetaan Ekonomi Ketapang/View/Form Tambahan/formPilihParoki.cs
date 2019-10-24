@@ -12,6 +12,7 @@ using Pemetaan_Ekonomi_Ketapang.Controller.Global;
 using Pemetaan_Ekonomi_Ketapang.Controller;
 using Pemetaan_Ekonomi_Ketapang.Model;
 using Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan;
+using System.Diagnostics;
 
 namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
 {
@@ -28,15 +29,16 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
         private void formPilihParoki_Load(object sender, EventArgs e)
         {
             listDatabbase = dbConnector.getListDatabases();
-            this.comboBox1.DataSource = listDatabbase;
             this.comboBox1.DisplayMember = "lokasi_paroki";
             this.comboBox1.ValueMember = "nama_database";
+            this.comboBox1.DataSource = listDatabbase;
 
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             GlobalParam.nama_database = this.comboBox1.SelectedValue.ToString();
+            Debug.WriteLine("Nama Database yang dipilih : " + this.comboBox1.SelectedValue.ToString());
 
             if(String.Equals(GlobalParam.formParent,"formIdentitas"))
             {

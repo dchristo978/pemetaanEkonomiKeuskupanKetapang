@@ -1,6 +1,6 @@
 ﻿namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
 {
-    partial class fornPilihanPanen
+    partial class formPilihanPanen
     {
         /// <summary>
         /// Required designer variable.

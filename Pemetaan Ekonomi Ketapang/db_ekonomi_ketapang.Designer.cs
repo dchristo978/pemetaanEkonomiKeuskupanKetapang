@@ -13035,7 +13035,7 @@ WHERE        (tbl_pertanyaan.id_pertanyaan = @p)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[3];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[4];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `id_umat`, `no_kk`, `no_k5`, `no_ktp`, `nama`, `umur`, `jenis_kelamin`, `n" +
@@ -13043,30 +13043,42 @@ WHERE        (tbl_pertanyaan.id_pertanyaan = @p)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        id_umat, no_kk, no_k5, no_ktp, nama, umur, jenis_kelamin, no_telp, " +
-                "id_ref_pekerjaan, id_paroki, id_stasi\r\nFROM            tbl_umat\r\nWHERE        (i" +
-                "d_umat = @idUmat)";
+            this._commandCollection[1].CommandText = "SELECT   COUNT(id_umat) AS Expr1\r\nFROM         tbl_umat\r\nWHERE     (id_stasi = @p" +
+                ")";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "id_stasi";
+            this._commandCollection[1].Parameters.Add(param);
+            this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        id_umat, no_kk, no_k5, no_ktp, nama, umur, jenis_kelamin, no_telp, " +
+                "id_ref_pekerjaan, id_paroki, id_stasi\r\nFROM            tbl_umat\r\nWHERE        (i" +
+                "d_umat = @idUmat)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@idUmat";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "id_umat";
-            this._commandCollection[1].Parameters.Add(param);
-            this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"INSERT INTO tbl_umat
+            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"INSERT INTO tbl_umat
                          (id_umat, no_kk, no_k5, no_ktp, nama, umur, jenis_kelamin, no_telp, id_ref_pekerjaan, id_paroki, id_stasi)
 VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @notelp, @refpekerjaan, @refparoki, @refstasi)";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@idumat";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "id_umat";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@nokk";
             param.DbType = global::System.Data.DbType.String;
@@ -13074,7 +13086,7 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             param.Size = 20;
             param.IsNullable = true;
             param.SourceColumn = "no_kk";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@nok5";
             param.DbType = global::System.Data.DbType.String;
@@ -13082,7 +13094,7 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             param.Size = 20;
             param.IsNullable = true;
             param.SourceColumn = "no_k5";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@noktp";
             param.DbType = global::System.Data.DbType.String;
@@ -13090,7 +13102,7 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             param.Size = 20;
             param.IsNullable = true;
             param.SourceColumn = "no_ktp";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@nama";
             param.DbType = global::System.Data.DbType.String;
@@ -13098,14 +13110,14 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             param.Size = 150;
             param.IsNullable = true;
             param.SourceColumn = "nama";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@umur";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "umur";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@jeniskelamin";
             param.DbType = global::System.Data.DbType.String;
@@ -13113,7 +13125,7 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             param.Size = 1;
             param.IsNullable = true;
             param.SourceColumn = "jenis_kelamin";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@notelp";
             param.DbType = global::System.Data.DbType.String;
@@ -13121,28 +13133,28 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
             param.Size = 50;
             param.IsNullable = true;
             param.SourceColumn = "no_telp";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@refpekerjaan";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "id_ref_pekerjaan";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@refparoki";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "id_paroki";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@refstasi";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "id_stasi";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13174,7 +13186,7 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual db_ekonomi_ketapang.tbl_umatDataTable getUmatSatuanByIDUmat(int idUmat) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idUmat));
             db_ekonomi_ketapang.tbl_umatDataTable dataTable = new db_ekonomi_ketapang.tbl_umatDataTable();
             this.Adapter.Fill(dataTable);
@@ -13491,9 +13503,38 @@ VALUES        (@idumat, @nokk, @nok5, @noktp, @nama, @umur, @jeniskelamin, @note
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<long> getTotalKKBasedOnIdStasi(int p) {
+            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(p));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<long>();
+            }
+            else {
+                return new global::System.Nullable<long>(((long)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int insertUmat(int idumat, string nokk, string nok5, string noktp, string nama, int umur, string jeniskelamin, string notelp, int refpekerjaan, int refparoki, int refstasi) {
-            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[2];
+            global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[3];
             command.Parameters[0].Value = ((int)(idumat));
             if ((nokk == null)) {
                 throw new global::System.ArgumentNullException("nokk");
