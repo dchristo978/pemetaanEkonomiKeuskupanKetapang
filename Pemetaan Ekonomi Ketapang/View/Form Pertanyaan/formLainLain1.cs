@@ -42,7 +42,6 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
             this.populateComboBox(15, this.cmbPendidikanTertinggiKK);
             this.populateComboBox(16, this.cmbKepemilikanTabungan);
             this.populateComboBox(17, this.cmbKondisiKepemilikanTabungan);
-            this.populateComboBox(18, this.cmbKondisiKepemilikanTabungan);
         }
 
         private void initializeHeader()

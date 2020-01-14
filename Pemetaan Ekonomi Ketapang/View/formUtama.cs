@@ -140,5 +140,31 @@
             form.MdiParent = this;
             form.Show();
         }
+
+        private void masterDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formDatabase form = new formDatabase();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void daftarKepalaKeluargaTersamplingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formKKTersample form = new formKKTersample();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void lihatLaporanPemetaanEkonomiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formLaporanPemetaanEkonomi form = new formLaporanPemetaanEkonomi();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

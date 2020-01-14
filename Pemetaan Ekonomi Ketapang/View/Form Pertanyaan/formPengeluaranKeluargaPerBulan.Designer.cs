@@ -89,11 +89,11 @@
             this.groupBox1.Controls.Add(this.lb_nok5);
             this.groupBox1.Controls.Add(this.metroLabel6);
             this.groupBox1.Controls.Add(this.lb_namaKK);
-            this.groupBox1.Location = new System.Drawing.Point(44, 81);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(33, 66);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1181, 191);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(886, 155);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identitas";
@@ -101,246 +101,270 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(719, 48);
+            this.metroLabel4.Location = new System.Drawing.Point(539, 39);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(59, 20);
+            this.metroLabel4.Size = new System.Drawing.Size(56, 19);
             this.metroLabel4.TabIndex = 3;
             this.metroLabel4.Text = "4. Umur";
             // 
             // lb_stasi
             // 
             this.lb_stasi.AutoSize = true;
-            this.lb_stasi.Location = new System.Drawing.Point(833, 128);
+            this.lb_stasi.Location = new System.Drawing.Point(625, 104);
+            this.lb_stasi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_stasi.Name = "lb_stasi";
-            this.lb_stasi.Size = new System.Drawing.Size(111, 20);
+            this.lb_stasi.Size = new System.Drawing.Size(106, 19);
             this.lb_stasi.TabIndex = 11;
             this.lb_stasi.Text = "Stasi taruh di sini";
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(27, 48);
+            this.metroLabel1.Location = new System.Drawing.Point(20, 39);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(161, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(155, 19);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "1. Nama Kepala Keluarga";
             // 
             // lb_paroki
             // 
             this.lb_paroki.AutoSize = true;
-            this.lb_paroki.Location = new System.Drawing.Point(833, 90);
+            this.lb_paroki.Location = new System.Drawing.Point(625, 73);
+            this.lb_paroki.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_paroki.Name = "lb_paroki";
-            this.lb_paroki.Size = new System.Drawing.Size(121, 20);
+            this.lb_paroki.Size = new System.Drawing.Size(116, 19);
             this.lb_paroki.TabIndex = 10;
             this.lb_paroki.Text = "Paroki taruh di sini";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(27, 90);
+            this.metroLabel2.Location = new System.Drawing.Point(20, 73);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(98, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(93, 19);
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "2. No Identitas";
             // 
             // lb_umur
             // 
             this.lb_umur.AutoSize = true;
-            this.lb_umur.Location = new System.Drawing.Point(833, 48);
+            this.lb_umur.Location = new System.Drawing.Point(625, 39);
+            this.lb_umur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_umur.Name = "lb_umur";
-            this.lb_umur.Size = new System.Drawing.Size(161, 20);
+            this.lb_umur.Size = new System.Drawing.Size(154, 19);
             this.lb_umur.TabIndex = 9;
             this.lb_umur.Text = "Tanggal lahir taruh di sini";
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(27, 128);
+            this.metroLabel3.Location = new System.Drawing.Point(20, 104);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(107, 20);
+            this.metroLabel3.Size = new System.Drawing.Size(100, 19);
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "3. Jenis Kelamin";
             // 
             // lb_jenisKelamin
             // 
             this.lb_jenisKelamin.AutoSize = true;
-            this.lb_jenisKelamin.Location = new System.Drawing.Point(276, 128);
+            this.lb_jenisKelamin.Location = new System.Drawing.Point(207, 104);
+            this.lb_jenisKelamin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_jenisKelamin.Name = "lb_jenisKelamin";
-            this.lb_jenisKelamin.Size = new System.Drawing.Size(182, 20);
+            this.lb_jenisKelamin.Size = new System.Drawing.Size(172, 19);
             this.lb_jenisKelamin.TabIndex = 8;
             this.lb_jenisKelamin.Text = "Jenis Kelamin di taruh di sini";
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(719, 90);
+            this.metroLabel5.Location = new System.Drawing.Point(539, 73);
+            this.metroLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(61, 20);
+            this.metroLabel5.Size = new System.Drawing.Size(59, 19);
             this.metroLabel5.TabIndex = 4;
             this.metroLabel5.Text = "5. Paroki";
             // 
             // lb_nok5
             // 
             this.lb_nok5.AutoSize = true;
-            this.lb_nok5.Location = new System.Drawing.Point(276, 90);
+            this.lb_nok5.Location = new System.Drawing.Point(207, 73);
+            this.lb_nok5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_nok5.Name = "lb_nok5";
-            this.lb_nok5.Size = new System.Drawing.Size(192, 20);
+            this.lb_nok5.Size = new System.Drawing.Size(182, 19);
             this.lb_nok5.TabIndex = 7;
             this.lb_nok5.Text = "No K5 Keluarga ditaruh di sini";
             // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(719, 128);
+            this.metroLabel6.Location = new System.Drawing.Point(539, 104);
+            this.metroLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(51, 20);
+            this.metroLabel6.Size = new System.Drawing.Size(49, 19);
             this.metroLabel6.TabIndex = 5;
             this.metroLabel6.Text = "6. Stasi";
             // 
             // lb_namaKK
             // 
             this.lb_namaKK.AutoSize = true;
-            this.lb_namaKK.Location = new System.Drawing.Point(276, 47);
+            this.lb_namaKK.Location = new System.Drawing.Point(207, 38);
+            this.lb_namaKK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_namaKK.Name = "lb_namaKK";
-            this.lb_namaKK.Size = new System.Drawing.Size(237, 20);
+            this.lb_namaKK.Size = new System.Drawing.Size(226, 19);
             this.lb_namaKK.TabIndex = 6;
             this.lb_namaKK.Text = "Nama Kepala Keluarga Ditaruh di sini";
             // 
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(508, 286);
+            this.metroLabel7.Location = new System.Drawing.Point(381, 232);
+            this.metroLabel7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(217, 20);
+            this.metroLabel7.Size = new System.Drawing.Size(206, 19);
             this.metroLabel7.TabIndex = 18;
             this.metroLabel7.Text = "Pengeluaran keluarga per bulan : ";
             // 
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(365, 311);
+            this.metroLabel8.Location = new System.Drawing.Point(274, 253);
+            this.metroLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(116, 20);
+            this.metroLabel8.Size = new System.Drawing.Size(112, 19);
             this.metroLabel8.TabIndex = 19;
             this.metroLabel8.Text = "1. Belanja Harian :";
             // 
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(382, 335);
+            this.metroLabel9.Location = new System.Drawing.Point(286, 272);
+            this.metroLabel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(110, 20);
+            this.metroLabel9.Size = new System.Drawing.Size(107, 19);
             this.metroLabel9.TabIndex = 20;
             this.metroLabel9.Text = "a. Bahan Bakar : ";
             // 
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(382, 359);
+            this.metroLabel10.Location = new System.Drawing.Point(286, 292);
+            this.metroLabel10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(92, 20);
+            this.metroLabel10.Size = new System.Drawing.Size(90, 19);
             this.metroLabel10.TabIndex = 21;
             this.metroLabel10.Text = "b. Sembako : ";
             // 
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(382, 383);
+            this.metroLabel11.Location = new System.Drawing.Point(286, 311);
+            this.metroLabel11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(133, 20);
+            this.metroLabel11.Size = new System.Drawing.Size(129, 19);
             this.metroLabel11.TabIndex = 22;
             this.metroLabel11.Text = "c. Bumbu dapur, dll :";
             // 
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(365, 416);
+            this.metroLabel12.Location = new System.Drawing.Point(274, 338);
+            this.metroLabel12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(133, 20);
+            this.metroLabel12.Size = new System.Drawing.Size(127, 19);
             this.metroLabel12.TabIndex = 23;
             this.metroLabel12.Text = "2. Uang jajan anak : ";
             // 
             // metroLabel13
             // 
             this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(364, 448);
+            this.metroLabel13.Location = new System.Drawing.Point(273, 364);
+            this.metroLabel13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(108, 20);
+            this.metroLabel13.Size = new System.Drawing.Size(105, 19);
             this.metroLabel13.TabIndex = 24;
             this.metroLabel13.Text = "3. Membeli air : ";
             // 
             // metroLabel14
             // 
             this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(364, 482);
+            this.metroLabel14.Location = new System.Drawing.Point(273, 392);
+            this.metroLabel14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(70, 20);
+            this.metroLabel14.Size = new System.Drawing.Size(66, 19);
             this.metroLabel14.TabIndex = 25;
             this.metroLabel14.Text = "4. Listrik : ";
             // 
             // metroLabel15
             // 
             this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(365, 512);
+            this.metroLabel15.Location = new System.Drawing.Point(274, 416);
+            this.metroLabel15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(62, 20);
+            this.metroLabel15.Size = new System.Drawing.Size(61, 19);
             this.metroLabel15.TabIndex = 26;
             this.metroLabel15.Text = "5. PAM : ";
             // 
             // metroLabel16
             // 
             this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(364, 545);
+            this.metroLabel16.Location = new System.Drawing.Point(273, 443);
+            this.metroLabel16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(148, 20);
+            this.metroLabel16.Size = new System.Drawing.Size(139, 19);
             this.metroLabel16.TabIndex = 27;
             this.metroLabel16.Text = "6. Uang sekolah anak :";
             // 
             // btnEditLain
             // 
-            this.btnEditLain.Location = new System.Drawing.Point(793, 580);
-            this.btnEditLain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditLain.Location = new System.Drawing.Point(595, 471);
+            this.btnEditLain.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditLain.Name = "btnEditLain";
-            this.btnEditLain.Size = new System.Drawing.Size(87, 22);
+            this.btnEditLain.Size = new System.Drawing.Size(65, 18);
             this.btnEditLain.TabIndex = 89;
             this.btnEditLain.Text = "Ubah";
             this.btnEditLain.UseSelectable = true;
             // 
             // edtTotalLain
             // 
-            this.edtTotalLain.Location = new System.Drawing.Point(569, 580);
-            this.edtTotalLain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.edtTotalLain.Location = new System.Drawing.Point(433, 471);
+            this.edtTotalLain.Margin = new System.Windows.Forms.Padding(2);
             this.edtTotalLain.Name = "edtTotalLain";
-            this.edtTotalLain.Size = new System.Drawing.Size(207, 22);
+            this.edtTotalLain.Size = new System.Drawing.Size(156, 20);
             this.edtTotalLain.TabIndex = 88;
             this.edtTotalLain.Visible = false;
             // 
             // lbNamaLain
             // 
             this.lbNamaLain.AutoSize = true;
-            this.lbNamaLain.Location = new System.Drawing.Point(402, 582);
+            this.lbNamaLain.Location = new System.Drawing.Point(302, 473);
+            this.lbNamaLain.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNamaLain.Name = "lbNamaLain";
-            this.lbNamaLain.Size = new System.Drawing.Size(61, 20);
+            this.lbNamaLain.Size = new System.Drawing.Size(58, 19);
             this.lbNamaLain.TabIndex = 87;
             this.lbNamaLain.Text = "Lain-lain";
             this.lbNamaLain.Visible = false;
             // 
             // btnTambahLain
             // 
-            this.btnTambahLain.Location = new System.Drawing.Point(559, 618);
-            this.btnTambahLain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTambahLain.Location = new System.Drawing.Point(419, 502);
+            this.btnTambahLain.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambahLain.Name = "btnTambahLain";
-            this.btnTambahLain.Size = new System.Drawing.Size(217, 41);
+            this.btnTambahLain.Size = new System.Drawing.Size(163, 33);
             this.btnTambahLain.TabIndex = 86;
             this.btnTambahLain.Text = "Tambah Jawaban Lainnya";
             this.btnTambahLain.UseSelectable = true;
+            this.btnTambahLain.Click += new System.EventHandler(this.btnTambahLain_Click);
             // 
             // cmbSimpan
             // 
-            this.cmbSimpan.Location = new System.Drawing.Point(508, 685);
-            this.cmbSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbSimpan.Location = new System.Drawing.Point(381, 557);
+            this.cmbSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSimpan.Name = "cmbSimpan";
-            this.cmbSimpan.Size = new System.Drawing.Size(216, 71);
+            this.cmbSimpan.Size = new System.Drawing.Size(162, 58);
             this.cmbSimpan.TabIndex = 90;
             this.cmbSimpan.Text = "Simpan";
             this.cmbSimpan.UseSelectable = true;
@@ -349,144 +373,160 @@
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(535, 335);
+            this.metroLabel17.Location = new System.Drawing.Point(401, 272);
+            this.metroLabel17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(28, 20);
+            this.metroLabel17.Size = new System.Drawing.Size(28, 19);
             this.metroLabel17.TabIndex = 92;
             this.metroLabel17.Text = "Rp.";
             // 
             // edtBahanBakar
             // 
-            this.edtBahanBakar.Location = new System.Drawing.Point(569, 333);
+            this.edtBahanBakar.Location = new System.Drawing.Point(433, 271);
+            this.edtBahanBakar.Margin = new System.Windows.Forms.Padding(2);
             this.edtBahanBakar.Name = "edtBahanBakar";
-            this.edtBahanBakar.Size = new System.Drawing.Size(207, 22);
+            this.edtBahanBakar.Size = new System.Drawing.Size(156, 20);
             this.edtBahanBakar.TabIndex = 91;
             this.edtBahanBakar.TextChanged += new System.EventHandler(this.edtSuami_TextChanged);
             // 
             // metroLabel18
             // 
             this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(535, 361);
+            this.metroLabel18.Location = new System.Drawing.Point(401, 293);
+            this.metroLabel18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(28, 20);
+            this.metroLabel18.Size = new System.Drawing.Size(28, 19);
             this.metroLabel18.TabIndex = 94;
             this.metroLabel18.Text = "Rp.";
             // 
             // edtSembako
             // 
-            this.edtSembako.Location = new System.Drawing.Point(569, 359);
+            this.edtSembako.Location = new System.Drawing.Point(433, 292);
+            this.edtSembako.Margin = new System.Windows.Forms.Padding(2);
             this.edtSembako.Name = "edtSembako";
-            this.edtSembako.Size = new System.Drawing.Size(207, 22);
+            this.edtSembako.Size = new System.Drawing.Size(156, 20);
             this.edtSembako.TabIndex = 93;
             this.edtSembako.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // metroLabel19
             // 
             this.metroLabel19.AutoSize = true;
-            this.metroLabel19.Location = new System.Drawing.Point(535, 387);
+            this.metroLabel19.Location = new System.Drawing.Point(401, 314);
+            this.metroLabel19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(28, 20);
+            this.metroLabel19.Size = new System.Drawing.Size(28, 19);
             this.metroLabel19.TabIndex = 96;
             this.metroLabel19.Text = "Rp.";
             // 
             // edtBumbuDapur
             // 
-            this.edtBumbuDapur.Location = new System.Drawing.Point(569, 385);
+            this.edtBumbuDapur.Location = new System.Drawing.Point(433, 313);
+            this.edtBumbuDapur.Margin = new System.Windows.Forms.Padding(2);
             this.edtBumbuDapur.Name = "edtBumbuDapur";
-            this.edtBumbuDapur.Size = new System.Drawing.Size(207, 22);
+            this.edtBumbuDapur.Size = new System.Drawing.Size(156, 20);
             this.edtBumbuDapur.TabIndex = 95;
             this.edtBumbuDapur.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // metroLabel20
             // 
             this.metroLabel20.AutoSize = true;
-            this.metroLabel20.Location = new System.Drawing.Point(535, 418);
+            this.metroLabel20.Location = new System.Drawing.Point(401, 340);
+            this.metroLabel20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(28, 20);
+            this.metroLabel20.Size = new System.Drawing.Size(28, 19);
             this.metroLabel20.TabIndex = 98;
             this.metroLabel20.Text = "Rp.";
             // 
             // edtUangJajan
             // 
-            this.edtUangJajan.Location = new System.Drawing.Point(569, 416);
+            this.edtUangJajan.Location = new System.Drawing.Point(433, 338);
+            this.edtUangJajan.Margin = new System.Windows.Forms.Padding(2);
             this.edtUangJajan.Name = "edtUangJajan";
-            this.edtUangJajan.Size = new System.Drawing.Size(207, 22);
+            this.edtUangJajan.Size = new System.Drawing.Size(156, 20);
             this.edtUangJajan.TabIndex = 97;
             this.edtUangJajan.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // metroLabel21
             // 
             this.metroLabel21.AutoSize = true;
-            this.metroLabel21.Location = new System.Drawing.Point(535, 450);
+            this.metroLabel21.Location = new System.Drawing.Point(401, 366);
+            this.metroLabel21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(28, 20);
+            this.metroLabel21.Size = new System.Drawing.Size(28, 19);
             this.metroLabel21.TabIndex = 100;
             this.metroLabel21.Text = "Rp.";
             // 
             // edtAir
             // 
-            this.edtAir.Location = new System.Drawing.Point(569, 448);
+            this.edtAir.Location = new System.Drawing.Point(433, 364);
+            this.edtAir.Margin = new System.Windows.Forms.Padding(2);
             this.edtAir.Name = "edtAir";
-            this.edtAir.Size = new System.Drawing.Size(207, 22);
+            this.edtAir.Size = new System.Drawing.Size(156, 20);
             this.edtAir.TabIndex = 99;
             this.edtAir.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // metroLabel22
             // 
             this.metroLabel22.AutoSize = true;
-            this.metroLabel22.Location = new System.Drawing.Point(535, 482);
+            this.metroLabel22.Location = new System.Drawing.Point(401, 392);
+            this.metroLabel22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(28, 20);
+            this.metroLabel22.Size = new System.Drawing.Size(28, 19);
             this.metroLabel22.TabIndex = 102;
             this.metroLabel22.Text = "Rp.";
             // 
             // edtListrik
             // 
-            this.edtListrik.Location = new System.Drawing.Point(569, 480);
+            this.edtListrik.Location = new System.Drawing.Point(433, 390);
+            this.edtListrik.Margin = new System.Windows.Forms.Padding(2);
             this.edtListrik.Name = "edtListrik";
-            this.edtListrik.Size = new System.Drawing.Size(207, 22);
+            this.edtListrik.Size = new System.Drawing.Size(156, 20);
             this.edtListrik.TabIndex = 101;
             this.edtListrik.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // metroLabel23
             // 
             this.metroLabel23.AutoSize = true;
-            this.metroLabel23.Location = new System.Drawing.Point(535, 514);
+            this.metroLabel23.Location = new System.Drawing.Point(401, 418);
+            this.metroLabel23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(28, 20);
+            this.metroLabel23.Size = new System.Drawing.Size(28, 19);
             this.metroLabel23.TabIndex = 104;
             this.metroLabel23.Text = "Rp.";
             // 
             // edtPAM
             // 
-            this.edtPAM.Location = new System.Drawing.Point(569, 512);
+            this.edtPAM.Location = new System.Drawing.Point(433, 416);
+            this.edtPAM.Margin = new System.Windows.Forms.Padding(2);
             this.edtPAM.Name = "edtPAM";
-            this.edtPAM.Size = new System.Drawing.Size(207, 22);
+            this.edtPAM.Size = new System.Drawing.Size(156, 20);
             this.edtPAM.TabIndex = 103;
             this.edtPAM.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // metroLabel24
             // 
             this.metroLabel24.AutoSize = true;
-            this.metroLabel24.Location = new System.Drawing.Point(535, 547);
+            this.metroLabel24.Location = new System.Drawing.Point(401, 444);
+            this.metroLabel24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel24.Name = "metroLabel24";
-            this.metroLabel24.Size = new System.Drawing.Size(28, 20);
+            this.metroLabel24.Size = new System.Drawing.Size(28, 19);
             this.metroLabel24.TabIndex = 106;
             this.metroLabel24.Text = "Rp.";
             // 
             // edtUangSekolahAnak
             // 
-            this.edtUangSekolahAnak.Location = new System.Drawing.Point(569, 545);
+            this.edtUangSekolahAnak.Location = new System.Drawing.Point(433, 443);
+            this.edtUangSekolahAnak.Margin = new System.Windows.Forms.Padding(2);
             this.edtUangSekolahAnak.Name = "edtUangSekolahAnak";
-            this.edtUangSekolahAnak.Size = new System.Drawing.Size(207, 22);
+            this.edtUangSekolahAnak.Size = new System.Drawing.Size(156, 20);
             this.edtUangSekolahAnak.TabIndex = 105;
             this.edtUangSekolahAnak.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // formPengeluaranKeluargaPerBulan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 778);
+            this.ClientSize = new System.Drawing.Size(956, 632);
             this.Controls.Add(this.metroLabel24);
             this.Controls.Add(this.edtUangSekolahAnak);
             this.Controls.Add(this.metroLabel23);
@@ -519,7 +559,9 @@
             this.Controls.Add(this.metroLabel8);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formPengeluaranKeluargaPerBulan";
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Text = "Form Pengeluaran Keluarga Per Bulan";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.formPengeluaranKeluargaPerBulan_Load);

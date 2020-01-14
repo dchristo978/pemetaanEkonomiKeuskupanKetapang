@@ -63,6 +63,7 @@
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Ekonomi\Ref_bab.cs" />
     <Compile Include="Controller\Ekonomi\Ref_JawabanControl.cs" />
     <Compile Include="Controller\Ekonomi\Tbl_BobotControl.cs" />
     <Compile Include="Controller\Ekonomi\Tbl_JawabanControl.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="Model\DGVPrinter.cs" />
     <Compile Include="Model\jenis_kelamin.cs" />
     <Compile Include="Model\mst_user.cs" />
+    <Compile Include="Model\refBab.cs" />
     <Compile Include="Model\ref_jawaban.cs" />
     <Compile Include="Model\ref_pekerjaan.cs" />
     <Compile Include="Model\tbl_bobot.cs" />
@@ -154,6 +157,24 @@
     </Compile>
     <Compile Include="View\Form Pertanyaan\formTanamanKeras.Designer.cs">
       <DependentUpon>formTanamanKeras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Tambahan\formDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Tambahan\formDatabase.Designer.cs">
+      <DependentUpon>formDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Tambahan\formKKTersample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Tambahan\formKKTersample.Designer.cs">
+      <DependentUpon>formKKTersample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form Tambahan\formLaporanPemetaanEkonomi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form Tambahan\formLaporanPemetaanEkonomi.Designer.cs">
+      <DependentUpon>formLaporanPemetaanEkonomi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Form Tambahan\formListJawabanLainTerpilih.cs">
       <SubType>Form</SubType>
@@ -262,6 +283,15 @@
     <EmbeddedResource Include="View\Form Pertanyaan\formTanamanKeras.resx">
       <DependentUpon>formTanamanKeras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Tambahan\formDatabase.resx">
+      <DependentUpon>formDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Tambahan\formKKTersample.resx">
+      <DependentUpon>formKKTersample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form Tambahan\formLaporanPemetaanEkonomi.resx">
+      <DependentUpon>formLaporanPemetaanEkonomi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Form Tambahan\formListJawabanLainTerpilih.resx">
       <DependentUpon>formListJawabanLainTerpilih.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,7 +383,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\WatermarkKeuskupanKetapang.bmp" />
     <None Include="bin\Debug\KKKetapang.jpg" />
+    <Content Include="bin\Debug\WatermarkKeuskupanKetapang.png" />
+    <None Include="bin\Image\WatermarkKeuskupanKetapang.jpg" />
+    <None Include="bin\Image\LogoKKetapang.jpg" />
     <Content Include="MetroFramework.txt" />
     <None Include="Resources\KKKetapang.jpg" />
   </ItemGroup>

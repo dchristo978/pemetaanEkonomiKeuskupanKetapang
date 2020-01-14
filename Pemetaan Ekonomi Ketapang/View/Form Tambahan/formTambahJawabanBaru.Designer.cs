@@ -54,45 +54,44 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 89);
+            this.label1.Location = new System.Drawing.Point(44, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pertanyaan :";
             // 
             // cmbPertanyaan
             // 
             this.cmbPertanyaan.FormattingEnabled = true;
-            this.cmbPertanyaan.Location = new System.Drawing.Point(241, 87);
-            this.cmbPertanyaan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbPertanyaan.Location = new System.Drawing.Point(181, 71);
             this.cmbPertanyaan.Name = "cmbPertanyaan";
-            this.cmbPertanyaan.Size = new System.Drawing.Size(299, 24);
+            this.cmbPertanyaan.Size = new System.Drawing.Size(225, 21);
             this.cmbPertanyaan.TabIndex = 1;
             this.cmbPertanyaan.SelectedIndexChanged += new System.EventHandler(this.cmbPertanyaan_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 135);
+            this.label2.Location = new System.Drawing.Point(44, 110);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 17);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Jawaban Baru :";
             // 
             // edtJawaban
             // 
-            this.edtJawaban.Location = new System.Drawing.Point(241, 135);
-            this.edtJawaban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edtJawaban.Location = new System.Drawing.Point(181, 110);
             this.edtJawaban.Name = "edtJawaban";
-            this.edtJawaban.Size = new System.Drawing.Size(299, 22);
+            this.edtJawaban.Size = new System.Drawing.Size(225, 20);
             this.edtJawaban.TabIndex = 3;
             // 
             // btnSimpanJawaban
             // 
-            this.btnSimpanJawaban.Location = new System.Drawing.Point(241, 167);
-            this.btnSimpanJawaban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimpanJawaban.Location = new System.Drawing.Point(181, 136);
             this.btnSimpanJawaban.Name = "btnSimpanJawaban";
-            this.btnSimpanJawaban.Size = new System.Drawing.Size(147, 50);
+            this.btnSimpanJawaban.Size = new System.Drawing.Size(110, 41);
             this.btnSimpanJawaban.TabIndex = 4;
             this.btnSimpanJawaban.Text = "Simpan Jawaban";
             this.btnSimpanJawaban.UseVisualStyleBackColor = true;
@@ -101,78 +100,70 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(624, 101);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(468, 82);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(796, 373);
+            this.dataGridView1.Size = new System.Drawing.Size(597, 303);
             this.dataGridView1.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(620, 81);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(465, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 17);
+            this.label3.Size = new System.Drawing.Size(113, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tabel Referensi Bobot";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 250);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(44, 203);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 17);
+            this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Judul Bobot";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 286);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(44, 232);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 17);
+            this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Deskripsi Bobot";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(59, 319);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(44, 259);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 17);
+            this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "Batas Atas Bobot";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(59, 350);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(44, 284);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 17);
+            this.label7.Size = new System.Drawing.Size(101, 13);
             this.label7.TabIndex = 10;
             this.label7.Text = "Batas Bawah Bobot";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(59, 382);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(44, 310);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 17);
+            this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 11;
             this.label8.Text = "Bobot";
             // 
             // btnSimpanBobot
             // 
-            this.btnSimpanBobot.Location = new System.Drawing.Point(241, 422);
-            this.btnSimpanBobot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimpanBobot.Location = new System.Drawing.Point(181, 343);
             this.btnSimpanBobot.Name = "btnSimpanBobot";
-            this.btnSimpanBobot.Size = new System.Drawing.Size(152, 52);
+            this.btnSimpanBobot.Size = new System.Drawing.Size(114, 42);
             this.btnSimpanBobot.TabIndex = 12;
             this.btnSimpanBobot.Text = "Simpan Bobot";
             this.btnSimpanBobot.UseVisualStyleBackColor = true;
@@ -180,50 +171,44 @@
             // 
             // edtHeaderBobot
             // 
-            this.edtHeaderBobot.Location = new System.Drawing.Point(244, 250);
-            this.edtHeaderBobot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edtHeaderBobot.Location = new System.Drawing.Point(183, 203);
             this.edtHeaderBobot.Name = "edtHeaderBobot";
-            this.edtHeaderBobot.Size = new System.Drawing.Size(235, 22);
+            this.edtHeaderBobot.Size = new System.Drawing.Size(177, 20);
             this.edtHeaderBobot.TabIndex = 13;
             // 
             // edtDesBobot
             // 
-            this.edtDesBobot.Location = new System.Drawing.Point(244, 286);
-            this.edtDesBobot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edtDesBobot.Location = new System.Drawing.Point(183, 232);
             this.edtDesBobot.Name = "edtDesBobot";
-            this.edtDesBobot.Size = new System.Drawing.Size(235, 22);
+            this.edtDesBobot.Size = new System.Drawing.Size(177, 20);
             this.edtDesBobot.TabIndex = 14;
             // 
             // edtBatasAtasBobot
             // 
-            this.edtBatasAtasBobot.Location = new System.Drawing.Point(244, 319);
-            this.edtBatasAtasBobot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edtBatasAtasBobot.Location = new System.Drawing.Point(183, 259);
             this.edtBatasAtasBobot.Name = "edtBatasAtasBobot";
-            this.edtBatasAtasBobot.Size = new System.Drawing.Size(235, 22);
+            this.edtBatasAtasBobot.Size = new System.Drawing.Size(177, 20);
             this.edtBatasAtasBobot.TabIndex = 15;
             // 
             // edtBatasBawahBobot
             // 
-            this.edtBatasBawahBobot.Location = new System.Drawing.Point(244, 351);
-            this.edtBatasBawahBobot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edtBatasBawahBobot.Location = new System.Drawing.Point(183, 285);
             this.edtBatasBawahBobot.Name = "edtBatasBawahBobot";
-            this.edtBatasBawahBobot.Size = new System.Drawing.Size(235, 22);
+            this.edtBatasBawahBobot.Size = new System.Drawing.Size(177, 20);
             this.edtBatasBawahBobot.TabIndex = 16;
             // 
             // edtBobot
             // 
-            this.edtBobot.Location = new System.Drawing.Point(244, 382);
-            this.edtBobot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edtBobot.Location = new System.Drawing.Point(183, 310);
             this.edtBobot.Name = "edtBobot";
-            this.edtBobot.Size = new System.Drawing.Size(148, 22);
+            this.edtBobot.Size = new System.Drawing.Size(112, 20);
             this.edtBobot.TabIndex = 17;
             // 
             // btnSelesai
             // 
-            this.btnSelesai.Location = new System.Drawing.Point(608, 521);
-            this.btnSelesai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelesai.Location = new System.Drawing.Point(456, 423);
             this.btnSelesai.Name = "btnSelesai";
-            this.btnSelesai.Size = new System.Drawing.Size(240, 63);
+            this.btnSelesai.Size = new System.Drawing.Size(180, 51);
             this.btnSelesai.TabIndex = 18;
             this.btnSelesai.Text = "Selesai";
             this.btnSelesai.UseVisualStyleBackColor = true;
@@ -231,19 +216,20 @@
             // 
             // btnHapusJawaban
             // 
-            this.btnHapusJawaban.Location = new System.Drawing.Point(396, 167);
-            this.btnHapusJawaban.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHapusJawaban.Location = new System.Drawing.Point(297, 136);
             this.btnHapusJawaban.Name = "btnHapusJawaban";
-            this.btnHapusJawaban.Size = new System.Drawing.Size(147, 50);
+            this.btnHapusJawaban.Size = new System.Drawing.Size(110, 41);
             this.btnHapusJawaban.TabIndex = 19;
             this.btnHapusJawaban.Text = "Hapus Jawaban";
             this.btnHapusJawaban.UseVisualStyleBackColor = true;
+            this.btnHapusJawaban.Visible = false;
+            this.btnHapusJawaban.Click += new System.EventHandler(this.btnHapusJawaban_Click);
             // 
             // formTambahJawabanLainnya
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1451, 612);
+            this.ClientSize = new System.Drawing.Size(1088, 497);
             this.Controls.Add(this.btnHapusJawaban);
             this.Controls.Add(this.btnSelesai);
             this.Controls.Add(this.edtBobot);
@@ -264,9 +250,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbPertanyaan);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formTambahJawabanLainnya";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Tambah Jawaban";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.formTambahJawabanLainnya_Load);

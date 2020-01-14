@@ -49,6 +49,9 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         {
             initializeHeader();
             GlobalParam.idPertanyaan = 22;
+            this.edtSuami.Enabled = false;
+            this.edtIstri.Enabled = false;
+            this.edtAnak.Enabled = false;
         }
 
         private void cbSuami_CheckedChanged(object sender, EventArgs e)

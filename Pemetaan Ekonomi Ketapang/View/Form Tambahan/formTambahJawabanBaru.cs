@@ -197,5 +197,10 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         {
             this.Close();
         }
+
+        private void btnHapusJawaban_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

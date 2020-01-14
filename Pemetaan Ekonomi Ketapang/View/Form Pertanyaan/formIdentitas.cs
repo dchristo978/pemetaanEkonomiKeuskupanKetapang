@@ -72,7 +72,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
             temp = stasiControl.getStasiBasedOnIdParokiNew(Convert.ToInt32(dbConnector.getIDParoki(GlobalParam.nama_database)),GlobalParam.nama_database);
             this.cmbStasi.DataSource = temp;
             this.cmbStasi.DisplayMember = "nama_stasi";
-            this.cmbStasi.ValueMember = "kode_stasi";
+            this.cmbStasi.ValueMember = "id_stasi";
         }
 
         private void cmbParoki_SelectedIndexChanged(object sender, EventArgs e)

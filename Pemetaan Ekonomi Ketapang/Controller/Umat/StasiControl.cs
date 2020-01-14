@@ -73,7 +73,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Umat
         {
             String balikan = "";
             MySqlConnection connection = dbConnector.openConnection("", "", GlobalParam.nama_database);
-            String query = "Select nama_stasi from tbl_stasi where id_paroki = @idParoki and kode_stasi = @kodeStasi";
+            String query = "Select nama_stasi from tbl_stasi where id_paroki = @idParoki and id_stasi = @kodeStasi";
             connection.Open();
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@idParoki", GlobalParam.id_paroki);

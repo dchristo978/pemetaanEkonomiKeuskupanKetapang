@@ -92,7 +92,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                     }
 
                     MessageBox.Show("Data berhasil di masukan, silahkan lanjutkan ke form berikutnya !");
-
+                    GlobalParam.isPanenPangan = false;
                     if(GlobalParam.isPanenKeras)
                     {
                         formTanamanKeras temp = new formTanamanKeras();

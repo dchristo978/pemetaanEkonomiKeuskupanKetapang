@@ -108,5 +108,18 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Ekonomi
 
             return balikan;
         }
+
+        public String deleteJawabanBasedOnIdUmat(int idUmat)
+        {
+            int temp = tblJawabanAdapter.DeleteAllJawabanBasedOnIdUmat(idUmat);
+            if (temp > 0)
+            {
+                return temp + " jawaban sampling berhasil di hapus";
+            }
+            else
+            {
+                return " tidak ada jawaban sampling terhapus";
+            }
+        }
     }
 }

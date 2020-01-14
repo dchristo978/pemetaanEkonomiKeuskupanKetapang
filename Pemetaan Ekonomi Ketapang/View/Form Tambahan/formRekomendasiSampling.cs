@@ -46,26 +46,47 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
         }
 
         private void btnCetak_Click(object sender, EventArgs e)
-        {
-            DGVPrinter printer = new DGVPrinter();
-            printer.Title = "Laporan Rekomendasi Sampling";
-            printer.SubTitle = "Paroki : " + this.cmbParoki.Text;
-            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+        { 
+            if(this.dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Belum ada data yang ditampilkan untuk di cetak!");
+            }
+            else{
 
-            printer.PageNumbers = true;
+                Bitmap bmp = new Bitmap(Properties.Resources.LogoKKetapang);
+                DGVPrinter.ImbeddedImage B1 = new DGVPrinter.ImbeddedImage();
+                B1.ImageAlignment = DGVPrinter.Alignment.NotSet;
+                B1.ImageLocation = DGVPrinter.Location.Header;
+                B1.ImageX = 80;
+                B1.ImageY = -55;
+                B1.theImage = bmp;
+                
+                DGVPrinter printer = new DGVPrinter();
+                printer.Title = "Laporan Rekomendasi Sampling\n";
+                printer.SubTitle = "Keuskupan Ketapang\nParoki : " + this.cmbParoki.Text+ "\n\n";
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
 
-            printer.PageNumberInHeader = false;
+                printer.PageNumbers = true;
 
-            printer.PorportionalColumns = true;
+                printer.PageText = "Halaman ";
 
-            printer.HeaderCellAlignment = StringAlignment.Near;
+                printer.PageNumberInHeader = false;
 
-            printer.Footer = "Your Company Name Here";
+                printer.ShowTotalPageNumber = true;
 
-            printer.FooterSpacing = 15;
+                printer.PageSeparator = " dari ";
 
+                printer.PorportionalColumns = true;
 
-            printer.PrintDataGridView(this.dataGridView1);
+                printer.HeaderCellAlignment = StringAlignment.Near;
+
+                printer.Footer = "Keuskupan Ketapang";
+
+                printer.FooterSpacing = 15;
+
+                printer.ImbeddedImageList.Add(B1);
+                printer.PrintDataGridView(this.dataGridView1);
+            }
         }
 
         private void cmbParoki_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,7 +102,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
                 GlobalParam.marginOfError = 0.075;
             else if (this.cmbError.SelectedIndex == 2)
                 GlobalParam.marginOfError = 0.1;
-                
+
             GlobalParam.nama_database = this.cmbParoki.SelectedValue.ToString();
             this.lbTotalKK.Text = umatControl.getTotalKepalaKeluagaParoki().ToString();
 
@@ -91,8 +112,9 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
             {
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                if(i!=0)
+                if (i != 0)
                 {
+                    this.dataGridView1.Columns[i].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     this.dataGridView1.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 }
             }

@@ -52,21 +52,18 @@
             this.groupBox1.Controls.Add(this.edt_cari_kepalaKeluarga);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.edt_cari_noKK);
-            this.groupBox1.Location = new System.Drawing.Point(31, 78);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(23, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(724, 176);
+            this.groupBox1.Size = new System.Drawing.Size(543, 143);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pencarian Kepala Keluarga";
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(545, 74);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroButton1.Location = new System.Drawing.Point(409, 60);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(145, 53);
+            this.metroButton1.Size = new System.Drawing.Size(109, 43);
             this.metroButton1.TabIndex = 7;
             this.metroButton1.Text = "CARI";
             this.metroButton1.UseSelectable = true;
@@ -75,56 +72,50 @@
             // cmbStasi
             // 
             this.cmbStasi.FormattingEnabled = true;
-            this.cmbStasi.Location = new System.Drawing.Point(95, 128);
-            this.cmbStasi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbStasi.Location = new System.Drawing.Point(71, 104);
             this.cmbStasi.Name = "cmbStasi";
-            this.cmbStasi.Size = new System.Drawing.Size(400, 24);
+            this.cmbStasi.Size = new System.Drawing.Size(301, 21);
             this.cmbStasi.TabIndex = 6;
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(8, 128);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel3.Location = new System.Drawing.Point(6, 104);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(40, 20);
+            this.metroLabel3.Size = new System.Drawing.Size(39, 19);
             this.metroLabel3.TabIndex = 5;
             this.metroLabel3.Text = "Stasi ";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(8, 90);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel2.Location = new System.Drawing.Point(6, 73);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(46, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(45, 19);
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Nama";
             // 
             // edt_cari_kepalaKeluarga
             // 
-            this.edt_cari_kepalaKeluarga.Location = new System.Drawing.Point(95, 90);
-            this.edt_cari_kepalaKeluarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edt_cari_kepalaKeluarga.Location = new System.Drawing.Point(71, 73);
             this.edt_cari_kepalaKeluarga.Name = "edt_cari_kepalaKeluarga";
-            this.edt_cari_kepalaKeluarga.Size = new System.Drawing.Size(400, 22);
+            this.edt_cari_kepalaKeluarga.Size = new System.Drawing.Size(301, 20);
             this.edt_cari_kepalaKeluarga.TabIndex = 4;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(8, 48);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(6, 39);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(48, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(45, 19);
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "No KK";
             // 
             // edt_cari_noKK
             // 
-            this.edt_cari_noKK.Location = new System.Drawing.Point(95, 46);
-            this.edt_cari_noKK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edt_cari_noKK.Location = new System.Drawing.Point(71, 37);
             this.edt_cari_noKK.Name = "edt_cari_noKK";
-            this.edt_cari_noKK.Size = new System.Drawing.Size(400, 22);
+            this.edt_cari_noKK.Size = new System.Drawing.Size(301, 20);
             this.edt_cari_noKK.TabIndex = 3;
             // 
             // dataGridKepalaKeluarga
@@ -132,46 +123,42 @@
             this.dataGridKepalaKeluarga.AllowUserToAddRows = false;
             this.dataGridKepalaKeluarga.AllowUserToDeleteRows = false;
             this.dataGridKepalaKeluarga.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridKepalaKeluarga.Location = new System.Drawing.Point(31, 281);
-            this.dataGridKepalaKeluarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridKepalaKeluarga.Location = new System.Drawing.Point(23, 228);
             this.dataGridKepalaKeluarga.MultiSelect = false;
             this.dataGridKepalaKeluarga.Name = "dataGridKepalaKeluarga";
             this.dataGridKepalaKeluarga.ReadOnly = true;
             this.dataGridKepalaKeluarga.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridKepalaKeluarga.Size = new System.Drawing.Size(1216, 431);
+            this.dataGridKepalaKeluarga.Size = new System.Drawing.Size(912, 350);
             this.dataGridKepalaKeluarga.TabIndex = 7;
+            this.dataGridKepalaKeluarga.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridKepalaKeluarga_CellContentClick_1);
             this.dataGridKepalaKeluarga.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridKepalaKeluarga_CellContentDoubleClick_1);
             // 
             // edt_col
             // 
-            this.edt_col.Location = new System.Drawing.Point(1113, 73);
-            this.edt_col.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edt_col.Location = new System.Drawing.Point(835, 59);
             this.edt_col.Name = "edt_col";
-            this.edt_col.Size = new System.Drawing.Size(132, 22);
+            this.edt_col.Size = new System.Drawing.Size(100, 20);
             this.edt_col.TabIndex = 9;
             this.edt_col.Visible = false;
             // 
             // edt_row
             // 
-            this.edt_row.Location = new System.Drawing.Point(1113, 39);
-            this.edt_row.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edt_row.Location = new System.Drawing.Point(835, 32);
             this.edt_row.Name = "edt_row";
-            this.edt_row.Size = new System.Drawing.Size(132, 22);
+            this.edt_row.Size = new System.Drawing.Size(100, 20);
             this.edt_row.TabIndex = 8;
             this.edt_row.Visible = false;
             // 
             // formKkDatabase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 740);
+            this.ClientSize = new System.Drawing.Size(958, 601);
             this.Controls.Add(this.edt_col);
             this.Controls.Add(this.edt_row);
             this.Controls.Add(this.dataGridKepalaKeluarga);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formKkDatabase";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Form Identitas Dari Database";
             this.Load += new System.EventHandler(this.formKkDatabase_Load);
             this.groupBox1.ResumeLayout(false);

@@ -190,5 +190,14 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                 MessageBox.Show("Terjadi kesalahan pada sistem, silahkan hubungi admin dengan menyertakan kalimat berikut : " + E.Message);
             }
         }
+
+        private void btnTambahLain_Click(object sender, EventArgs e)
+        {
+            GlobalParam.formParent = "formPengeluaranKeluargaPerBulan";
+            GlobalParam.idPertanyaan = 19;
+            formJawabanLainnya fr = new formJawabanLainnya();
+            fr.ShowDialog();
+        }
+        
     }
 }

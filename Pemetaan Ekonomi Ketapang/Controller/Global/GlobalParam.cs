@@ -35,5 +35,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller
         public static bool isPanenKeras = false;
         public static bool isPanenTernak = false;
 
+        public static int babPertanyaan = 0;
+        public static String reginParoki = "";
     }
 }

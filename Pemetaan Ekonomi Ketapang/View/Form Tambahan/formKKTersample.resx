@@ -117,34 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="KKKetapang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\KKKetapang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="versiAplikasi" xml:space="preserve">
-    <value>2019.05.1.0.0</value>
-    <comment>Versi dari aplikasi Pemetaan Ekonomi Keuskupan Ketapang</comment>
-  </data>
-  <data name="warna1" xml:space="preserve">
-    <value>2E694F</value>
-    <comment>Biru gelap</comment>
-  </data>
-  <data name="warna2" xml:space="preserve">
-    <value>2D5D7C</value>
-    <comment>Biru agak terang</comment>
-  </data>
-  <data name="warna3" xml:space="preserve">
-    <value>FFFFFF</value>
-    <comment>Putih</comment>
-  </data>
-  <data name="warna4" xml:space="preserve">
-    <value>EF5939</value>
-    <comment>Merah Orange</comment>
-  </data>
-  <data name="LogoKKetapang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Image\LogoKKetapang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WatermarkKeuskupanKetapang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Image\WatermarkKeuskupanKetapang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

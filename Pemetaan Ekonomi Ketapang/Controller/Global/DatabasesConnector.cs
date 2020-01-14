@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Pemetaan_Ekonomi_Ketapang.db_ekonomi_ketapangTableAdapters;
 
 namespace Pemetaan_Ekonomi_Ketapang.Controller.Global
 {
@@ -14,6 +15,7 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Global
         public string lokasi_paroki { get; set; }
         public string nama_database { get; set; }
         public string id_paroki { get; set; }
+        private tbl_database_connectorTableAdapter databaseConnector = new tbl_database_connectorTableAdapter();
 
         public DatabasesConnector() { }
 
@@ -24,33 +26,32 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Global
             this.nama_database = nama_database;
         }
 
-
+        public DataTable getDatabaseDataTable()
+        {
+            DataTable balikan =  databaseConnector.GetData();
+            balikan.Columns[0].ColumnName = "ID Paroki";
+            balikan.Columns[1].ColumnName = "Lokasi Paroki";
+            balikan.Columns[2].ColumnName = "Nama Database";
+            return balikan;
+        }
 
         public List<DatabasesConnector> getListDatabases()
         {
-            List<DatabasesConnector> temp = new List<DatabasesConnector>();
-            temp.Add(new DatabasesConnector("1", "Air Upas", "db_umat_ketapang_air_upas"));
-            temp.Add(new DatabasesConnector("2", "Balai Berkuak", "db_umat_ketapang_balai_berkuak"));
-            temp.Add(new DatabasesConnector("3", "Balai Semandang", "db_umat_ketapang_balai_semandang"));
-            temp.Add(new DatabasesConnector("4", "Kendawangan", "db_umat_ketapang_kendawangan"));
-            temp.Add(new DatabasesConnector("5", "Gemma Galgani Ketapang", "db_umat_ketapang_balai_berkuak"));
-            temp.Add(new DatabasesConnector("7", "Marau", "db_umat_ketapang_marau"));
-            temp.Add(new DatabasesConnector("8", "Menyumbung", "db_umat_ketapang_menyumbung"));
-            temp.Add(new DatabasesConnector("9", "Tayap", "db_umat_ketapang_tayap"));
-            temp.Add(new DatabasesConnector("10", "Randau", "db_umat_ketapang_randau"));
-            temp.Add(new DatabasesConnector("11", "Sandai", "db_umat_ketapang_sandai"));
-            temp.Add(new DatabasesConnector("12", "Sepotong", "db_umat_ketapang_sepotong"));
-            temp.Add(new DatabasesConnector("13", "Serengkah", "db_umat_ketapang_serengkah"));
-            temp.Add(new DatabasesConnector("14", "Tumbang Titi", "db_umat_ketapang_tumbang_titi"));
-            temp.Add(new DatabasesConnector("15", "Simpang Dua", "db_umat_ketapang_simpang_dua"));
-            temp.Add(new DatabasesConnector("16", "Tanjung", "db_umat_ketapang_tanjung"));
-            temp.Add(new DatabasesConnector("17", "Tembelina", "db_umat_ketapang_tembelina"));
-            temp.Add(new DatabasesConnector("18", "Sukadana", "db_umat_ketapang_sukadana"));
-            temp.Add(new DatabasesConnector("19", "Botong", "db_umat_ketapang_botong"));
-            temp.Add(new DatabasesConnector("20", "Meraban", "db_umat_ketapang_meraban"));
-            temp.Add(new DatabasesConnector("21", "Sungai Daka", "db_umat_ketapang_sungai_daka"));
+            List<DatabasesConnector> balikan = new List<DatabasesConnector>();
 
-            return temp;
+            DataTable tempGet = databaseConnector.GetData();
+
+            for (int i = 0; i < tempGet.Rows.Count; i ++)
+            {
+                DatabasesConnector temp = new DatabasesConnector();
+                temp.id_paroki = tempGet.Rows[i][0].ToString();
+                temp.lokasi_paroki = tempGet.Rows[i][1].ToString();
+                temp.nama_database = tempGet.Rows[i][2].ToString();
+
+                balikan.Add(temp);
+            }
+
+            return balikan;
         }
 
         public MySqlConnection openConnection(string ipDataSource, String port, String databaseName)
@@ -82,6 +83,38 @@ namespace Pemetaan_Ekonomi_Ketapang.Controller.Global
             }
 
             return temp;
+        }
+        
+        public string getNamaDatabase(String idParoki)
+        {
+            String temp = "0";
+            List<DatabasesConnector> tempList = getListDatabases();
+
+            foreach (DatabasesConnector database in tempList)
+            {
+                if (String.Equals(database.id_paroki, idParoki))
+                {
+                    temp = database.nama_database;
+                    break;
+                }
+            }
+
+            return temp;
+        }
+
+        public bool tambahDatabase(DatabasesConnector temp)
+        {
+            return databaseConnector.InsertQuery(Convert.ToInt32(temp.id_paroki),temp.lokasi_paroki,temp.nama_database)>0;
+        }
+
+        public bool deleteDatabase(DatabasesConnector temp)
+        {
+            return databaseConnector.DeleteQuery(Convert.ToInt32(temp.id_paroki), temp.lokasi_paroki, temp.nama_database) >0;
+        }
+
+        public bool updateDatabase(DatabasesConnector param,DatabasesConnector input)
+        {
+            return databaseConnector.UpdateQuery(Convert.ToInt32(input.id_paroki),input.lokasi_paroki,input.nama_database, Convert.ToInt32(param.id_paroki),param.lokasi_paroki,param.nama_database)>0;
         }
 
     }

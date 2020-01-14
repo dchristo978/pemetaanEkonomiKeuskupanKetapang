@@ -15,7 +15,7 @@ using Pemetaan_Ekonomi_Ketapang.Model;
 
 namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
 {
-    
+
     public partial class formKkDatabase : MetroForm
     {
         DatabasesConnector dbConnector = new DatabasesConnector();
@@ -33,7 +33,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         {
             DG.DataSource = umatControl.getMstUmatBasedOnParoki();
             DG.Columns[0].HeaderText = "No K5";
-            for(int i = 0; i<DG.Columns.Count; i ++)
+            for (int i = 0; i < DG.Columns.Count; i++)
                 DG.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
@@ -103,7 +103,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
             List<tbl_stasi> temp = new List<tbl_stasi>();
             temp = stasiControl.getStasiBasedOnIdParokiNew(Convert.ToInt32(dbConnector.getIDParoki(GlobalParam.nama_database)), GlobalParam.nama_database);
 
-            temp.Add(new tbl_stasi("-1","","","TIDAK MEMILIH STASI",0,"1"));
+            temp.Add(new tbl_stasi("-1", "", "", "TIDAK MEMILIH STASI", 0, "1"));
             this.cmbStasi.DataSource = temp;
             this.cmbStasi.DisplayMember = "nama_stasi";
             this.cmbStasi.ValueMember = "id_stasi";
@@ -120,7 +120,6 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
         {
             if (!String.Equals(GlobalParam.formParent, "formKepalaKeluarga"))
             {
-
                 GlobalParam.no_k5 = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["no_kk"].Value.ToString();
                 GlobalParam.nama = dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama"].Value.ToString();
 
@@ -129,15 +128,27 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Pertanyaan
                 GlobalParam.id_paroki = Convert.ToInt32(dbConnector.getIDParoki(GlobalParam.nama_database));
                 GlobalParam.kode_stasi = umatControl.getKodeStasiBasedOnNamaStasi(dataGridKepalaKeluarga.Rows[e.RowIndex].Cells["nama_stasi"].Value.ToString());
 
-                formIdentitas fr = new formIdentitas();
-                fr.ShowDialog();
-                this.Hide();
+                if (!umatControl.getSamePerson(new tbl_umat("","","",GlobalParam.nama,0,"","",0,GlobalParam.id_paroki,GlobalParam.kode_stasi)))
+                {
+                    formIdentitas fr = new formIdentitas();
+                    fr.ShowDialog();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Sudah terdapat sample dengan nama orang, paroki dan stasi yang sama pada basis data!");
+                }
             }
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             this.cariNoKK_KepalaKeluarga(this.dataGridKepalaKeluarga);
+        }
+
+        private void dataGridKepalaKeluarga_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

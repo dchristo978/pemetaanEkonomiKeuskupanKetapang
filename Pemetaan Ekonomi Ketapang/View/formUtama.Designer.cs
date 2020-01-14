@@ -38,8 +38,11 @@
             this.aplikasiPendataanUmatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cariKepalaKeluargaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lihatLaporanPemetaanEkonomiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.daftarKepalaKeluargaTersamplingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tambahJawabanBaruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutAkunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keluarAplikasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,6 +63,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1140, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // pemetaanEkonomiToolStripMenuItem
             // 
@@ -127,15 +131,33 @@
             // 
             // laporanToolStripMenuItem
             // 
+            this.laporanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lihatLaporanPemetaanEkonomiToolStripMenuItem,
+            this.daftarKepalaKeluargaTersamplingToolStripMenuItem});
             this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
             this.laporanToolStripMenuItem.Size = new System.Drawing.Size(168, 20);
             this.laporanToolStripMenuItem.Text = "Laporan Pemetaan Ekonomi";
             this.laporanToolStripMenuItem.Click += new System.EventHandler(this.laporanToolStripMenuItem_Click);
             // 
+            // lihatLaporanPemetaanEkonomiToolStripMenuItem
+            // 
+            this.lihatLaporanPemetaanEkonomiToolStripMenuItem.Name = "lihatLaporanPemetaanEkonomiToolStripMenuItem";
+            this.lihatLaporanPemetaanEkonomiToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.lihatLaporanPemetaanEkonomiToolStripMenuItem.Text = "Lihat Laporan Pemetaan Ekonomi";
+            this.lihatLaporanPemetaanEkonomiToolStripMenuItem.Click += new System.EventHandler(this.lihatLaporanPemetaanEkonomiToolStripMenuItem_Click);
+            // 
+            // daftarKepalaKeluargaTersamplingToolStripMenuItem
+            // 
+            this.daftarKepalaKeluargaTersamplingToolStripMenuItem.Name = "daftarKepalaKeluargaTersamplingToolStripMenuItem";
+            this.daftarKepalaKeluargaTersamplingToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.daftarKepalaKeluargaTersamplingToolStripMenuItem.Text = "Daftar Kepala Keluarga Tersampling";
+            this.daftarKepalaKeluargaTersamplingToolStripMenuItem.Click += new System.EventHandler(this.daftarKepalaKeluargaTersamplingToolStripMenuItem_Click);
+            // 
             // settingToolStripMenuItem
             // 
             this.settingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tambahJawabanBaruToolStripMenuItem});
+            this.tambahJawabanBaruToolStripMenuItem,
+            this.masterDatabaseToolStripMenuItem});
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             this.settingToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.settingToolStripMenuItem.Text = "Setting";
@@ -147,6 +169,13 @@
             this.tambahJawabanBaruToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.tambahJawabanBaruToolStripMenuItem.Text = "Tambah Jawaban Baru";
             this.tambahJawabanBaruToolStripMenuItem.Click += new System.EventHandler(this.tambahJawabanBaruToolStripMenuItem_Click);
+            // 
+            // masterDatabaseToolStripMenuItem
+            // 
+            this.masterDatabaseToolStripMenuItem.Name = "masterDatabaseToolStripMenuItem";
+            this.masterDatabaseToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.masterDatabaseToolStripMenuItem.Text = "Master Database";
+            this.masterDatabaseToolStripMenuItem.Click += new System.EventHandler(this.masterDatabaseToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -205,5 +234,8 @@
         private System.Windows.Forms.ToolStripMenuItem kepalaKeluargaTerdataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kepalaKeluargaBaruTidakTerdataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tambahJawabanBaruToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masterDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lihatLaporanPemetaanEkonomiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem daftarKepalaKeluargaTersamplingToolStripMenuItem;
     }
 }

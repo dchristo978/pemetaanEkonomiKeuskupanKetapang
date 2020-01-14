@@ -71,6 +71,16 @@ namespace Pemetaan_Ekonomi_Ketapang.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoKKetapang {
+            get {
+                object obj = ResourceManager.GetObject("LogoKKetapang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 2019.05.1.0.0.
         /// </summary>
         internal static string versiAplikasi {
@@ -112,6 +122,16 @@ namespace Pemetaan_Ekonomi_Ketapang.Properties {
         internal static string warna4 {
             get {
                 return ResourceManager.GetString("warna4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WatermarkKeuskupanKetapang {
+            get {
+                object obj = ResourceManager.GetObject("WatermarkKeuskupanKetapang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
