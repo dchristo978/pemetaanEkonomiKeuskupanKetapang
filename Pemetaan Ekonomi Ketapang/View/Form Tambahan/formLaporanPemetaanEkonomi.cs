@@ -140,16 +140,16 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
             }
 
 
-            if (this.cmbCakupanWilayah.SelectedIndex == 0)
-            {
-                GlobalParam.babPertanyaan = Convert.ToInt32(this.cmbTampilkanBerdasarkan.SelectedValue.ToString());
-                DataTable tempView = bobotControl.hitungBobotSatuKeuskupan();
+            //if (this.cmbCakupanWilayah.SelectedIndex == 0)
+            //{
+            //    GlobalParam.babPertanyaan = Convert.ToInt32(this.cmbTampilkanBerdasarkan.SelectedValue.ToString());
+            //    DataTable tempView = bobotControl.hitungBobotSatuKeuskupan();
 
-                this.dataGridView1.DataSource = tempView;
+            //    this.dataGridView1.DataSource = tempView;
 
-                this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
+            //    this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //    this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //}
 
             if (this.cmbCakupanWilayah.SelectedIndex == 1)
             {
@@ -162,6 +162,14 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
 
                 this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+
+            if(this.cmbTampilkanBerdasarkan.SelectedIndex == 0)
+            {
+                if(this.cmbCakupanWilayah.SelectedIndex == 0)
+                {
+                    this.dataGridView1.DataSource = bobotControl.hitungPengeluaranKeluargaTerbesar(true, false, false);
+                }
             }
 
         }
@@ -192,7 +200,7 @@ namespace Pemetaan_Ekonomi_Ketapang.View.Form_Tambahan
             {
                 lbRegion.Visible = false;
                 cmbReginParoki.Visible = false;
-                this.cmbTampilkanBerdasarkan.Insert();
+                //this.cmbTampilkanBerdasarkan.Insert();
             }
         }
     }

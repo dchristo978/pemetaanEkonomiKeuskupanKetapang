@@ -7,6 +7,7 @@
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Diagnostics;
 
     /// <summary>
     /// Defines the <see cref="Tbl_BobotControl" />
@@ -118,7 +119,7 @@
             dt = babAdapter.GetData();
 
             List<refBab> balikan = new List<refBab>();
-            for (int i = 1; i < dt.Rows.Count - 1; i++)
+            for (int i = 0; i < dt.Rows.Count - 1; i++)
             {
                 refBab temp = new refBab();
                 temp.id_bab = dt.Rows[i]["id_pertanyaan_bab"].ToString();
@@ -227,16 +228,18 @@
             connection.Open();
             if (flagKeuskupan)
             {
+                Debug.WriteLine("Menampilkan pengeluaran keluarga terbesar berdasarkan cakupan wilayah seluruh keuskupan");
                 query = "select " +
                         "ref_jawaban.jawaban," +
                         "max(tbl_jawaban.deskripsi_jawaban_1) as nilai_tertinggi, " +
-                        "sum(tbl_jawaban.deskripsi_jawaban_1) / count(tbl_umat.id_umat) as rata2_pengeluaran" +
+                        "sum(tbl_jawaban.deskripsi_jawaban_1) / count(tbl_umat.id_umat) as rata2_pengeluaran " +
                         "from tbl_bobot " +
                         "join ref_jawaban on tbl_bobot.id_ref_jawaban = ref_jawaban.id_ref_jawaban " +
                         "join tbl_jawaban on tbl_jawaban.id_ref_jawaban = ref_jawaban.id_ref_jawaban " +
                         "join tbl_umat on tbl_umat.id_umat = tbl_jawaban.id_umat " +
                         "join tbl_pertanyaan on tbl_pertanyaan.id_pertanyaan = ref_jawaban.id_pertanyaan " +
-                        "where tbl_pertanyaan.id_pertanyaan > 22 " +
+                        "where tbl_pertanyaan.id_pertanyaan = 23 " +
+                        "OR tbl_pertanyaan.id_pertanyaan = 24  " +
                         "group by ref_jawaban.jawaban";
 
                 MySqlCommand command = new MySqlCommand(query, connection);
